@@ -1,0 +1,115 @@
+// Core variables and mixins
+// @import "helpers/variables";
+// @import 'helpers/mixins';
+
+// Reset
+// @import "base/normalize";
+
+// Core CSS
+// @import "base/scaffolding";
+// @import "base/type";
+// @import "components/tables";
+// @import "components/forms";
+// @import "components/buttons";
+
+// layout
+// @import "layout/popup";
+@import "layout/header";
+// @import "layout/footer";
+
+.more-btn {
+  display: inline-block;
+  a {
+    padding-right: 14px;
+    color: #524f46;
+    font-size: 14px;
+    background: url(../images/more-arrow.png) 100% 0 no-repeat;
+  }
+}
+
+.list {
+  box-sizing: border-box;
+  .list-date {
+    display: inline-block;
+    font-size: 14px;
+    padding-right: 10px;
+    background: url(../images/NAV-arrow.png) 100% 50% no-repeat;
+  }
+  .list-title {
+    font-size: 16px;
+    margin-top: 3px;
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    margin: 5px 0;
+    background: #FFF;
+    opacity: 0.2;
+  }
+  .list-name {
+    font-size: 14px;
+  }
+  .list-val {
+    font-size: 30px;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 1200px;
+  height: 342px;
+  margin: 0 auto;
+  .slider-main {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    // height: 690px;
+    font-size: 0;
+    margin: 0 auto;
+    .slider-normalize {
+      position: relative;
+    }
+    .slider-content {
+      position: relative;
+      width: 99999px;
+      li {
+        display: inline-block;
+        width: 1200px;
+      }
+    }
+  }
+  .btn {
+    position: absolute;
+    // top: 50%;
+    // left: 22px;
+    z-index: 1;
+    // &.prev-btn {
+    //   @include bg('../images/slider-arrow.png', 1/2);
+    // }
+    // &.next-btn {
+    //   @include bg('../images/slider-arrow.png', 1/2);
+    //   @include bgPosition('../images/slider-arrow.png', 0, -1/2);
+    //   right: 22px;
+    //     left: auto;
+    // }
+  }
+  .dotNav{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 13px;
+    cursor: pointer;
+    li{
+      background-color: rgba(255, 255, 255, .8);
+      margin-left: 10px;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      // border-radius: 50%;
+      transition: .3s;
+    }
+    .active{
+      background-color:  #D6000F;
+    }
+  }
+}

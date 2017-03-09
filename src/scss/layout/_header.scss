@@ -1,0 +1,161 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+#wrap {
+	border-top: 7px solid #D6000F;
+}
+
+/*清除樣式*/
+#nav {
+	font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+	> ul {
+		background: none;
+		> li {
+			&:hover {
+				background: none;
+			}
+			> a {
+				font-size: 18px;
+				// color: #000;
+				font-weight: normal;
+				border-right: none;
+				height: auto;
+				width: auto;
+				margin: 0;
+			}
+		}
+	}
+}
+
+
+#nav {
+	margin-top: -14px;
+	width: 1060px;
+	.navCont {
+	  text-align: right;
+		height: auto;
+	  > li {
+	    position: relative;
+	    display: inline-block;
+	    vertical-align: top;
+	    &:hover {
+				.underline-from-center:before {
+				  left: 0;
+				  right: 0;
+				}
+	      > a {
+	        // color: #d6000f;
+	      }
+	      ul {
+	        display: block;
+	        /*-webkit-animation: fadeIn 0.5s 0s ease both;
+	        -moz-animation: fadeIn 0.5s 0s ease both;
+	        -ms-animation: fadeIn 0.5s 0s ease both;
+	        -o-animation: fadeIn 0.5s 0s ease both;
+	        animation: fadeIn 0.5s 0s ease both;*/
+	      }
+	    }
+			> a {
+				letter-spacing: 0px;
+				padding: 10px 32px;
+			}
+	    ul {
+	      position: absolute;
+	      width: 100%;
+	      background: #FFF;
+				font-size: 16px;
+	      display: none;
+				text-align: left;
+	      z-index: 999;
+				> li {
+					> a {
+						padding: 14px 32px;
+					}
+				}
+	      li:hover a {
+	        color: #d6000f;
+	      }
+	    }
+	  }
+	  a {
+	    display: block;
+	    color: #2b2925;
+	  }
+	}
+}
+
+/* Underline From Center */
+.underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  // overflow: hidden;
+}
+.underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: -4px;
+  background: #D6000F;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+// .underline-from-center:hover:before {
+//   left: 0;
+//   right: 0;
+// }
+
+
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
