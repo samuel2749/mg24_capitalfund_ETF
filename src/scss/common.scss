@@ -17,6 +17,19 @@
 @import "layout/header";
 // @import "layout/footer";
 
+body {
+  min-width: 1200px;
+  background-color: #F0F0F0;
+}
+
+.header-box {
+  background: #FFF;
+}
+
+.container {
+
+}
+
 .more-btn {
   display: inline-block;
   a {
@@ -27,13 +40,86 @@
   }
 }
 
+.section {
+  position: relative;
+  .section-title {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 52px;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    font-weight: 700;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: -6px;
+      background: #D6000F;
+      width: 90px;
+      height: 2px;
+      -webkit-transition-property: left, right;
+      transition-property: left, right;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+    &:hover:before {
+      // left: 0;
+      // right: 0;
+    }
+  }
+  .more-btn {
+    position: absolute;
+    top: 18px;
+    right: 0;
+  }
+  .section-list-box {
+    font-size: 0;
+    .line-chart {
+      height: 160px;
+      border: 1px solid #D6000F;
+    }
+    li {
+      width: 270px;
+      box-sizing: border-box;
+      &.up {
+        .amplitude  {
+          .list-val {
+            color: #f06261;
+          }
+        }
+      }
+      &.down {
+        .amplitude  {
+          .list-val {
+            color: #17c55f;
+          }
+        }
+      }
+      & ~ li {
+        margin-left: 13px;
+      }
+    }
+    .list-info {
+      background: #736f6a;
+      a {
+        color: #FFF;
+      }
+    }
+  }
+}
 .list {
+  display: inline-block;
   box-sizing: border-box;
   .list-date {
     display: inline-block;
     font-size: 14px;
     padding-right: 10px;
-    background: url(../images/NAV-arrow.png) 100% 50% no-repeat;
+    background: url(../images/list-arrow1.png) 100% 50% no-repeat;
   }
   .list-title {
     font-size: 16px;
@@ -46,11 +132,22 @@
     background: #FFF;
     opacity: 0.2;
   }
+  .list-info {
+    padding: 15px;
+  }
   .list-name {
     font-size: 14px;
   }
   .list-val {
     font-size: 30px;
+    margin-left: 3px;
+  }
+  .amplitude {
+    .list-val {
+      position: relative;
+      top: 4px;
+      font-size: 28px;
+    }
   }
 }
 

@@ -47,6 +47,11 @@ gulp.task('uglify', ['cleanJs'], function() {
       // .pipe(uglify())
       .pipe(gulp.dest('./dist/js'))
       .pipe(browserSync.reload({stream:true}));
+
+  gulp.src('./src/js/**/*.json')
+      // .pipe(uglify())
+      .pipe(gulp.dest('./dist/js'))
+      .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('tinypng', ['cleanImg'], function () {
