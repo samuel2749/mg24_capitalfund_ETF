@@ -15,8 +15,10 @@ $(function() {
 		url: 'http://localhost:3000/js/data/NAV.json',
 		dataType: 'json'
 	})
-	.then(function(res) {
-		renderNAVList(res);
+	.then(function(data) {
+		// renderNAVList(res);
+		var template = new Template($('.NAV-list-box'), 'NAV', data.data)
+		// console.log('template = ', template);
 	}, function(err) {
 		console.log('err = ', err);
 	});
@@ -26,8 +28,8 @@ $(function() {
 		url: 'http://localhost:3000/js/data/index.json',
 		dataType: 'json'
 	})
-	.then(function(res) {
-		renderIndexList(res);
+	.then(function(data) {
+		// renderIndexList(res);
 	}, function(err) {
 		console.log('err = ', err);
 	});
@@ -37,7 +39,7 @@ $(function() {
 		console.log('data = ', data);
 		data.map(function(data) {
 			console.log(data);
-			var template = new Test($('.NAV-list-box'), data);
+			// var template = new Test($('.NAV-list-box'), data);
 			// var template = `
 			// 	<li class="list up">
 			// 		<div class="line-chart"></div>
