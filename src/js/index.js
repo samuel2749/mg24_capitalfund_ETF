@@ -17,7 +17,7 @@ $(function() {
 	})
 	.then(function(data) {
 		// renderNAVList(res);
-		var template = new Template($('.NAV-list-box'), 'NAV', data.data)
+		var template = new Template($('.NAV-list-box'), 'NAV', data.data);
 		// console.log('template = ', template);
 	}, function(err) {
 		console.log('err = ', err);
@@ -29,7 +29,15 @@ $(function() {
 		dataType: 'json'
 	})
 	.then(function(data) {
-		// renderIndexList(res);
+		var template = new Template($('.Index-list-box'), 'Index', data.data);
+		
+		// 偶數的list加上.even
+		var item = $('.Index-list-box').find('li').filter(function(index, list) {
+			if (index % 2 === 1) {
+				$(list).addClass('even');
+				return true
+			}
+		});
 	}, function(err) {
 		console.log('err = ', err);
 	});

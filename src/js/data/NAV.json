@@ -15,7 +15,7 @@
       "name": "群益深證中小",
       "NAV": 13.97,
       "price": 13.97,
-      "amplitude": 0.8565
+      "amplitude": -0.8565
     },
     {
       "date": "1/3",
@@ -31,7 +31,7 @@
       "name": "群益深證中小",
       "NAV": 13.97,
       "price": 13.97,
-      "amplitude": 0.8565
+      "amplitude": -0.8565
     }
   ]
 }

@@ -2,23 +2,23 @@ var Template = function( pEle, pType, pData ) {
   var template = '';
   var type_template_NAV = '';
   var type_template_Index = '';
-  // setTemplate();
 
   pData.map(function(data) {
     template += setTemplate(pType, data);
-  })
-
-  // console.log(pData);
-  // console.log('template = ', template);
+  });
 
   pEle.append(template);
 
-
-
   function setTemplate(pType, pData) {
+    if (pData.amplitude > 0) {
+      var situation = 'up';
+    } else if (pData.amplitude < 0) {
+      var situation = 'down';
+    }
+
     if (pType === 'NAV') {
       template = `
-        <li class="list up">
+        <li class="list ${situation}">
           <div class="line-chart"></div>
           <div class="NAV-info list-info">
             <a href="javascript:;">
@@ -43,9 +43,9 @@ var Template = function( pEle, pType, pData ) {
             </a>
           </div>
         </li>`;;
-    } else if (pType === 'NAV') {
+    } else if (pType === 'Index') {
       template = `
-				<li class="list up">
+				<li class="list ${situation}">
 					<div class="Index-info list-info">
 						<a href="javascript:;">
 							<div class="Index-date list-date">${pData.date}</div>
@@ -67,5 +67,4 @@ var Template = function( pEle, pType, pData ) {
     }
     return template;
   }
-
 }

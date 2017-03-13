@@ -1,9 +1,11 @@
+@import "compass/css3";
+
 // Core variables and mixins
 // @import "helpers/variables";
-// @import 'helpers/mixins';
+@import 'helpers/mixins';
 
 // Reset
-// @import "base/normalize";
+@import "base/normalize";
 
 // Core CSS
 // @import "base/scaffolding";
@@ -16,6 +18,10 @@
 // @import "layout/popup";
 @import "layout/header";
 // @import "layout/footer";
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   min-width: 1200px;
@@ -81,11 +87,10 @@ body {
     font-size: 0;
     .line-chart {
       height: 160px;
-      border: 1px solid #D6000F;
     }
     li {
       width: 270px;
-      box-sizing: border-box;
+      vertical-align: top;
       &.up {
         .amplitude  {
           .list-val {
@@ -104,17 +109,22 @@ body {
         margin-left: 13px;
       }
     }
-    .list-info {
-      background: #736f6a;
-      a {
-        color: #FFF;
-      }
+  }
+  .list-info {
+    position: relative;
+    background: #FFF;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #000;
+      padding: 15px 15px 25px;
     }
   }
 }
 .list {
   display: inline-block;
-  box-sizing: border-box;
+  // font-family: '微軟正黑體';
   .list-date {
     display: inline-block;
     font-size: 14px;
@@ -132,9 +142,6 @@ body {
     background: #FFF;
     opacity: 0.2;
   }
-  .list-info {
-    padding: 15px;
-  }
   .list-name {
     font-size: 14px;
   }
@@ -148,6 +155,38 @@ body {
       top: 4px;
       font-size: 28px;
     }
+  }
+}
+
+.article {
+  .list-img {
+    position: relative;
+    width: image-width('../images/index/category1.jpg');
+    height: image-height('../images/index/category1.jpg');
+    h3 {
+      line-height: image-height('../images/index/category1.jpg');
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      color: #FFF;
+      text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+    }
+  }
+  .img-arrow {
+    @include align('h');
+    bottom: -1px;
+    width: image-width('../images/list-arrow3.png');
+    height: image-height('../images/list-arrow3.png');
+    background: url(../images/list-arrow3.png);
+  }
+  .list-title {
+    font-size: 22px;
+    color: #db0d1b;
+    font-weight: 700;
+  }
+  .list-txt {
+    font-size: 14px;
+    margin-top: 16px;
   }
 }
 
