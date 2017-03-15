@@ -1,24 +1,74 @@
 $(function() {
-	var attentionTitleLi = $('.attention-title li');
-	var attentionContLi = $('.attention-cont .cont');
+	var j_attention = $('.attention-box');
+	var j_attentionTitleLi = $('.attention-title li');
+	var j_attentionContLi = $('.attention-cont .cont');
+	var openRight = 0;
+	var closeRight = -232;
+	var initRight = -312;
 
 	setAttention();
 
 	function setAttention() {
 		titleClick();
-		fixedAnimate();
+		scrollAnimate(220);
+		$(window).on('click', function(e) {
+			var j_target = $(e.target);
+			if ($('.attention-box').find(j_target).length) {
+				TweenMax.to(j_attention, .5, {
+					right: openRight
+				});
+			} else {
+				j_attentionTitleLi.removeClass('active');
+				TweenMax.to(j_attention, .5, {
+					right: closeRight
+				});
+			}
+		})
 
 		function titleClick() {
-			attentionTitleLi.on('click', function() {
-				var index = $(this).index();
+			j_attentionTitleLi.on('click', function() {
+				var j_this = $(this);
+				var index = j_this.index();
 
-				if (attentionContLi.eq(index).hasClass('active')) return;
-				attentionContLi.removeClass('active').eq(index).addClass('active');
+				// console.log(j_this);
+
+				// if (j_this.hasClass('active')) return;
+				j_attentionTitleLi.removeClass('active').eq(index).addClass('active');
+				j_attentionContLi.removeClass('active').eq(index).addClass('active');
+				// TweenMax.to(j_attention, .5, {
+				// 	right: openRight
+				// });
 			});
 		}
 
-		function fixedAnimate() {
-			
+		function scrollAnimate(initTop) {
+			var windowHeight = $(window).height();
+			var scrollTop = $(window).scrollTop();
+			var attentionPosition = initTop;
+
+			init();
+
+			// $(window).scroll(function() {
+			// 	scrollTop = $(window).scrollTop();
+			// 	attentionPosition = initTop + scrollTop;
+			//
+			// 	TweenMax.to(j_attention, .5, {
+			// 		top: attentionPosition
+			// 	})
+			// });
+
+			function init() {
+				j_attention.css({
+					right: initRight,
+					top: initTop
+				});
+				TweenMax.to(j_attention, .5, {
+					css: {
+						right: closeRight
+					},
+					delay: .5
+				})
+			}
 		}
 	}
 
