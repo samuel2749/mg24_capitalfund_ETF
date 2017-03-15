@@ -1,4 +1,26 @@
 $(function() {
+	var attentionTitleLi = $('.attention-title li');
+	var attentionContLi = $('.attention-cont .cont');
+
+	setAttention();
+
+	function setAttention() {
+		titleClick();
+		fixedAnimate();
+
+		function titleClick() {
+			attentionTitleLi.on('click', function() {
+				var index = $(this).index();
+
+				if (attentionContLi.eq(index).hasClass('active')) return;
+				attentionContLi.removeClass('active').eq(index).addClass('active');
+			});
+		}
+
+		function fixedAnimate() {
+			
+		}
+	}
 
 	var slider = new Slider({
 		name: '.slider',
@@ -30,7 +52,7 @@ $(function() {
 	})
 	.then(function(data) {
 		var template = new Template($('.Index-list-box'), 'Index', data.data);
-		
+
 		// 偶數的list加上.even
 		var item = $('.Index-list-box').find('li').filter(function(index, list) {
 			if (index % 2 === 1) {

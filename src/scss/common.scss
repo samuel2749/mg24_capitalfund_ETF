@@ -334,7 +334,7 @@ body {
   z-index: 999;
   .attention-arrow {
     position: absolute;
-    top: 0;
+    top: 34px;
     right: -1 * image-width('../images/attention/attention-arrow.png');
     @include bg('../images/attention/attention-arrow.png');
   }
@@ -381,6 +381,13 @@ body {
     position: relative;
     width: 230px;
     height: 244px;
+    overflow: hidden;
+    .cont {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
     .youtube {
       @include align();
       width: 200px;
@@ -391,6 +398,24 @@ body {
         padding-left: 3px;
         margin-bottom: 5px;
       }
+    }
+  }
+  .list {
+    display: block;
+    font-size: 16px;
+    color: #FFF;
+    padding: 7px 15px;
+    li {
+      padding: 12px 0 7px 22px;
+      & ~ li {
+        border-top: 1px solid rgba(255, 255, 255, .3);
+      }
+    }
+    .attention-list-num {
+
+    }
+    .attention-list-name {
+      margin-top: 2px;
     }
   }
 }
