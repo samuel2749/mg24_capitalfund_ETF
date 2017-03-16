@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="https://www.capitalfund.com.tw/webstatic/Shared/Styles/info.css">
 
 	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/index2.css">
+	<link rel="stylesheet" href="css/etfseries.css">
 	<script src="js/lib/jquery-1.9.1.min.js"></script>
 	<script src="js/lib/greensock/TweenMax.min.js"></script>
 	<script src="js/lib/fastclick.js"></script>
@@ -24,7 +24,7 @@
 	<script src="js/component/Slider.js"></script>
 	<script src="js/component/Template.js"></script>
 	<script src="js/common.js"></script>
-	<script src="js/index2.js"></script>
+	<script src="js/etfseries.js"></script>
 
 	<style type="text/css">
     div.googlecse {
@@ -236,59 +236,120 @@
 		  </div>
 		</div>
 		<div class="banner">
-			<a href="javascript:;"><img src="images/index/kv.jpg" /></a>
+			<a href="javascript:;"><img src="images/etfseries/kv.jpg" /></a>
 		</div>
 		<div class="container">
-			<div class="row">
+			<div class="breadcrumb">
+				<a href="javascript:;">首頁</a> > <a href="javascript:;">ETF指數收盤行情</a>
+			</div>
+			<div class="row table-box">
 				<div class="col-sm-12">
-					<div class="page-header">
-						<h1>前端必學技能<small>超重要</small></h1>
-					</div>
 					<div class="table-responsive">
-						<table class="table table-hover table-bordered">
+						<table class="table table-striped">
 							<thead>
 								<tr>
-									<th></th>
-									<th>CSS</th>
-									<th>HTML</th>
-									<th>Javascript</th>
-									<th>jQuery</th>
-									<th>記事本(咦)</th>
+									<th>指數名稱</th>
+									<th>日期</th>
+									<th>收盤價</th>
+									<th>日漲跌</th>
+									<th>日漲跌幅</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<th>作用</th>
-									<td>網頁維護建置便利</td>
-									<td>網頁的基礎，不懂不行</td>
-									<td>網頁互動就靠它了</td>
-									<td>加速撰寫互動程式的法寶</td>
-									<td>純文字編輯器，寫網頁就靠它了</td>
+								<tr class="up">
+									<td>富時中國A50</td>
+									<td>02/03</td>
+									<td>10253.79</td>
+									<td>-107.86</td>
+									<td>-107.86</td>
 								</tr>
-								<tr>
-									<th>特色</th>
-									<td>網頁的裝潢師傅，利用CSS可以</td>
-									<td>網頁的基礎架構，重點在著重在語意的建置。</td>
-									<td>有趣的網頁互動效果與動畫就靠它了～歷史也算悠久的一個程式語言。</td>
-									<td>簡潔的程式碼撰寫方式，跨瀏覽器的最快速解決方案，讓你省下撰寫程式的許多時間。</td>
-									<td>簡潔的編輯界面，不佔資源的最佳編輯程式(咦？)</td>
+								<tr class="down">
+									<td>富時中國A50</td>
+									<td>02/03</td>
+									<td>10253.79</td>
+									<td>-107.86</td>
+									<td>-107.86</td>
 								</tr>
-								<tr>
-									<th>相關單位</th>
-									<td>W3C</td>
-									<td>W3C</td>
-									<td>Brendan Eich</td>
-									<td>John Resig</td>
-									<td>Microsoft</td>
+								<tr class="up">
+									<td>富時中國A50</td>
+									<td>02/03</td>
+									<td>10253.79</td>
+									<td>-107.86</td>
+									<td>-107.86</td>
+								</tr>
+								<tr class="down">
+									<td>富時中國A50</td>
+									<td>02/03</td>
+									<td>10253.79</td>
+									<td>-107.86</td>
+									<td>-107.86</td>
+								</tr>
+								<tr class="up">
+									<td>富時中國A50</td>
+									<td>02/03</td>
+									<td>10253.79</td>
+									<td>-107.86</td>
+									<td>-107.86</td>
+								</tr>
+								<tr class="down">
+									<td>富時中國A50</td>
+									<td>02/03</td>
+									<td>10253.79</td>
+									<td>-107.86</td>
+									<td>-107.86</td>
+								</tr>
+								<tr class="up">
+									<td>富時中國A50</td>
+									<td>02/03</td>
+									<td>10253.79</td>
+									<td>-107.86</td>
+									<td>-107.86</td>
+								</tr>
+								<tr class="down">
+									<td>富時中國A50</td>
+									<td>02/03</td>
+									<td>10253.79</td>
+									<td>-107.86</td>
+									<td>-107.86</td>
+								</tr>
+								<tr class="up">
+									<td>富時中國A50</td>
+									<td>02/03</td>
+									<td>10253.79</td>
+									<td>-107.86</td>
+									<td>-107.86</td>
+								</tr>
+								<tr class="down">
+									<td>富時中國A50</td>
+									<td>02/03</td>
+									<td>10253.79</td>
+									<td>-107.86</td>
+									<td>-107.86</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
 			</div>
+			<div class="page">
+				<a class="page-first" href="javascript:;">第一頁</a>
+				<a class="pre-btn page-btn" href="javascript:;"></a>
+				<a class="page-num active" href="javascript:;">1</a>
+				<a class="page-num" href="javascript:;">2</a>
+				<a class="page-num" href="javascript:;">3</a>
+				<a class="page-num" href="javascript:;">4</a>
+				<a class="page-num" href="javascript:;">5</a>
+				<a class="page-num" href="javascript:;">6</a>
+				<a class="page-num" href="javascript:;">7</a>
+				<a class="page-num" href="javascript:;">8</a>
+				<a class="page-num" href="javascript:;">9</a>
+				<a class="page-num" href="javascript:;">10</a>
+				<a class="next-btn page-btn" href="javascript:;"></a>
+				<a class="page-last" href="javascript:;">最末頁</a>
+			</div>
 		</div>
 		<div id="footer">
-			群益投信獨立經營管理
+			群益投信獨立經營管理九十九年金管投信新字第025號 © 2017 by Capital Investment Trust Corporation. All Rights reserved.
 		</div>
 	</div>
 

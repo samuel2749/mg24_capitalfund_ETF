@@ -1,14 +1,12 @@
 @import 'compass/css3';
 @import 'helpers/mixins';
 
-@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
-
 .section-list-box {
   margin-top: 30px;
 }
 .NAV {
   .line-chart {
-    border: 1px solid #D6000F;
+    border: 1px solid $main-color;
   }
   .list-info {
     background: #736f6a;

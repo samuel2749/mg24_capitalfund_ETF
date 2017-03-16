@@ -1,0 +1,58 @@
+@import 'compass/css3';
+@import 'helpers/mixins';
+@import 'helpers/variables';
+
+$table-bg-accent: #e2e2e2;
+@import 'layout/footer';
+@import 'components/forms';
+@import 'components/tables';
+
+.banner {
+  text-align: center;
+}
+
+.table {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        font-size: 16px;
+        border: 0;
+        &:nth-child(1) {
+          padding-left: 4%;
+        }
+      }
+    }
+  }
+  thead {
+    th {
+      font-weight: 700;
+    }
+  }
+  tbody {
+    tr {
+      &.up {
+        td:nth-child(4),
+        td:nth-child(5) {
+          color: $up-color;
+        }
+      }
+      &.down {
+        td:nth-child(4),
+        td:nth-child(5) {
+          color: $down-color;
+        }
+      }
+    }
+  }
+}
+
+.table-box {
+  padding: 18px 16px;
+  background: #FFF;
+  .table {
+    margin-bottom: 0;
+  }
+}

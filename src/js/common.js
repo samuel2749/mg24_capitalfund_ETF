@@ -1,11 +1,15 @@
 $(function() {
 	var j_attention = $('.attention-box');
 	var j_attentionTitleLi = $('.attention-title li');
+	var attentionTitleHeight = 80;
 	var j_attentionContLi = $('.attention-cont .cont');
+	var j_attentionArrow = $('.attention-arrow');
+	var attentionArrowHeight = 13;
+	var attentionCenterPosition = Math.round((attentionTitleHeight - attentionArrowHeight) / 2);
 	var openRight = 0;
 	var closeRight = -232;
 	var initRight = -312;
-	
+
 	setAttentionBtn();
 
 	function setAttentionBtn() {
@@ -30,14 +34,15 @@ $(function() {
 				var j_this = $(this);
 				var index = j_this.index();
 
-				// console.log(j_this);
-
 				// if (j_this.hasClass('active')) return;
 				j_attentionTitleLi.removeClass('active').eq(index).addClass('active');
 				j_attentionContLi.removeClass('active').eq(index).addClass('active');
-				// TweenMax.to(j_attention, .5, {
-				// 	right: openRight
-				// });
+
+				var  position = attentionCenterPosition + index * attentionTitleHeight;
+
+				TweenMax.to(j_attentionArrow, .3, {
+					top: position
+				})
 			});
 		}
 

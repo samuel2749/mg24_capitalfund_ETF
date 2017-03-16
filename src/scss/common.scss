@@ -1,7 +1,9 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
 @import "compass/css3";
 
 // Core variables and mixins
-// @import "helpers/variables";
+@import "helpers/variables";
 @import 'helpers/mixins';
 
 // Reset
@@ -31,15 +33,14 @@ input.gsc-search-button {
 }
 
 // =============================
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  min-width: 1200px;
+  // min-width: 1200px;
   background-color: #F0F0F0;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .header-box {
@@ -47,8 +48,9 @@ body {
 }
 
 .container {
-  width: 1120px;
+  max-width: 1120px;
   margin: 0 auto 34px;
+  // font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
 }
 
 .more-btn {
@@ -68,7 +70,6 @@ body {
     font-size: 30px;
     text-align: center;
     margin-top: 52px;
-    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
     font-weight: 700;
     &:before {
       content: "";
@@ -78,7 +79,7 @@ body {
       right: 0;
       margin: 0 auto;
       bottom: -6px;
-      background: #D6000F;
+      background: $main-color;
       width: 90px;
       height: 2px;
       -webkit-transition-property: left, right;
@@ -102,7 +103,7 @@ body {
     }
     &:hover {
       a {
-        color: #D6000F;
+        color: $main-color;
       }
     }
   }
@@ -117,14 +118,14 @@ body {
       &.up {
         .amplitude  {
           .list-val {
-            color: #f06261;
+            color: $up-color;
           }
         }
       }
       &.down {
         .amplitude  {
           .list-val {
-            color: #17c55f;
+            color: $down-color;
           }
         }
       }
@@ -259,6 +260,7 @@ body {
   .list-txt {
     font-size: 14px;
     margin-top: 16px;
+    line-height: 1.3;
   }
   .announcement {
     li {
@@ -343,7 +345,7 @@ body {
       transition: .3s;
     }
     .active{
-      background-color:  #D6000F;
+      background-color:  $main-color;
     }
   }
 }
@@ -355,12 +357,31 @@ body {
   right: -312px;
   font-size: 0;
   background: rgba(84, 80, 71, .9);
+  overflow: hidden;
   z-index: 999;
   .attention-arrow {
     position: absolute;
     top: 34px;
     right: -1 * image-width('../images/attention/attention-arrow.png');
     @include bg('../images/attention/attention-arrow.png');
+    &:before {
+      content: '';
+      display: table;
+      width: 2px;
+      height: 244px;
+      background: #FFF;
+      position: absolute;
+      bottom: 100%;
+    }
+    &:after {
+      content: '';
+      display: table;
+      width: 2px;
+      height: 244px;
+      background: #FFF;
+      position: absolute;
+      top: 100%;
+    }
   }
   .attention-title {
     position: relative;
@@ -370,7 +391,7 @@ body {
       width: 80px;
       height: 80px;
       // background: rgba(84, 80, 71, .8);
-      border-right: 2px solid #FFF;
+      // border-right: 2px solid #FFF;
       & ~ li {
         border-top: 2px solid #FFF;
       }
@@ -490,9 +511,58 @@ body {
   }
 }
 
+.breadcrumb {
+  margin-top: 16px;
+  margin-bottom: 22px;
+  a {
+    color: #000;
+    font-size: 13px;
+    transition: .3s;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.page {
+  margin: 34px 0;
+  text-align: center;
+  a {
+    color: #000;
+    font-size: 16px;
+    vertical-align: top;
+  }
+  .page-btn {
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    box-sizing: content-box;
+    background-position: 50% 50%;
+    padding: 4px 4px;
+  }
+  .pre-btn {
+    @include bg('../images/page-arrow-left.png');
+  }
+  .next-btn {
+    @include bg('../images/page-arrow-right.png');
+    // background-position: 0 -15px;
+  }
+  .page-first, .page-last {
+    font-size: 14px;
+    padding: 4px 0;
+  }
+  .page-num {
+    padding: 4px 8px;
+    &.active {
+      color: #FFF;
+      background: $main-color;
+    }
+  }
+}
+
 
 @media screen and (max-width: 1200px) {
   body {
-    overflow-x: auto;
+    // overflow-x: auto;
   }
 }
