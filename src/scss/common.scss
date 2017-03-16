@@ -19,6 +19,19 @@
 @import "layout/header";
 // @import "layout/footer";
 
+// 修正樣式
+#header {
+  height: 58px;
+}
+#header .select span {
+  box-sizing: content-box;
+}
+input.gsc-search-button {
+  box-sizing: content-box;
+}
+
+// =============================
+
 * {
   box-sizing: border-box;
 }
@@ -34,7 +47,8 @@ body {
 }
 
 .container {
-
+  width: 1120px;
+  margin: 0 auto 34px;
 }
 
 .more-btn {
@@ -83,6 +97,14 @@ body {
     position: absolute;
     top: 18px;
     right: 0;
+    a {
+      transition: .3s;
+    }
+    &:hover {
+      a {
+        color: #D6000F;
+      }
+    }
   }
   .section-list-box {
     font-size: 0;

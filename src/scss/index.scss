@@ -1,12 +1,7 @@
-@import "compass/css3";
+@import 'compass/css3';
 @import 'helpers/mixins';
 
 @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
-
-.container {
-  width: 1120px;
-  margin: 0 auto 34px;
-}
 
 .section-list-box {
   margin-top: 30px;
