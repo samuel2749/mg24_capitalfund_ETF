@@ -1,0 +1,87 @@
+@import 'compass/css3';
+@import 'helpers/mixins';
+@import 'helpers/variables';
+
+$table-bg-accent: #e2e2e2;
+@import 'layout/footer';
+@import 'components/forms';
+@import 'components/tables';
+
+.banner {
+  text-align: center;
+}
+
+.accordion {
+  position: relative;
+  padding-bottom: 100px;
+  a {
+    display: block;
+  }
+  .accordion-content {
+    margin: 30px auto 0;
+    width: 900px;
+  }
+  .accordion-title {
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #4098AC;
+  }
+  .back-activity-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .accordion-list {
+    font-size: 0;
+    li {
+      position: relative;
+      border-bottom: 1px solid #B7B7B7;
+      > a {
+        position: relative;
+      }
+    }
+    .list-img {
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 0;
+    }
+    .list-text {
+      position: absolute;
+      width: 75%;
+      top: 0;
+      bottom: 0;
+      left: 90px;
+      margin: auto 0;
+      height: 28px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #4098AC;
+    }
+    .list-btn {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto 0;
+      width: 122px;
+      height: 24px;
+      background: url(../images/award/list-open-btn.jpg);
+    }
+    .list-sub {
+      display: none;
+      font-size: 15px;
+      padding-bottom: 25px;
+      td {
+        padding-bottom: 12px;
+      }
+      .first-td td {
+        padding-top: 12px;
+      }
+    }
+    .coming-soon {
+      text-align: center;
+      padding: 10px 0 13px;
+      background: #EBF5F7;
+    }
+  }
+}

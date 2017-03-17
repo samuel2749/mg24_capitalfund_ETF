@@ -33,6 +33,7 @@ $table-bg-accent: #e2e2e2;
   }
   tbody {
     tr {
+      color: $font-color-gray;
       &.up {
         td:nth-child(4),
         td:nth-child(5) {

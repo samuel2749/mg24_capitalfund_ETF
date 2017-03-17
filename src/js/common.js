@@ -41,7 +41,8 @@ $(function() {
 				var  position = attentionCenterPosition + index * attentionTitleHeight;
 
 				TweenMax.to(j_attentionArrow, .3, {
-					top: position
+					top: position,
+					ease: Back.easeOut.config(1.7)
 				})
 			});
 		}
