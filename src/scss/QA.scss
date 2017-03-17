@@ -19,69 +19,178 @@ $table-bg-accent: #e2e2e2;
   }
   .accordion-content {
     margin: 30px auto 0;
-    width: 900px;
+    // width: 900px;
   }
   .accordion-title {
-    position: relative;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #4098AC;
+    // position: relative;
+    // padding-bottom: 10px;
+    // border-bottom: 3px solid #4098AC;
+    // letter-spacing: -4px;
+    @include clearfix;
+    li {
+      position: relative;
+      float: left;
+      width: 190px;
+      height: 55px;
+      vertical-align: top;
+      background: $table-bg-accent;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 55px;
+      overflow: hidden;
+      transition: .3s;
+      a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        color: #000;
+        transition: .3s;
+      }
+      & ~ li {
+        margin-left: 2px;
+      }
+      &:hover {
+        background: $main-color;
+        a {
+          color: #FFF;
+        }
+      }
+      &.active {
+        background: $main-color;
+        a {
+          color: #FFF;
+        }
+        .accordion-title-arrow {
+          bottom: -7px;
+        }
+      }
+    }
+    .accordion-title-arrow {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1 * image-width('../images/Qa/accordion-title-arrow.png');
+      margin: 0 auto;
+      width: image-width('../images/Qa/accordion-title-arrow.png');
+      height: image-height('../images/Qa/accordion-title-arrow.png');
+      background: url(../images/Qa/accordion-title-arrow.png);
+      transition: .3s;
+    }
+    .product {
+
+    }
+    .transaction {
+
+    }
+    .market {
+
+    }
   }
-  .back-activity-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
+  // .back-activity-btn {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  // }
+  .accordion-list-box {
+    position: relative;
+    background: #FFF;
   }
   .accordion-list {
     font-size: 0;
+    padding: 35px 52px;
+    // background: #FFF;
     li {
       position: relative;
-      border-bottom: 1px solid #B7B7B7;
+      // border-bottom: 1px solid #B7B7B7;
       > a {
         position: relative;
       }
     }
-    .list-img {
+    .question-icon {
       display: inline-block;
-      margin: 20px 0;
+      // margin: 20px 0;
       font-size: 0;
+      width: image-width('../images/Qa/quation-icon.png');
+      height: image-height('../images/Qa/quation-icon.png');
+      background: url(../images/Qa/quation-icon.png);
     }
-    .list-text {
+    .answer-icon {
       position: absolute;
-      width: 75%;
-      top: 0;
-      bottom: 0;
-      left: 90px;
-      margin: auto 0;
-      height: 28px;
-      font-size: 20px;
-      font-weight: bold;
-      color: #4098AC;
+      left: 0;
+      font-size: 0;
+      width: image-width('../images/Qa/answer-icon.png');
+      height: image-height('../images/Qa/answer-icon.png');
+      background: url(../images/Qa/answer-icon.png);
     }
-    .list-btn {
+    .list-title {
+      padding-top: 9px;
+    }
+    .list-title-text {
+      // position: absolute;
+      // width: 75%;
+      // top: 0;
+      // bottom: 0;
+      // left: 90px;
+      // margin: auto 0;
+      // height: 28px;
+      display: inline-block;
+      padding: 5px 10px 10px;
+      vertical-align: top;
+      font-size: 16px;
+      font-weight: bold;
+      color: $main-color;
+    }
+    .list-sub-text {
+      // font-size: 14px;
+      padding: 2px 0 12px;
+      line-height: 1.5;
+    }
+    .switch-icon {
       position: absolute;
       top: 0;
       bottom: 0;
       right: 0;
       margin: auto 0;
-      width: 122px;
-      height: 24px;
-      background: url(../images/award/list-open-btn.jpg);
+      width: 14px;
+      height: 15px;
+      background: url(../images/Qa/switch-icon.png) 0 0;
     }
     .list-sub {
       display: none;
-      font-size: 15px;
-      padding-bottom: 25px;
-      td {
-        padding-bottom: 12px;
-      }
-      .first-td td {
-        padding-top: 12px;
+      position: relative;
+      box-sizing: border-box;
+      padding: 10px 0 0 34px;
+      font-size: 14px;
+      a {
+        display: inline-block;
+        text-decoration: underline;
       }
     }
-    .coming-soon {
-      text-align: center;
-      padding: 10px 0 13px;
-      background: #EBF5F7;
+    &.transaction {
+      display: none;
+    }
+    &.market {
+      display: none;
+    }
+  }
+}
+
+.table {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 0;
+      }
+    }
+  }
+  > thead {
+    > tr {
+      background: $QA-title-gray;
     }
   }
 }
