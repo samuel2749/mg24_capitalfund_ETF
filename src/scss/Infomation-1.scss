@@ -1,0 +1,237 @@
+@import 'compass/css3';
+@import 'helpers/mixins';
+@import 'helpers/variables';
+
+$table-bg-accent: #e2e2e2;
+@import 'layout/footer';
+// @import 'components/forms';
+// @import 'components/tables';
+
+.banner {
+  text-align: center;
+}
+
+.infomation-box {
+  .info {
+    padding: 35px 52px;
+    background: #FFF;
+  }
+  .info-text {
+    width: 1040px;
+    height: 485px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-y: auto;
+  }
+}
+
+.table {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 0;
+      }
+    }
+  }
+  > thead {
+    > tr {
+      background: $QA-title-gray;
+    }
+  }
+}
+
+.confirm-btn {
+  margin-top: 12px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 52px;
+  @include clearfix;
+  .btn {
+    // float: left;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    // width: 188px;
+    // height: 52px;
+    a {
+      display: block;
+      width: 188px;
+      height: 52px;
+      // color: #FFF;
+    }
+    & ~ .btn {
+      margin-left: 12px;
+    }
+  }
+  .false-btn {
+    // background: $false-btn-bg;
+  }
+  .true-btn {
+    // background: $main-color;
+  }
+}
+
+.btn {
+  border: none;
+  // font-family: inherit;
+  // font-size: inherit;
+  // color: inherit;
+  // background: none;
+  cursor: pointer;
+  // padding: 25px 80px;
+  // display: inline-block;
+  // margin: 15px 30px;
+  // text-transform: uppercase;
+  // letter-spacing: 1px;
+  // font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  &:before {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.btn-1 {
+	border: 3px solid #fff;
+	color: #fff;
+}
+
+/* Button 1c */
+.btn-1c {
+  overflow: hidden;
+  a {
+    color: #FFF;
+  }
+  &.false-btn {
+    border: 3px solid $false-btn-bg;
+    &:after {
+      background: $false-btn-bg;
+    }
+  }
+  &.true-btn {
+    border: 3px solid $main-color;
+    &:after {
+      background: $main-color;
+    }
+  }
+  &:hover, &:active {
+    a {
+      color: #000;
+    }
+  }
+  &:after {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // background: #fff;
+  }
+  &:hover, &:active {
+    a {
+      // color: #0e83cd;
+    }
+  }
+  &:hover:after, &:active:after {
+    // width: 0%;
+    left: 100%;
+  }
+}
+
+// checkbox
+.checkbox-area {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  svg {
+    border: none;
+    display: block;
+  }
+  .cb-content {
+    position: relative;
+    top: -4px;
+    font-size: 16px;
+  }
+  label {
+  	// position: absolute;
+    // top: 3px;
+    // left: 0;
+  	cursor: pointer;
+  	// display: block;
+  	// font-size: 1.25em;
+  	// line-height: 2.5rem;
+  	// margin: 0.5em auto;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	user-select: none;
+  	// width: 20rem;
+    svg {
+      display: inline-block;
+      // float: left;
+      // margin-right: 0.5rem;
+      width: 23px;
+      height: 23px;
+      rect, polyline {
+        fill: none;
+        stroke-width: 3px;
+      }
+      rect {
+        stroke: $main-color;
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+    margin: 10px 0 0 5px;
+    width: 37px;
+    height: 37px;
+    &:checked + label svg {
+      rect {
+        stroke: $main-color;
+      }
+      polyline {
+        stroke: $main-color;
+      }
+      polyline {
+        -webkit-animation: checked 0.5s ease forwards;
+        animation: checked 0.5s ease forwards;
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+      }
+    }
+  }
+
+  @-webkit-keyframes checked {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes checked {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}

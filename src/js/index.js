@@ -11,7 +11,7 @@ $(function() {
 
 	/*NAV*/
 	$.ajax({
-		url: 'http://localhost:3000/js/data/NAV.json',
+		url: './js/data/NAV.json',
 		dataType: 'json'
 	})
 	.then(function(data) {
@@ -24,7 +24,7 @@ $(function() {
 
 	/*index*/
 	$.ajax({
-		url: 'http://localhost:3000/js/data/index.json',
+		url: './js/data/index.json',
 		dataType: 'json'
 	})
 	.then(function(data) {
