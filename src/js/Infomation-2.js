@@ -1,25 +1,36 @@
 $(function() {
-  var accordionTitleLi = $('.accordion-title li');
-  var accordionList = $('.accordion-list');
+  var j_typeBtn = $('.table-type, .chart-type');
 
-  // accordionTitle click
-  accordionTitleLi.on('click', function() {
+  // 切換『看表格』或『看走勢圖』
+  j_typeBtn.on('click', function() {
     var j_this = $(this);
     var index = j_this.index();
     if (j_this.hasClass('active')) return;
 
     j_this.addClass('active').siblings().removeClass('active');
-    accordionList.hide().eq(index).show();
-    // accordionList.css({position: 'absolute'}).fadeOut().eq(index).css({position: 'relative'}).fadeIn();
   });
 
-  // accordionList click
-  $('.list-title').click(function() {
-		$('.list-sub').slideUp();
-		$('.switch-icon').css('backgroundPositionY', 0);
-		if ( $(this).next().css('display') == 'none' ) {
-			$(this).next().slideDown();
-			$(this).find('.switch-icon').css('backgroundPositionY', -15);
-		}
-	});
+  renderList();
+
+  function renderList() {
+    /*stock*/
+  	$.ajax({
+  		url: './js/data/NAV.json',
+  		dataType: 'json'
+  	})
+  	.then(function(data) {
+  		// renderNAVList(res);
+  		var template = new Template($('.stock-list-box'), 'NAV', data.data);
+  		// console.log('template = ', template);
+  	}, function(err) {
+  		console.log('err = ', err);
+  	});
+
+    console.log('renderList');
+
+    setTimeout(function() {
+      // renderList();
+    }, 3000);
+  }
+
 });
