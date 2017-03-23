@@ -37,7 +37,7 @@ var Template = function( pEle, pType, pData ) {
                 <span class="list-val">${pData.price}</span>
               </div>
               <div class="NAV-amplitude amplitude">
-                <span class="list-name">即時價幅</span>
+                <span class="list-name">折溢價幅度</span>
                 <span class="list-val">${pData.amplitude}%</span>
               </div>
             </a>

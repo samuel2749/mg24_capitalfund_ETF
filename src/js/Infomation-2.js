@@ -1,5 +1,5 @@
 $(function() {
-  var j_typeBtn = $('.table-type, .chart-type');
+  var j_typeBtn = $('.select-table-type, .select-chart-type');
 
   // 切換『看表格』或『看走勢圖』
   j_typeBtn.on('click', function() {
@@ -10,7 +10,7 @@ $(function() {
     j_this.addClass('active').siblings().removeClass('active');
   });
 
-  renderList();
+  // renderList();
 
   function renderList() {
     /*stock*/

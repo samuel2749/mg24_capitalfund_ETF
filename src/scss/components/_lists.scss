@@ -4,13 +4,12 @@
   font-size: 0;
   margin-left: -13px;
   margin-top: -13px;
-  .line-chart {
+  .list-chart {
     height: 160px;
     border: 1px solid $main-color;
   }
   .list-info {
     position: relative;
-    // background: #FFF;
     a {
       display: block;
       width: 100%;
@@ -38,13 +37,9 @@
         }
       }
     }
-    & ~ li {
-      // margin-left: 13px;
-    }
   }
   .list {
     display: inline-block;
-    // font-family: '微軟正黑體';
     .list-date {
       display: inline-block;
       font-size: 14px;
@@ -223,8 +218,17 @@
   }
   // table 樣式
   &.table-type {
-    .line-chart {
+    .list-chart {
       display: none;
+    }
+  }
+}
+
+.data-list-box {
+  .data-list-title {
+    @include clearfix;
+    > li {
+      float: left;
     }
   }
 }
