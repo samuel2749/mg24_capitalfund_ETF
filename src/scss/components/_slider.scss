@@ -18,6 +18,7 @@
       position: relative;
       width: 99999px;
       li {
+        position: relative;
         display: inline-block;
         width: 1200px;
       }
@@ -56,5 +57,20 @@
     .active{
       background-color:  $main-color;
     }
+  }
+}
+
+.slider-txt {
+  position: absolute;
+  top: 220px;
+  left: 81px;
+  color: #000;
+  .txt-1 {
+    font-size: 38px;
+  }
+  .txt-2 {
+    position: relative;
+    top: 7px;
+    font-size: 15px;
   }
 }

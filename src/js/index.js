@@ -1,4 +1,10 @@
 $(function() {
+
+	renderChart('chart-1');
+	renderChart('chart-2');
+	renderChart('chart-3');
+	renderChart('chart-4');
+
 	var slider = new Slider({
 		name: '.slider',
 		random: false,
@@ -8,6 +14,131 @@ $(function() {
 		list: false,
 		duration: 3000
 	});
+
+	function renderChart(ele) {
+		// var dom = $('#list-chart').get[0];
+		var dom = document.getElementById(ele);
+		var myChart = echarts.init(dom);
+
+		var option = {
+	    title: {
+	        // text: '今日&昨日',
+	        // left: '50%',
+	        // textAlign: 'center'
+	    },
+	    tooltip: {
+	        trigger: 'asix',
+	        axisPointer: {
+	            lineStyle: {
+	                color: '#ddd'
+	            }
+	        },
+	        backgroundColor: 'rgba(255,255,255,1)',
+	        padding: [5, 10],
+	        textStyle: {
+	            color: '#D6000F',
+	        },
+	        extraCssText: 'box-shadow: 0 0 5px rgba(0,0,0,0.3)'
+	    },
+	    legend: {
+	        // right: 20,
+	        // orient: 'vertical',
+	        // data: ['今日','昨日']
+	    },
+	    xAxis: {
+	        type: 'category',
+	        data: ['00:00','2:00','4:00','6:00','8:00','10:00','12:00','14:00','16:00','18:00','20:00',"22:00"],
+	        boundaryGap: false,
+	        splitLine: {
+	            show: false,
+	            interval: 'auto',
+	            lineStyle: {
+	                color: ['#D4DFF5']
+	            }
+	        },
+	        axisTick: {
+	            show: false
+	        },
+	        axisLine: {
+							show: false,
+	            lineStyle: {
+	                color: '#609ee9'
+	            }
+	        },
+	        axisLabel: {
+							show: false,
+	            margin: 10,
+	            textStyle: {
+	                fontSize: 14
+	            }
+	        },
+					position: 'left'
+	    },
+	    yAxis: {
+	        type: 'value',
+	        splitLine: {
+	            lineStyle: {
+	                color: ['#d5d5d5']
+	            }
+	        },
+	        axisTick: {
+	            show: false
+	        },
+	        axisLine: {
+							show: false,
+	            lineStyle: {
+	                color: '#609ee9'
+	            }
+	        },
+	        axisLabel: {
+							show: false,
+	            margin: 10,
+	            textStyle: {
+	                fontSize: 14
+	            }
+	        }
+	    },
+			grid: {
+				left: 0,
+				right: 0,
+				top: 0,
+				bottom: 0
+			},
+	    series: [{
+	        name: '淨值',
+	        type: 'line',
+	        smooth: true,
+	        showSymbol: false,
+	        symbol: 'circle',
+	        symbolSize: 6,
+	        data: ['1200', '1400', '808', '811', '626', '488', '1600', '1100', '500', '300', '1998', '822'],
+	        areaStyle: {
+	            normal: {
+	                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+	                    offset: 0,
+	                    color: '#ebc7c9'
+	                }, {
+	                    offset: 1,
+	                    color: '#ebc7c9'
+	                }], false)
+	            }
+	        },
+	        itemStyle: {
+	            normal: {
+	                color: '#D6000F'
+	            }
+	        },
+	        lineStyle: {
+	            normal: {
+	                width: 2
+	            }
+	        }
+	    }]
+		};
+
+		myChart.setOption(option);
+
+	}
 
 	/*NAV*/
 	// $.ajax({

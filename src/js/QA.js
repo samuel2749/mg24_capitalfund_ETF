@@ -22,4 +22,11 @@ $(function() {
 			$(this).find('.switch-icon').css('backgroundPositionY', -15);
 		}
 	});
+
+  // 預設第一個開啟
+  if ( $('.accordion .product li').eq(0).find('.list-title').next().css('display') == 'none' ) {
+    $('.accordion .product li').eq(0).find('.list-title').next().show();
+    $('.accordion .product li').eq(0).find('.list-title').find('.switch-icon').css('backgroundPositionY', -15);
+  }
+
 });

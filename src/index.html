@@ -14,18 +14,18 @@
 
 	<link rel="stylesheet" href="https://www.capitalfund.com.tw/webstatic/Shared/Styles/info.css">
 
-	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/index.css">
-	<script src="js/lib/jquery-1.9.1.min.js"></script>
-	<script src="js/lib/greensock/TweenMax.min.js"></script>
-	<script src="js/lib/fastclick.js"></script>
-	<script src="js/fun.js"></script>
-	<script src="js/lib/jquery.easing.js"></script>
-	<script src="js/components/Slider.js"></script>
-	<script src="js/components/Template.js"></script>
-	<script src="js/common.js"></script>
-	<script src="js/index.js"></script>
-
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<script src="./js/lib/jquery-1.9.1.min.js"></script>
+	<script src="././js/lib/greensock/TweenMax.min.js"></script>
+	<script src="./js/lib/echarts.min.js"></script>
+	<script src="./js/lib/fastclick.js"></script>
+	<script src="./js/fun.js"></script>
+	<script src="./js/lib/jquery.easing.js"></script>
+	<script src="./js/components/Slider.js"></script>
+	<script src="./js/components/Template.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="./js/index.js"></script>
 	<style type="text/css">
     div.googlecse {
         position: absolute;
@@ -208,13 +208,13 @@
 	          </ul>
 	        </li>
 					<li>
-	          <a href="javascript:;">
+	          <a href="Infomation-1.html">
 	          	<span class="underline-from-center">ETF交易資訊</span>
 	          </a>
 	          <ul>
-	            <li><a href="javascript:;">即時預估淨值</a></li>
-	            <li><a href="javascript:;">申購買回清單</a></li>
-	            <li><a href="javascript:;">追蹤偏離</a></li>
+	            <li><a href="Infomation-1.html">即時預估淨值</a></li>
+	            <li><a href="pcf-00678.html">申購買回清單</a></li>
+	            <li><a href="benchmark_deviate.html">追蹤偏離</a></li>
 	          </ul>
 	        </li>
 					<li>
@@ -228,7 +228,7 @@
 	          </ul>
 	        </li>
 					<li>
-	          <a href="javascript:;">
+	          <a href="QA.html">
 	          	<span class="underline-from-center">ETF Q&A</span>
 	          </a>
 	        </li>
@@ -239,7 +239,15 @@
 			<div class="slider-main">
 				<div class="slider-normalize">
 					<ul class="slider-content">
-						<li><a href="javascript:;"><img src="images/index/kv.jpg" /></a></li>
+						<li>
+							<a href="javascript:;">
+								<img src="images/index/kv.jpg" />
+								<!-- <div class="slider-txt">
+									<div class="txt-1">2017群益Fund Push</div>
+									<div class="txt-2">定期定額操作，借力使力，與群益團結力量大</div>
+								</div> -->
+							</a>
+						</li>
 						<li><a href="javascript:;"><img src="images/index/kv.jpg" /></a></li>
 						<li><a href="javascript:;"><img src="images/index/kv.jpg" /></a></li>
 					</ul>
@@ -249,12 +257,12 @@
 		<div class="container">
 			<div class="NAV section">
 				<h2 class="section-title">即時預估淨值</h2>
-				<div class="more-btn"><a href="javascript:;">more</a></div>
+				<div class="more-btn"><a href="Infomation-1.html">more</a></div>
 				<ul class="NAV-list-box list-box chart-type">
 					<li class="list up">
-						<div class="list-chart"></div>
+						<div id="chart-1" class="list-chart"></div>
 						<div class="list-info">
-							<a href="javascript:;">
+							<a href="Infomation-1.html">
 								<div class="list-date">2017-01-13</div>
 								<div class="list-title">
 									<span class="list-title-num">00643</span>
@@ -277,9 +285,9 @@
 						</div>
 					</li>
 					<li class="list down">
-						<div class="list-chart"></div>
+						<div id="chart-2" class="list-chart"></div>
 						<div class="list-info">
-							<a href="javascript:;">
+							<a href="Infomation-1.html">
 								<div class="list-date">2017-01-13</div>
 								<div class="list-title">
 									<span class="list-title-num">00643</span>
@@ -302,9 +310,9 @@
 						</div>
 					</li>
 					<li class="list up">
-						<div class="list-chart"></div>
+						<div id="chart-3" class="list-chart"></div>
 						<div class="list-info">
-							<a href="javascript:;">
+							<a href="Infomation-1.html">
 								<div class="list-date">2017-01-13</div>
 								<div class="list-title">
 									<span class="list-title-num">00643</span>
@@ -327,9 +335,9 @@
 						</div>
 					</li>
 					<li class="list down">
-						<div class="list-chart"></div>
+						<div id="chart-4" class="list-chart"></div>
 						<div class="list-info">
-							<a href="javascript:;">
+							<a href="Infomation-1.html">
 								<div class="list-date">2017-01-13</div>
 								<div class="list-title">
 									<span class="list-title-num">00643</span>
@@ -355,7 +363,7 @@
 			</div>
 			<div class="Index section">
 				<h2 class="section-title">指數收盤行情</h2>
-				<div class="more-btn"><a href="javascript:;">more</a></div>
+				<div class="more-btn"><a href="etfseries.html">more</a></div>
 				<ul class="Index-list-box list-box data-type">
 
 				</ul>

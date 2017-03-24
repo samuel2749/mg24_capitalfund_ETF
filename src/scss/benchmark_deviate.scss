@@ -7,6 +7,13 @@ $table-bg-accent: #e2e2e2;
 // @import 'components/forms';
 // @import 'components/tables';
 
+.banner {
+  text-align: center;
+  img {
+    width: 100%;
+  }
+}
+
 .main-title {
   // @include clearfix;
   text-align: center;

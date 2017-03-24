@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+	<meta property="og:image" content="https://www.capitalfund.com.tw/webstatic/Shared/Images/FB_icon_512.png" />
+	<title>群益投信理財網</title>
+	<!--gobal css-->
+	<link rel="stylesheet" href="https://www.capitalfund.com.tw/webstatic/Shared/Styles/reset.css">
+	<link rel="stylesheet" href="https://www.capitalfund.com.tw/webstatic/Shared/Styles/gobal.css">
+	<link rel="stylesheet" href="https://www.capitalfund.com.tw/webstatic/Shared/Styles/jquery-ui.css">
+
+	<link rel="stylesheet" href="https://www.capitalfund.com.tw/webstatic/Shared/Styles/info.css">
+
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/pcf.css">
+	<script src="./js/lib/jquery-1.9.1.min.js"></script>
+	<script src="./js/lib/greensock/TweenMax.min.js"></script>
+	<script src="./js/lib/echarts.min.js"></script>
+	<script src="./js/lib/fastclick.js"></script>
+	<script src="./js/fun.js"></script>
+	<script src="./js/lib/jquery.easing.js"></script>
+	<script src="./js/components/Slider.js"></script>
+	<script src="./js/components/Template.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="./js/pcf.js"></script>
+
+	<style type="text/css">
+		div.googlecse {
+			position: absolute;
+			top: 5px;
+			right: 0;
+			width: 146px;
+		}
+
+		.gsc-search-box-tools .gsc-search-box .gsc-input {
+			padding-right: 0 !important;
+		}
+
+		.cse .gsc-search-button input.gsc-search-button-v2,
+		input.gsc-search-button-v2 {
+			padding: 6px !important;
+			margin-top: 0 !important;
+			margin-left: 0 !important;
+		}
+
+		.cse .gsc-control-cse,
+		.gsc-control-cse {
+			padding: 0 !important;
+		}
+		/*.breadcrumbs a[href="#"],.breadcrumbs a[href="javascript://"],.breadcrumbs a[href="javascript:void(0)"],*/
+
+		.breadcrumbs a:nth-child(3) {
+			cursor: text;
+		}
+
+		.gsc-input-box table {
+			height: 100%;
+		}
+
+		input.gsc-input {
+			font-size: 14px !important;
+		}
+	</style>
+
+
+	<!--[if lte IE 8]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script><![endif]-->
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="attention-box">
+			<div class="attention-title">
+				<div class="attention-arrow"></div>
+				<ul>
+					<li class="title1">
+						<a href="javascript:;">
+							<span class="title-img"></span>
+							<span>ETF掃描</span>
+						</a>
+					</li>
+					<li class="title2">
+						<a href="javascript:;">
+							<span class="title-img"></span>
+							<span>焦點ETF</span>
+						</a>
+					</li>
+					<li class="title3">
+						<a href="javascript:;">
+							<span class="title-img"></span>
+							<span>申購買回<br />清單 PCF</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="attention-cont">
+				<div class="cont youtube active">
+					<p>群益二十有成短片</p>
+					<iframe width="200" height="120" src="https://www.youtube.com/embed/vxH6gGigb1g" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="cont list">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<p class="attention-list-num">00643</p>
+								<p class="attention-list-name">群益深證中小</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<p class="attention-list-num">00643</p>
+								<p class="attention-list-name">群益深證中小</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<p class="attention-list-num">00643</p>
+								<p class="attention-list-name">群益深證中小</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<p class="attention-list-num">00643</p>
+								<p class="attention-list-name">群益深證中小</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cont list">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<p class="attention-list-num">00754</p>
+								<p class="attention-list-name">群益深證中小</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<p class="attention-list-num">00754</p>
+								<p class="attention-list-name">群益深證中小</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<p class="attention-list-num">00754</p>
+								<p class="attention-list-name">群益深證中小</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<p class="attention-list-num">00754</p>
+								<p class="attention-list-name">群益深證中小</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header-box">
+			<div id="header">
+				<a href="/" class="logo"><img src="https://www.capitalfund.com.tw/webstatic/Shared/Images/logo.png" alt=""></a>
+				<ul>
+					<!--0618-->
+					<!--0618-->
+
+				</ul>
+				<div class="fans">
+					<a href="https://www.facebook.com/Capitalfund.tw/?fref=ts" target="_blank"><img src="https://www.capitalfund.com.tw/webstatic/Shared/Images/fans.png" alt="群益粉絲團"></a>
+					<a href="https://www.facebook.com/Capitalfund.tw/?fref=ts" target="_blank" id="linkfans">群益粉絲團</a>
+				</div>
+				<div class="blog">
+					<a href="https://www.capitalfund.com.tw/blog/index.aspx" target="_blank"><img src="https://www.capitalfund.com.tw/webstatic/Shared/Images/blog.png" alt="群益部落格"></a>
+					<a href="https://www.capitalfund.com.tw/blog/index.aspx" target="_blank" id="linkblog">群益部落格</a>
+				</div>
+				<div class="select">
+					<span>繁體中文<i></i></span>
+					<ul style="display: none;">
+						<li onclick="window.location.href = '/web/en/'">英文</li>
+						<li onclick="window.location.href = '/web/cn/'">簡體中文</li>
+					</ul>
+				</div>
+				<div class="googlecse">
+					<script>
+						(function() {
+							var cx = '011083547043971680260:qq747szs7ly';
+							var gcse = document.createElement('script');
+							gcse.type = 'text/javascript';
+							gcse.async = true;
+							gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+								'//cse.google.com/cse.js?cx=' + cx;
+							var s = document.getElementsByTagName('script')[0];
+							s.parentNode.insertBefore(gcse, s);
+						})();
+					</script>
+					<div id="___gcse_0">
+						<div class="gsc-control-cse gsc-control-cse-zh_TW">
+							<div class="gsc-control-wrapper-cse" dir="ltr">
+								<form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8">
+									<table cellspacing="0" cellpadding="0" class="gsc-search-box">
+										<tbody>
+											<tr>
+												<td class="gsc-input">
+													<div class="gsc-input-box " id="gsc-iw-id1">
+														<table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 " style="width: 100%; padding: 0px;">
+															<tbody>
+																<tr>
+																	<td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="搜尋" id="gsc-i-id1" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none; background: url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px;"
+																		    dir="ltr" spellcheck="false" placeholder="自訂搜尋"></td>
+																	<td class="gsib_b">
+																		<div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;"><span class="gscb_a" id="gs_cb50">×</span></a></div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div><input type="hidden" name="bgresponse" id="bgresponse"></td>
+												<td class="gsc-search-button"><input type="image" src="https://www.google.com/uds/css/v2/search_box_icon.png" class="gsc-search-button gsc-search-button-v2" title="搜尋"></td>
+												<td class="gsc-clear-button">
+													<div class="gsc-clear-button" title="清除結果">&nbsp;</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<table cellspacing="0" cellpadding="0" class="gsc-branding">
+										<tbody>
+											<tr>
+												<td class="gsc-branding-user-defined"></td>
+												<td class="gsc-branding-text">
+													<div class="gsc-branding-text">技術提供：</div>
+												</td>
+												<td class="gsc-branding-img"><img src="https://www.google.com/cse/static/images/1x/googlelogo_grey_46x15dp.png" class="gsc-branding-img" srcset="https://www.google.com/cse/static/images/2x/googlelogo_grey_46x15dp.png 2x"></td>
+											</tr>
+										</tbody>
+									</table>
+								</form>
+								<div class="gsc-results-wrapper-overlay">
+									<div class="gsc-results-close-btn" tabindex="0"></div>
+									<div class="gsc-tabsAreaInvisible">
+										<div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">自訂搜尋</div><span class="gs-spacer"> </span></div>
+									<div class="gsc-tabsAreaInvisible"></div>
+									<div class="gsc-above-wrapper-area-invisible">
+										<table cellspacing="0" cellpadding="0" class="gsc-above-wrapper-area-container">
+											<tbody>
+												<tr>
+													<td class="gsc-result-info-container">
+														<div class="gsc-result-info-invisible"></div>
+													</td>
+													<td class="gsc-orderby-container">
+														<div class="gsc-orderby-invisible">
+															<div class="gsc-orderby-label gsc-inline-block">排序依據：</div>
+															<div class="gsc-option-menu-container gsc-inline-block">
+																<div class="gsc-selected-option-container gsc-inline-block">
+																	<div class="gsc-selected-option">Relevance</div>
+																	<div class="gsc-option-selector"></div>
+																</div>
+																<div class="gsc-option-menu-invisible">
+																	<div class="gsc-option-menu-item gsc-option-menu-item-highlighted">
+																		<div class="gsc-option">Relevance</div>
+																	</div>
+																	<div class="gsc-option-menu-item">
+																		<div class="gsc-option">Date</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="gsc-adBlockInvisible"></div>
+									<div class="gsc-wrapper">
+										<div class="gsc-adBlockInvisible"></div>
+										<div class="gsc-resultsbox-invisible">
+											<div class="gsc-resultsRoot gsc-tabData gsc-tabdActive">
+												<table cellspacing="0" cellpadding="0" class="gsc-resultsHeader">
+													<tbody>
+														<tr>
+															<td class="gsc-twiddleRegionCell">
+																<div class="gsc-twiddle">
+																	<div class="gsc-title">網頁</div>
+																</div>
+																<div class="gsc-stats"></div>
+																<div class="gsc-results-selector gsc-all-results-active">
+																	<div class="gsc-result-selector gsc-one-result" title="顯示單一結果">&nbsp;</div>
+																	<div class="gsc-result-selector gsc-more-results" title="顯示更多結果">&nbsp;</div>
+																	<div class="gsc-result-selector gsc-all-results" title="顯示所有結果">&nbsp;</div>
+																</div>
+															</td>
+															<td class="gsc-configLabelCell"></td>
+														</tr>
+													</tbody>
+												</table>
+												<div>
+													<div class="gsc-expansionArea"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="gsc-modal-background-image" tabindex="0"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--0618-->
+			</div>
+			<div id="nav">
+				<ul class="navCont">
+	        <li>
+	          <a href="javascript:;">
+	          	<span class="underline-from-center">ETF產品櫥窗</span>
+	          </a>
+	          <ul>
+	            <li><a href="javascript:;">基金產品</a></li>
+	            <li><a href="javascript:;">重要公告</a></li>
+	          </ul>
+	        </li>
+					<li>
+	          <a href="Infomation-1.html">
+	          	<span class="underline-from-center">ETF交易資訊</span>
+	          </a>
+	          <ul>
+	            <li><a href="Infomation-1.html">即時預估淨值</a></li>
+	            <li><a href="pcf-00678.html">申購買回清單</a></li>
+	            <li><a href="benchmark_deviate.html">追蹤偏離</a></li>
+	          </ul>
+	        </li>
+					<li>
+	          <a href="javascript:;">
+	          	<span class="underline-from-center">ETF投資攻略</span>
+	          </a>
+	          <ul>
+	            <li><a href="javascript:;">市場情報</a></li>
+	            <li><a href="javascript:;">入門導覽</a></li>
+	            <li><a href="javascript:;">ETF掃描</a></li>
+	          </ul>
+	        </li>
+					<li>
+	          <a href="QA.html">
+	          	<span class="underline-from-center">ETF Q&A</span>
+	          </a>
+	        </li>
+	      </ul>
+			</div>
+		</div>
+		<div class="kv">
+			<img src="images/kv/information.jpg" />
+			<span class="kv-txt">ETF指數收盤行情</span>
+		</div>
+		<div class="container">
+			<div class="breadcrumb">
+				<a href="index.html">首頁</a>
+				 >
+				<a href="Infomation-1.html">ETF交易資訊</a>
+				 >
+			 	<a href="javascript:;">申購買回清單</a>
+			</div>
+			<ul class="main-title">
+				<li><a href="Infomation-2.html">即時預估淨值</a></li>
+				<li class="active"><a href="javascript:;">申購買回清單</a></li>
+				<li><a href="benchmark_deviate.html">追蹤偏離</a></li>
+			</ul>
+			<ul class="select">
+				<li class="ETF-type">
+					<select>
+			      <option value="all"><img src="./images/select-type-icon.png" />00678 群益NBI生技</option>
+			      <option value="stock">00679 群益NBI生技</option>
+			      <option value="fund">00680 群益NBI生技</option>
+						<option value="bond">00681 群益NBI生技</option>
+				  </select>
+				</li>
+			</ul>
+			<h2 class="section-title"><span class="title-num">00678</span> <span class="title-name">群益NBI生技</span></h2>
+			<div class="info-box">
+				<div class="left-area">
+					<div class="info announcement">
+						<div class="info-title">
+							申購買回清單公告
+						</div>
+						<div class="info-list">
+							<ul>
+								<li>
+									<div class="name">基金淨資產價值(元)</div>
+									<div class="val">TWD 4,764,125,136</div>
+								</li>
+								<li>
+									<div class="name">每受益權單位淨資產價值(元)</div>
+									<div class="val">TWD 13.55</div>
+								</li>
+								<li>
+									<div class="name">已發行受益權單位總數</div>
+									<div class="val">351,020,000</div>
+								</li>
+								<li>
+									<div class="name">與前日已發行單位差異數</div>
+									<div class="val">-1,000,000</div>
+								</li>
+								<li>
+									<div class="name">每現金申購單位之受益權單位數</div>
+									<div class="val">500,000</div>
+								</li>
+								<li>
+									<div class="name">每現金申購買回基數約當市值(元)</div>
+									<div class="val">6,772,996</div>
+								</li>
+								<li>
+									<div class="name">每申購基數之預收申購總價金(元)</div>
+									<div class="val">7,455,296</div>
+								</li>
+								<li>
+									<div class="name">2017-02-13 每基數申購總價金差額(元)</div>
+									<div class="val">-621,417</div>
+								</li>
+								<li>
+									<div class="name">2017-02-13 每基數實際申購總價金(元)</div>
+									<div class="val">6,791,542</div>
+								</li>
+							</ul>
+						</div>
+						<div class="exchange-rate">
+							<span>匯率(2017/02/13) : </span>
+							<ul>
+								<li>1 USD = 30.9870 TWD</li>
+								<li>1 USD = 30.9870 TWD</li>
+								<li>1 USD = 30.9870 TWD</li>
+							</ul>
+						</div>
+					</div>
+					<div class="info purchase">
+						<div class="info-title">
+							申購/買回控管
+						</div>
+						<div class="list">
+							申購申請說明：深中小ETF之新QFII額度已取得，於2016/9/5開始接受申購。每月可供買回基數及計算依據：經理公司所發行之群益深証中小板證券投資信託基金(下稱「本基金」)，係以指數化策略複製追蹤深証中小板指數績效表現為本基金投資組合管理之目標，本基金已取得大陸地區合格境外機構投資者（QFII）之開放式中國基金帳戶投資額度，得投資於大陸地區深圳交易所之股票；根據大陸地區「合格境外機構投資者境內證券投資外匯管理規定」第17條第2項規定，「開放式基金可根據申購或贖回的軋差淨額，由託管人為其按日辦理相關的資金的匯入或匯出。每月累計淨匯出資金不得超過上年底基金境內總資產的20%」。2016/12/30本基金投資於QFII的總資產為人民幣1,080,619,600元，因此本基金於2016年每月可匯出QFII金額上限為人民幣216,123,920元。以本基金2017/1/24每基數約當市值新台幣6,643,703元，以及人民幣兌新台幣評價匯率(CNY/TWD)1：4.5710進行試算，每月可買回基數約為148個基數。納入基金流動性準備考量以及匯率波動，本月可買回基數開放128個基數。若當月份基金淨值漲跌幅超越可開放基數，本公司將重新檢視可買回基數之合理性。
+						</div>
+						<div class="list date">
+							<p>2017/02/14</p>
+							<ul>
+								<li>可買回基數：8組、本日可買回之號碼：71號</li>
+								<li>預計次一營業日可排到之預約號碼：71號、本日接受起始預約號碼：71號</li>
+								<li>本月剩餘可買回基數：121組</li>
+								<li>流動量提供者與投資人之可買回基數分配比例：1:1</li>
+							</ul>
+						</div>
+						<div class="list principle">
+							<p>執行原則：</p>
+							<ul>
+								<li>流動性提供者與投資人排隊分流。流動性提供者與投資人（含自然人及法人、含非流動量提供者之參與券商自營部門）皆適用此預約規則提出贖回申請。</li>
+								<li>每一投資人單日僅能申請買回一個基數，當日不得重複向多個券商申請，由投信依投資人身分編號（ID）確認及篩選。單日重複申請者，將僅保留第一筆申請。</li>
+							</ul>
+						</div>
+						<div class="download-btn">
+							<a href="javascript:;">
+								買回控管機制文件下載 <img src="./images/download-icon.png" />
+							</a>
+						</div>
+					</div>
+					<div class="farther-box">
+						<div class="remark farther">
+							<div class="farther-title">備註</div>
+							<div class="farther-line"></div>
+							<ul class="farther-list">
+								<li>每現金申購/買回基數之實際申購總價金、申購總價金差額及買回總價金，以基金經理公司通知給付之金額為準。</li>
+								<li>若因申購失敗或買回失敗而影響當日基金淨值時，每一申購基數申購總價金差額以及實際申購總價金，將以最新資料為準。</li>
+								<li>以上資料係依據各基金信託契約相關條款之規定公告。</li>
+								<li>本現金申購/買回清單內容以經理公司網站公告之中文版本為準，本基金其餘相關資訊請參考經理公司網站。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="right-area">
+					<div class="info stock">
+						<div class="info-title">
+							股票
+						</div>
+						<div class="row table-box">
+						  <div class="col-sm-12">
+						    <div class="table-responsive">
+						      <table class="table table-bordered">
+						        <thead>
+						          <tr>
+						            <th>股票代號</th>
+						            <th>股票名稱</th>
+						            <th>持股權重<br>(%)</th>
+						            <th>股數</th>
+						          </tr>
+						        </thead>
+										<tbody>
+											<tr>
+												<td>REGN US</td>
+												<td>REGENERON PHARMACEUTICAL</td>
+												<td>6.35</td>
+												<td>4,882</td>
+											</tr>
+											<tr>
+												<td>REGN US</td>
+												<td>REGENERON PHARMACEUTICAL</td>
+												<td>6.35</td>
+												<td>4,882</td>
+											</tr>
+											<tr>
+												<td>REGN US</td>
+												<td>REGENERON PHARMACEUTICAL</td>
+												<td>6.35</td>
+												<td>4,882</td>
+											</tr>
+											<tr>
+												<td>REGN US</td>
+												<td>REGENERON PHARMACEUTICAL</td>
+												<td>6.35</td>
+												<td>4,882</td>
+											</tr>
+											<tr>
+												<td>REGN US</td>
+												<td>REGENERON PHARMACEUTICAL</td>
+												<td>6.35</td>
+												<td>4,882</td>
+											</tr>
+											<tr>
+												<td>REGN US</td>
+												<td>REGENERON PHARMACEUTICAL</td>
+												<td>6.35</td>
+												<td>4,882</td>
+											</tr>
+											<tr>
+												<td>REGN US</td>
+												<td>REGENERON PHARMACEUTICAL</td>
+												<td>6.35</td>
+												<td>4,882</td>
+											</tr>
+											<tr>
+												<td>REGN US</td>
+												<td>REGENERON PHARMACEUTICAL</td>
+												<td>6.35</td>
+												<td>4,882</td>
+											</tr>
+											<tr>
+												<td>REGN US</td>
+												<td>REGENERON PHARMACEUTICAL</td>
+												<td>6.35</td>
+												<td>4,882</td>
+											</tr>
+											<tr>
+												<td>REGN US</td>
+												<td>REGENERON PHARMACEUTICAL</td>
+												<td>6.35</td>
+												<td>4,882</td>
+											</tr>
+										</tbody>
+						      </table>
+						    </div>
+						  </div>
+						</div>
+						<div class="load-more-btn">
+							<a href="javascript:;">
+								<img src="./images/more-icon.png" />
+								看更多
+							</a>
+						</div>
+					</div>
+					<div class="info other">
+						<div class="accordion">
+							<div class="accordion-content">
+								<ul class="accordion-title">
+									<li class="product active">
+										<a href="javascript:;">期貨</a>
+										<div class="accordion-title-arrow"></div>
+									</li>
+									<li class="transaction">
+										<a href="javascript:;">附買回債券</a>
+										<div class="accordion-title-arrow"></div>
+									</li>
+									<li class="market">
+										<a href="javascript:;">其他資產</a>
+										<div class="accordion-title-arrow"></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="row table-box futures">
+						  <div class="col-sm-12">
+						    <div class="table-responsive">
+						      <table class="table table-bordered">
+						        <thead>
+						          <tr>
+						            <th>期貨名稱</th>
+												<th>持股權重<br>(%)</th>
+						            <th>口數</th>
+						            <th>契約年約</th>
+						          </tr>
+						        </thead>
+										<tbody>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>0.27</td>
+												<td>40</td>
+												<td>201702</td>
+											</tr>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>0.27</td>
+												<td>40</td>
+												<td>201702</td>
+											</tr>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>0.27</td>
+												<td>40</td>
+												<td>201702</td>
+											</tr>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>0.27</td>
+												<td>40</td>
+												<td>201702</td>
+											</tr>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>0.27</td>
+												<td>40</td>
+												<td>201702</td>
+											</tr>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>0.27</td>
+												<td>40</td>
+												<td>201702</td>
+											</tr>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>0.27</td>
+												<td>40</td>
+												<td>201702</td>
+											</tr>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>0.27</td>
+												<td>40</td>
+												<td>201702</td>
+											</tr>
+										</tbody>
+						      </table>
+						    </div>
+						  </div>
+							<div class="load-more-btn">
+								<a href="javascript:;">
+									<img src="./images/more-icon.png" />
+									看更多
+								</a>
+							</div>
+						</div>
+						<div class="row table-box bond">
+						  <div class="col-sm-12">
+						    <div class="table-responsive">
+						      <table class="table table-bordered">
+						        <thead>
+						          <tr>
+						            <th>名稱</th>
+						            <th>金額</th>
+						          </tr>
+						        </thead>
+										<tbody>
+											<tr>
+												<td>A01105 央債101-5期</td>
+												<td>123,100,000</td>
+											</tr>
+											<tr>
+												<td>A01105 央債101-5期</td>
+												<td>123,100,000</td>
+											</tr>
+											<tr>
+												<td>A01105 央債101-5期</td>
+												<td>123,100,000</td>
+											</tr>
+											<tr>
+												<td>A01105 央債101-5期</td>
+												<td>123,100,000</td>
+											</tr>
+											<tr>
+												<td>A01105 央債101-5期</td>
+												<td>123,100,000</td>
+											</tr>
+										</tbody>
+						      </table>
+						    </div>
+						  </div>
+							<div class="load-more-btn">
+								<a href="javascript:;">
+									<img src="./images/more-icon.png" />
+									看更多
+								</a>
+							</div>
+						</div>
+						<div class="row table-box assets">
+						  <div class="col-sm-12">
+						    <div class="table-responsive">
+						      <table class="table table-bordered">
+						        <thead>
+						          <tr>
+						            <th>項目</th>
+						            <th>金額</th>
+						          </tr>
+						        </thead>
+										<tbody>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>USD 547,258.52</td>
+											</tr>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>USD 547,258.52</td>
+											</tr>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>USD 547,258.52</td>
+											</tr>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>USD 547,258.52</td>
+											</tr>
+											<tr>
+												<td>富時中國A50指數期貨</td>
+												<td>USD 547,258.52</td>
+											</tr>
+										</tbody>
+						      </table>
+						    </div>
+						  </div>
+							<div class="load-more-btn">
+								<a href="javascript:;">
+									<img src="./images/more-icon.png" />
+									看更多
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			群益投信獨立經營管理九十九年金管投信新字第025號 © 2017 by Capital Investment Trust Corporation. All Rights reserved.
+		</div>
+	</div>
+
+</body>
+
+</html>

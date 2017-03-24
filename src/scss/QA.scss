@@ -7,8 +7,10 @@ $table-bg-accent: #e2e2e2;
 @import 'components/forms';
 @import 'components/tables';
 
-.banner {
-  text-align: center;
+.kv {
+  .kv-txt {
+    color: #FFF;
+  }
 }
 
 .accordion {
