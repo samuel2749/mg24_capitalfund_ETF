@@ -140,6 +140,26 @@ body {
   }
 }
 
+.load-more-btn {
+  max-width: 552px;
+  width: 40%;
+  height: 46px;
+  line-height: 46px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 3px;
+  background: #e2e2e2;
+  margin: 35px auto 0;
+  img {
+    position: relative;
+    top: 2px;
+  }
+  a {
+    display: block;
+    color: #5C584C;
+  }
+}
+
 .farther {
   margin-top: 42px;
   .farther-title {

@@ -8,7 +8,38 @@ $(function() {
     if (j_this.hasClass('active')) return;
 
     j_this.addClass('active').siblings().removeClass('active');
+
+    if ( $(this).hasClass('select-table-type') ) {
+      console.log('table')
+      $('.table-box').show();
+      $('.list-box').hide();
+    } else if ( $(this).hasClass('select-chart-type') ) {
+      console.log('chart')
+      $('.table-box').hide();
+      $('.list-box').show();
+    }
   });
+
+
+  $('.ETF-type select').on('change', function() {
+    console.log( $(this).val() );
+    var val = $(this).val();
+    if ( val === "請選擇其他ETF類別") {
+      $('.section-box').hide();
+      $('.section-box.ETFs-all').show();
+    } else if ( val === "股票ETFs") {
+      $('.section-box').hide();
+      $('.section-box.ETFs-stock').show();
+    } else if ( val === "基金ETFs") {
+      $('.section-box').hide();
+      $('.section-box.ETFs-fund').show();
+    } else if ( val === "債券ETFs") {
+      $('.section-box').hide();
+      $('.section-box.ETFs-bond').show();
+    }
+  })
+
+
 
   // renderList();
 

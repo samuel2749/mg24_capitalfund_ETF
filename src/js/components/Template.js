@@ -19,7 +19,7 @@ var Template = function( pEle, pType, pData ) {
     if (pType === 'NAV') {
       template = `
         <li class="list ${situation}">
-          <div class="line-chart"></div>
+          <div class="list-chart"></div>
           <div class="NAV-info list-info">
             <a href="javascript:;">
               <div class="NAV-date list-date">${pData.date}</div>

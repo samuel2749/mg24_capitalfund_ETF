@@ -10,17 +10,16 @@ $(function() {
 	});
 
 	/*NAV*/
-	$.ajax({
-		url: './js/data/NAV.json',
-		dataType: 'json'
-	})
-	.then(function(data) {
-		// renderNAVList(res);
-		var template = new Template($('.NAV-list-box'), 'NAV', data.data);
-		// console.log('template = ', template);
-	}, function(err) {
-		console.log('err = ', err);
-	});
+	// $.ajax({
+	// 	url: './js/data/NAV.json',
+	// 	dataType: 'json'
+	// })
+	// .then(function(data) {
+	// 	// renderNAVList(res);
+	// 	var template = new Template($('.NAV-list-box'), 'NAV', data.data);
+	// }, function(err) {
+	// 	console.log('err = ', err);
+	// });
 
 	/*index*/
 	$.ajax({
