@@ -138,6 +138,10 @@ $(function() {
 
 		myChart.setOption(option);
 
+		$(window).resize(function() {
+			myChart.resize();
+		})
+
 	}
 
 	/*NAV*/
@@ -153,23 +157,23 @@ $(function() {
 	// });
 
 	/*index*/
-	$.ajax({
-		url: './js/data/index.json',
-		dataType: 'json'
-	})
-	.then(function(data) {
-		var template = new Template($('.Index-list-box'), 'Index', data.data);
-
-		// 偶數的list加上.even
-		var item = $('.Index-list-box').find('li').filter(function(index, list) {
-			if (index % 2 === 1) {
-				$(list).addClass('even');
-				return true
-			}
-		});
-	}, function(err) {
-		console.log('err = ', err);
-	});
+	// $.ajax({
+	// 	url: './js/data/index.json',
+	// 	dataType: 'json'
+	// })
+	// .then(function(data) {
+	// 	var template = new Template($('.Index-list-box'), 'Index', data.data);
+	//
+	// 	// 偶數的list加上.even
+	// 	var item = $('.Index-list-box').find('li').filter(function(index, list) {
+	// 		if (index % 2 === 1) {
+	// 			$(list).addClass('even');
+	// 			return true
+	// 		}
+	// 	});
+	// }, function(err) {
+	// 	console.log('err = ', err);
+	// });
 
 	function renderNAVList(data) {
 		var data = data.data;

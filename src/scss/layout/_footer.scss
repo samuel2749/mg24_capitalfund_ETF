@@ -13,3 +13,11 @@
     // color: #FFF;
   }
 }
+
+@media screen and (max-width: 1000px) {
+	#footer {
+		.width-1000 {
+			width: 100%;
+		}
+	}
+}

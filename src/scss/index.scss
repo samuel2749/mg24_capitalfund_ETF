@@ -32,7 +32,7 @@
   .more-btn {
     position: absolute;
     top: 18px;
-    right: 0;
+    right: 5px;
     a {
       transition: .3s;
     }
@@ -58,22 +58,26 @@
   }
   .market {
     .list-img {
-      background: url(../images/index/category1.jpg);
+      background: url(../images/index/category1.jpg) 50% 50% no-repeat;
+      background-size: cover;
     }
   }
   .announcement {
     .list-img {
-      background: url(../images/index/category2.jpg);
+      background: url(../images/index/category2.jpg) 50% 50% no-repeat;
+      background-size: cover;
     }
   }
   .novice {
     .list-img {
-      background: url(../images/index/category3.jpg);
+      background: url(../images/index/category3.jpg) 50% 50% no-repeat;
+      background-size: cover;
     }
   }
   .ETF {
     .list-img {
-      background: url(../images/index/category4.jpg);
+      background: url(../images/index/category4.jpg) 50% 50% no-repeat;
+      background-size: cover;
     }
   }
   .youtube-video {

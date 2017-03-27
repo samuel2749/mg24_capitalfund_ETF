@@ -4,6 +4,10 @@
 	border-top: 7px solid #D6000F;
 }
 
+.header-box {
+  background: #FFF;
+}
+
 /*清除樣式*/
 #nav {
 	font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
@@ -158,4 +162,28 @@
   100% {
     opacity: 1;
   }
+}
+
+
+@media screen and (max-width: 1000px) {
+  #header {
+		width: 100%;
+		.select {
+		  right: 153px;
+			left: auto;
+		}
+		.blog {
+			right: 257px;
+			left: auto;
+		}
+		.fans {
+		  right: 358px;
+			left: auto;
+		}
+	}
+}
+@media screen and (max-width: 1060px) {
+  #nav {
+		width: 100%;
+	}
 }
