@@ -55,6 +55,25 @@
   .list-info {
     border: 1px solid #E2E2E2;
     height: 150px;
+    a {
+      display: block;
+    }
+    .list-txt {
+      a {
+        transition: .3s;
+        &:hover {
+          color: #ffc7c7;
+        }
+      }
+    }
+    &.border {
+      transition: .3s;
+      &:hover {
+        border-left: 1px solid #d6000f;
+        border-right: 1px solid #d6000f;
+        border-bottom: 1px solid #d6000f;
+      }
+    }
   }
   .market {
     .list-img {

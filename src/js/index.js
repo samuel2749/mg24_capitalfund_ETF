@@ -211,35 +211,35 @@ $(function() {
 		});
 	}
 
-	function renderIndexList(data) {
-		var data = data.data;
-		console.log('data = ', data);
-		data.map(function(data) {
-			console.log(data);
-			var template = `
-				<li class="list up">
-					<div class="Index-info list-info">
-						<a href="javascript:;">
-							<div class="Index-date list-date">${data.date}</div>
-							<div class="Index-name list-title">
-								<span class="list-title-name">${data.name}</span>
-							</div>
-							<div class="line"></div>
-							<div class="Index-price">
-								<span class="list-name">價格</span>
-								<span class="list-val">${data.price}</span>
-							</div>
-							<div class="Index-amplitude amplitude">
-								<span class="list-name">當日漲跌幅</span>
-								<span class="list-val">${data.amplitude}%</span>
-							</div>
-						</a>
-					</div>
-				</li>`;
-			$('.Index-list-box').append(template);
-		});
-
-	}
+	// function renderIndexList(data) {
+	// 	var data = data.data;
+	// 	console.log('data = ', data);
+	// 	data.map(function(data) {
+	// 		console.log(data);
+	// 		var template = `
+	// 			<li class="list up">
+	// 				<div class="Index-info list-info">
+	// 					<a href="javascript:;">
+	// 						<div class="Index-date list-date">${data.date}</div>
+	// 						<div class="Index-name list-title">
+	// 							<span class="list-title-name">${data.name}</span>
+	// 						</div>
+	// 						<div class="line"></div>
+	// 						<div class="Index-price">
+	// 							<span class="list-name">價格</span>
+	// 							<span class="list-val">${data.price}</span>
+	// 						</div>
+	// 						<div class="Index-amplitude amplitude">
+	// 							<span class="list-name">當日漲跌幅</span>
+	// 							<span class="list-val">${data.amplitude}%</span>
+	// 						</div>
+	// 					</a>
+	// 				</div>
+	// 			</li>`;
+	// 		$('.Index-list-box').append(template);
+	// 	});
+	//
+	// }
 
 
 

@@ -1,11 +1,11 @@
 #footer {
-  position: relative;
-  padding: 13px 0 10px;
-  // height: 90px;
-  background: #4a4a4a;
-  text-align: center;
-  font-size: 12px;
-  color: #FFF;
+  // position: relative;
+  // padding: 13px 0 10px;
+  // // height: 90px;
+  // background: #4a4a4a;
+  // text-align: center;
+  // font-size: 12px;
+  // color: #FFF;
   span {
     // display: inline-block;
     // font-size: 14px;
@@ -14,10 +14,48 @@
   }
 }
 
+#m-footer {
+  display: none;
+  background: #FFF;
+}
+#m-footer {border-top: 4px solid #d6000f;}
+#m-footer { margin: 0 auto; width: 100%; padding: 2% 0; }
+#m-footer .logo { width: 29%; }
+#m-footer span { display: inline-block; width: 68%; color: #575757; font-size: 15px; line-height: 160%; }
+#m-footer p { color: #575757; font-size: 15px; line-height: 150%; text-align: center; }
+#m-footer p a { color: #0075c2; }
+#m-footer p i { margin: 0 4%; }
+#m-footer p.address { text-align: left; padding-left: 2.9%; }
+#m-footer .foo_con { padding: 0 2.9%; }
+#m-footer .foo_con p { text-align: left; }
+
 @media screen and (max-width: 1000px) {
 	#footer {
 		.width-1000 {
 			width: 100%;
 		}
+    .bottom-footer {
+      .width-1000 {
+        div {
+          display: none;
+        }
+      }
+    }
 	}
+}
+
+
+@media screen and (max-width: 640px) {
+  #footer {
+    display: none;
+  }
+  #m-footer {
+    display: block;
+  }
+}
+
+@media all and (max-width: 370px) {
+  #m-footer {
+    border-top: 2px solid #d6000f;
+  }
 }

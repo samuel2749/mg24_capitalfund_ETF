@@ -9,7 +9,7 @@
 }
 
 /*清除樣式*/
-#nav {
+#menu {
 	font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
 	> ul {
 		background: none;
@@ -31,7 +31,7 @@
 }
 
 
-#nav {
+#menu {
 	margin-top: -14px;
 	width: 1060px;
 	.navCont {
@@ -165,6 +165,12 @@
 }
 
 
+@media screen and (max-width: 1060px) {
+  #menu {
+		width: 100%;
+	}
+}
+
 @media screen and (max-width: 1000px) {
   #header {
 		width: 100%;
@@ -182,8 +188,83 @@
 		}
 	}
 }
-@media screen and (max-width: 1060px) {
-  #nav {
-		width: 100%;
+
+#m-header {
+	display: none;
+}
+#m-menu {
+	display: none;
+}
+
+@media screen and (max-width: 660px) {
+  #menu .navCont > li > a {
+    padding: 10px 29px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	#m-header {display: block;}
+	#m-header { position: relative; width: 100%; z-index: 99; background-size: cover; max-width: 640px; }
+	#m-header img { width: 100%; }
+	#m-header .m-nav { position: fixed; }
+	#m-header .m-nav img.trigger { width: 8.4%; position: absolute; top: 29%; left: 2.3%; }
+	#m-header .m-nav img.close { width: 10.4%; position: absolute; top: 8%; left: 1.3%; display: none; }
+	#m-header .menu { border-top: 5px solid #a10807; border-bottom: 5px solid #a10807; height: 569px; width: 436px; position: absolute; left: 15px; top: 100px; display: none; }
+	#m-header .menu:before { width: 0; height: 0; border-style: solid; border-width: 0 10px 10px 10px; border-color: transparent transparent #a10807 transparent; position: absolute; top: -15px; left: 15px; }
+	#m-header .menu div { background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fcfcfc), to(#efefef)); background: -webkit-linear-gradient(#fcfcfc, #efefef); background: -moz-linear-gradient(#fcfcfc, #efefef); background: -ms-linear-gradient(#fcfcfc, #efefef); background: -o-linear-gradient(#fcfcfc, #efefef); background: linear-gradient(#fcfcfc, #efefef); -pie-background: linear-gradient(#fcfcfc, #efefef); color: #000; font-size: 32px; line-height: 1em; border-bottom: 1px solid #d2d2d2; border-top: 1px solid #d2d2d2; border-right: 2px solid #d2d2d2; border-left: 2px solid #d2d2d2; padding: 1.45em; position: relative; }
+	#m-header .menu div b { position: absolute; top: 31%; left: 25%; font-weight: bold; }
+	#m-header .menu div i.arrow { width: 3%; position: absolute; top: 35%; right: 3%; }
+	#m-header .menu div i.arrow img { width: 100%; }
+	#m-header .menu div i.icon { width: 13%; position: absolute; top: 25%; left: 6.3%; }
+	#m-header .menu div i.icon img { width: 100%; }
+	#wrap {
+		border: 0;
+	}
+  #header, #menu {
+		display: none;
+	}
+	#m-menu {
+		display: block;
+		position: fixed;
+    z-index: 999;
+    width: 100%;
+    bottom: -54px;
+    background: #FFF;
+    border-top: 3px solid #D6000F;
+		@include clearfix;
+		.m-menu-controller {
+	    position: relative;
+	    height: 55px;
+	    .controller-icon {
+	      @include align();
+	      width: 82px;
+	      height: 13px;
+	      background: url(../images/m/menu/menu-controller.png) 0 0 no-repeat;
+	    }
+	    a {
+	      width: 100%;
+	      height: 100%;
+	    }
+			&.active {
+				.controller-icon {
+					background: url(../images/m/menu/menu-controller.png) 0 -13px no-repeat;
+				}
+			}
+	  }
+		// .m-menu-controller {
+		// 	&.active {
+		// 		.controller-icon {
+		//
+		// 		}
+		// 	}
+		// }
+		li {
+			float: left;
+			width: 25%;
+			text-align: center;
+		}
+		a {
+			display: block;
+		}
 	}
 }

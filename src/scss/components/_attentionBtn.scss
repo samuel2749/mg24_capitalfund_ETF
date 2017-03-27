@@ -149,6 +149,12 @@
       & ~ li {
         border-top: 1px solid rgba(255, 255, 255, .3);
       }
+      &:hover {
+        background: rgba(255, 255, 255, .8);
+        a {
+          color: #545047;
+        }
+      }
     }
     .attention-list-num {
 
@@ -156,5 +162,11 @@
     .attention-list-name {
       margin-top: 2px;
     }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .attention-box {
+    display: none;
   }
 }

@@ -19,7 +19,7 @@
 // layout
 // @import "layout/popup";
 @import "layout/header";
-// @import "layout/footer";
+@import "layout/footer";
 
 // components
 @import 'components/slider';
@@ -198,8 +198,9 @@ body {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  body {
-    // overflow-x: auto;
+@media screen and (max-width: 640px) {
+  .slider, .kv {
+    display: inline-block;
+    margin-top: 75px;
   }
 }

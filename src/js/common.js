@@ -11,6 +11,23 @@ $(function() {
 	var initRight = -312;
 
 	setAttentionBtn();
+	mMenu();
+
+	function mMenu() {
+		$('.m-menu-controller').on('click', function() {
+			$(this).toggleClass('active');
+			if ( $(this).hasClass('active') ) {
+				console.log('ff');
+				TweenMax.to($('#m-menu'), .3, {
+					bottom: 0
+				});
+			} else {
+				TweenMax.to($('#m-menu'), .3, {
+					bottom: -54
+				});
+			}
+		});
+	}
 
 	function setAttentionBtn() {
 		titleClick();
