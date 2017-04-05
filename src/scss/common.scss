@@ -199,8 +199,11 @@ body {
 }
 
 @media screen and (max-width: 640px) {
+  .wrap {
+    padding-top: 12.5%;
+  }
   .slider, .kv {
-    display: inline-block;
-    margin-top: 75px;
+    // display: inline-block;
+    // margin-top: 75px;
   }
 }

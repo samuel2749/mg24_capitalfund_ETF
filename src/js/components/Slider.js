@@ -5,11 +5,30 @@ var Slider = function( cfg ) {
 	var j_normalize = j_slider.find('.slider-normalize');
 	var j_ul = j_slider.find('.slider-content');
 	var j_li = j_ul.find('li');
+	var max_Width = 1200;
 	var j_li_width = j_li.width();
 	var j_li_length = j_li.length;
 	var addCloneItem = 1;
 	var j_normalize_position = j_li_width * addCloneItem;
 	var intervalId, interval;
+
+	$(window).resize(function() {
+		var win_Width = $(window).width();
+		if ( win_Width <= 1200 ) {
+			j_ul.find('li').css({width: win_Width});
+			j_li_width = win_Width;
+			j_ul.width( j_li_width * (j_li_length + (addCloneItem * 2)) );
+			j_normalize_position = j_li_width * addCloneItem;
+			j_normalize.css({'left': -j_normalize_position});
+		} else {
+			j_ul.find('li').css({width: max_Width});
+			j_li_width = max_Width;
+			j_ul.width( j_li_width * (j_li_length + (addCloneItem * 2)) );
+			j_normalize_position = j_li_width * addCloneItem;
+			j_normalize.css({'left': -j_normalize_position});
+		}
+		console.log('j_normalize_position = ', j_normalize_position);
+	}).resize();
 
 	if (cfg.random) {
 		randomSlide();
@@ -105,14 +124,13 @@ var Slider = function( cfg ) {
 		});
 	}
 
-
-	j_ul.width( j_li_width * (j_li_length + (addCloneItem * 2)) );
+	// j_ul.width( j_li_width * (j_li_length + (addCloneItem * 2)) );
 	for (var i = 0; i < addCloneItem; i++) {
 		j_ul.append(j_li.eq(i).clone());
 		j_ul.prepend(j_li.eq(j_li_length - i -1).clone());
 	}
 
-	j_normalize.css({'left': -j_normalize_position});
+	// j_normalize.css({'left': -j_normalize_position});
 
 	var startX,
       endX;

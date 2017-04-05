@@ -29,8 +29,9 @@ $(function() {
 	    tooltip: {
 	        trigger: 'asix',
 	        axisPointer: {
+						// type: 'cross',
 	            lineStyle: {
-	                color: '#ddd'
+	                color: '#ebc7c9'
 	            }
 	        },
 	        backgroundColor: 'rgba(255,255,255,1)',
@@ -38,7 +39,19 @@ $(function() {
 	        textStyle: {
 	            color: '#D6000F',
 	        },
-	        extraCssText: 'box-shadow: 0 0 5px rgba(0,0,0,0.3)'
+	        extraCssText: 'box-shadow: 0 0 5px rgba(0,0,0,0.3)',
+					position: function(params) {
+						// ['50%', '100%']
+						// console.log('0: ', params[0]);
+						// console.log('1: ', params[1]);
+						return [params[0], '100%']
+					},
+					// formatter: function(params) {
+						// console.dir(params);
+            // return params[0].dataIndex + '<br/>'
+            //        + params[0].seriesName + ' : ' + params[0].value + ' (m^3/s)<br/>'
+            //        + params[1].seriesName + ' : ' + -params[1].value + ' (mm)';
+        // },
 	    },
 	    legend: {
 	        // right: 20,
@@ -47,10 +60,11 @@ $(function() {
 	    },
 	    xAxis: {
 	        type: 'category',
+					position: 'top',
 	        data: ['00:00','2:00','4:00','6:00','8:00','10:00','12:00','14:00','16:00','18:00','20:00',"22:00"],
-	        boundaryGap: false,
+	        // boundaryGap: false,
 	        splitLine: {
-	            show: false,
+	            // show: false,
 	            interval: 'auto',
 	            lineStyle: {
 	                color: ['#D4DFF5']
@@ -60,49 +74,49 @@ $(function() {
 	            show: false
 	        },
 	        axisLine: {
-							show: false,
+							// show: false,
 	            lineStyle: {
-	                color: '#609ee9'
+	                color: '#868686'
 	            }
 	        },
 	        axisLabel: {
-							show: false,
+							// show: false,
 	            margin: 10,
 	            textStyle: {
-	                fontSize: 14
+	                fontSize: 10
 	            }
-	        },
-					position: 'left'
+	        }
 	    },
 	    yAxis: {
 	        type: 'value',
+					position: 'right',
 	        splitLine: {
 	            lineStyle: {
 	                color: ['#d5d5d5']
 	            }
 	        },
 	        axisTick: {
-	            show: false
+	            // show: false
 	        },
 	        axisLine: {
-							show: false,
+							// show: false,
 	            lineStyle: {
-	                color: '#609ee9'
+	                color: '#868686'
 	            }
 	        },
 	        axisLabel: {
-							show: false,
+							// show: false,
 	            margin: 10,
 	            textStyle: {
-	                fontSize: 14
+	                fontSize: 10
 	            }
 	        }
 	    },
 			grid: {
-				left: 0,
-				right: 0,
-				top: 0,
-				bottom: 0
+				// left: 0,
+				// right: 0,
+				// top: 0,
+				// bottom: 0
 			},
 	    series: [{
 	        name: '淨值',

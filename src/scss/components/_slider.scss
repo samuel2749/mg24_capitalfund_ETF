@@ -20,7 +20,10 @@
       li {
         position: relative;
         display: inline-block;
-        width: 1200px;
+        max-width: 1200px;
+      }
+      img {
+        width: 100%;
       }
     }
   }
