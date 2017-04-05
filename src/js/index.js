@@ -62,9 +62,9 @@ $(function() {
 	        type: 'category',
 					position: 'top',
 	        data: ['00:00','2:00','4:00','6:00','8:00','10:00','12:00','14:00','16:00','18:00','20:00',"22:00"],
-	        // boundaryGap: false,
+	        boundaryGap: false,
 	        splitLine: {
-	            // show: false,
+	            show: false,
 	            interval: 'auto',
 	            lineStyle: {
 	                color: ['#D4DFF5']
@@ -74,32 +74,44 @@ $(function() {
 	            show: false
 	        },
 	        axisLine: {
-							// show: false,
+							show: false,
 	            lineStyle: {
 	                color: '#868686'
 	            }
 	        },
 	        axisLabel: {
 							// show: false,
-	            margin: 10,
+	            // margin: 10,
+							// inside: true,
 	            textStyle: {
-	                fontSize: 10
+                fontSize: 10,
+								align: 'left'
 	            }
 	        }
 	    },
 	    yAxis: {
 	        type: 'value',
 					position: 'right',
+					interval: 500,
+					max: 2000,
+					// onZero: false,
 	        splitLine: {
-	            lineStyle: {
-	                color: ['#d5d5d5']
-	            }
+						// interval: 4,
+            lineStyle: {
+                color: ['#d5d5d5'],
+								// type: 'dashed'
+            }
 	        },
 	        axisTick: {
-	            // show: false
+	            // show: false,
+							// interval: 4
+							lineStyle: {
+                color: '#d5d5d5'
+	            }
 	        },
 	        axisLine: {
-							// show: false,
+							show: false,
+							onZero: false,
 	            lineStyle: {
 	                color: '#868686'
 	            }
@@ -108,15 +120,16 @@ $(function() {
 							// show: false,
 	            margin: 10,
 	            textStyle: {
-	                fontSize: 10
+	                fontSize: 10,
+									baseline: 'bottom'
 	            }
 	        }
 	    },
 			grid: {
-				// left: 0,
-				// right: 0,
-				// top: 0,
-				// bottom: 0
+				left: 0,
+				right: 45,
+				top: 30,
+				bottom: 10
 			},
 	    series: [{
 	        name: '淨值',
@@ -125,7 +138,7 @@ $(function() {
 	        showSymbol: false,
 	        symbol: 'circle',
 	        symbolSize: 6,
-	        data: ['1200', '1400', '808', '811', '626', '488', '1600', '1100', '500', '300', '1998', '822'],
+	        data: ['1200', '1400', '808', '811', '626', '488', '1600', '1100', '500', '300', '1898', '822'],
 	        areaStyle: {
 	            normal: {
 	                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
