@@ -30,9 +30,10 @@ $(function() {
 	        trigger: 'asix',
 	        axisPointer: {
 						// type: 'cross',
-	            lineStyle: {
-	                color: '#ebc7c9'
-	            }
+            lineStyle: {
+							type: 'dashed',
+              color: '#ebc7c9'
+            }
 	        },
 	        backgroundColor: 'rgba(255,255,255,1)',
 	        padding: [5, 10],
@@ -44,7 +45,7 @@ $(function() {
 						// ['50%', '100%']
 						// console.log('0: ', params[0]);
 						// console.log('1: ', params[1]);
-						return [params[0], '100%']
+						// return [params[0], '100%']
 					},
 					// formatter: function(params) {
 						// console.dir(params);
@@ -61,7 +62,7 @@ $(function() {
 	    xAxis: {
 	        type: 'category',
 					position: 'top',
-	        data: ['00:00','2:00','4:00','6:00','8:00','10:00','12:00','14:00','16:00','18:00','20:00',"22:00"],
+	        data: ['0:00','0:15','0:30','0:45','1:00','1:15','1:30','1:45','2:00','2:15','2:30',"3:00"],
 	        boundaryGap: false,
 	        splitLine: {
 	            show: false,
@@ -81,7 +82,7 @@ $(function() {
 	        },
 	        axisLabel: {
 							// show: false,
-	            // margin: 10,
+	            margin: 20,
 							// inside: true,
 	            textStyle: {
                 fontSize: 10,
@@ -128,8 +129,8 @@ $(function() {
 			grid: {
 				left: 0,
 				right: 45,
-				top: 30,
-				bottom: 10
+				top: 40,
+				bottom: 0
 			},
 	    series: [{
 	        name: '淨值',
@@ -167,7 +168,7 @@ $(function() {
 
 		$(window).resize(function() {
 			myChart.resize();
-		})
+		}).resize();
 
 	}
 

@@ -15,10 +15,11 @@ $(function() {
   });
 
 
-  setButton();
+  datepicker();
 
-  function setButton() {
-
+  function datepicker() {
+    $( "#datepicker" ).datepicker();
+    $( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
   }
 
 });

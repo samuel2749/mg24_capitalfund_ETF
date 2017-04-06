@@ -190,7 +190,19 @@ $table-bg-accent: #e2e2e2;
 }
 
 .section-box {
-  display: none;
+  // display: none;
+  &.ETFs-stock,
+  &.ETFs-fund,
+  &.ETFs-bond {
+    position: absolute;
+    width: 100%;
+    max-width: 1120px;
+    left: -3000px;
+    visibility: hidden;
+    // .chart-type {
+    //   width: 100%;
+    // }
+  }
   &.active {
     display: block;
   }
@@ -229,9 +241,16 @@ $table-bg-accent: #e2e2e2;
   }
 }
 
-.list-box {
-  display: none;
-}
+// .ETFs-all {
+  .list-box {
+    // display: none;
+    position: absolute;
+    width: 100%;
+    left: -3000px;
+    visibility: hidden;
+  }
+// }
+
 
 .confirm-btn {
   margin-top: 12px;
