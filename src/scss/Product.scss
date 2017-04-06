@@ -7,6 +7,12 @@ $table-bg-accent: #e2e2e2;
 // @import 'components/forms';
 // @import 'components/tables';
 
+.banner {
+  text-align: center;
+  img {
+    width: 100%;
+  }
+}
 
 .main-title {
   // @include clearfix;
@@ -85,6 +91,26 @@ $table-bg-accent: #e2e2e2;
         top: 1px;
       }
     }
+    .total-type {
+      background: url(../images/dropdown-arrow.png) right center no-repeat,
+                  url(../images/select-type-icon.png) 10px center no-repeat;
+      /* the width and the height of your image */
+      width: 270px;
+      height: 32px;
+      overflow: hidden;
+      border: solid 1px #ccc;
+      // margin-left: 13px;
+      select{
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        background:transparent;
+        border:none;
+        padding-left:34px;
+        width: 270px;
+        height:100%;
+      }
+    }
     .ETF-type {
       background: url(../images/dropdown-arrow.png) right center no-repeat,
                   url(../images/select-type-icon.png) 10px center no-repeat;
@@ -124,7 +150,7 @@ $table-bg-accent: #e2e2e2;
   .more-btn {
     position: absolute;
     top: 6px;
-    right: 0;
+    right: 6px;
     a {
       transition: .3s;
     }
@@ -151,7 +177,7 @@ $table-bg-accent: #e2e2e2;
   .table-bordered > thead > tr > th {
     // border-left: 3px solid $main-color;
   }
-  .table-bordered > tbody > tr {
+  .table-bordered > tbody > tr:nth-child(odd) {
     position: relative;
     border-top: 3px solid #ddd;
   }
@@ -166,7 +192,7 @@ $table-bg-accent: #e2e2e2;
     // background: #974;
   }
   .table-bordered > tbody > tr > td {
-    border: 0;
+    // border: 0;
     font-size: 16px;
     &.up {
       color: $main-color;
@@ -191,19 +217,7 @@ $table-bg-accent: #e2e2e2;
 }
 
 .section-box {
-  // display: none;
-  &.ETFs-stock,
-  &.ETFs-fund,
-  &.ETFs-bond {
-    position: absolute;
-    width: 100%;
-    max-width: 1120px;
-    left: -3000px;
-    visibility: hidden;
-    // .chart-type {
-    //   width: 100%;
-    // }
-  }
+  display: none;
   &.active {
     display: block;
   }
@@ -242,16 +256,92 @@ $table-bg-accent: #e2e2e2;
   }
 }
 
-// .ETFs-all {
-  .list-box {
-    // display: none;
-    position: absolute;
-    width: 100%;
-    left: -3000px;
-    visibility: hidden;
+.list-box {
+  margin-left: -6px;
+  margin-top: -6px;
+  .list {
+    width: 50%;
+    padding: 6px;
+    .list-title-name {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+    .line {
+      margin: 5px 0 18px;
+    }
+    .price {
+      display: inline-block;
+      width: 31.33333333%;
+      // max-width: 170px;
+      .list-icon {
+        @include bg('../images/product/list/info-icon1.png');
+      }
+    }
+    .amplitude {
+      display: inline-block;
+      width: 31.33333333%;
+      // max-width: 170px;
+      .list-val {
+        top: 0;
+        font-size: 30px;
+      }
+      .list-icon {
+        @include bg('../images/product/list/info-icon2.png');
+      }
+    }
+    .ratio {
+      display: inline-block;
+      width: 33.33333333%;
+      // max-width: 170px;
+      .list-icon {
+        @include bg('../images/product/list/info-icon3.png');
+      }
+    }
+    .list-val {
+      margin-left: 0;
+    }
+    .list-icon {
+      display: inline-block;
+    }
+    &.up {
+      .list-info {
+        border-top: 6px solid #d6000f;
+      }
+      .amplitude {
+        .list-val {
+          color: #d6000f;
+        }
+      }
+      .ratio {
+        .list-val {
+          color: #d6000f;
+        }
+      }
+    }
+    &.down {
+      .list-info {
+        border-top: 6px solid #19C360;
+      }
+      .amplitude {
+        .list-val {
+          color: #19C360;
+        }
+      }
+      .ratio {
+        .list-val {
+          color: #19C360;
+        }
+      }
+    }
   }
-// }
-
+  .list-info {
+    a {
+      padding: 16px 15px 20px;
+    }
+  }
+}
 
 .confirm-btn {
   margin-top: 12px;

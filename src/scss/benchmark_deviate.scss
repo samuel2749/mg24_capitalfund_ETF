@@ -157,7 +157,7 @@ $table-bg-accent: #e2e2e2;
   .table-bordered > thead > tr > th {
     // border-left: 3px solid $main-color;
   }
-  .table-bordered > tbody > tr {
+  .table-bordered > tbody > tr:nth-child(odd) {
     position: relative;
     border-top: 3px solid #ddd;
   }
@@ -172,7 +172,7 @@ $table-bg-accent: #e2e2e2;
     // background: #974;
   }
   .table-bordered > tbody > tr > td {
-    border: 0;
+    // border: 0;
     font-size: 16px;
     &.up {
       color: $main-color;
@@ -183,12 +183,20 @@ $table-bg-accent: #e2e2e2;
   }
   .table-bordered > tbody > tr > td:nth-child(12),
   .table-bordered > tbody > tr > td:nth-child(3) {
-    font-size: 13px;
+    // font-size: 13px;
   }
-  .table-bordered > tbody > tr > td:nth-child(2),
-  .table-bordered > tbody > tr > td:nth-child(3),
-  .table-bordered > tbody > tr > td:nth-child(12) {
-    text-align: left;
+  .table-bordered > tbody > tr > .t-title {
+    text-align: center;
+  }
+  .table-bordered > tbody > tr > .t-time {
+    text-align: center;
+    font-size: 14px;
+  }
+  .table-bordered > tbody > tr > .t-deviation-day {
+    text-align: center;
+  }
+  .table-bordered > tbody > tr > .t-deviation-accu {
+    text-align: center;
   }
   .table-bordered > thead > tr:first-child > th:first-child,
   .table-bordered > tbody > tr > td:first-child {
@@ -217,10 +225,17 @@ $table-bg-accent: #e2e2e2;
     > tr {
       > th,
       > td {
-        text-align: center;
+        // text-align: center;
         vertical-align: middle;
-        font-size: 14px;
+        font-size: 15px;
         // border: 1px solid #e2e2e2;
+      }
+      > th {
+        text-align: center;
+        color: #6e6e6e;
+      }
+      > td {
+        color: #2b2925;
       }
     }
   }

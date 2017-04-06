@@ -206,6 +206,21 @@ function setButton() {
         left: 0,
         visibility: 'visible'
       });
+      $('.section-box.ETFs-stock .chart-type').css({
+        position: 'relative',
+        left: 0,
+        visibility: 'visible'
+      });
+      $('.section-box.ETFs-fund .chart-type').css({
+        position: 'relative',
+        left: 0,
+        visibility: 'visible'
+      });
+      $('.section-box.ETFs-bond .chart-type').css({
+        position: 'relative',
+        left: 0,
+        visibility: 'visible'
+      });
     }
   });
 
@@ -230,11 +245,13 @@ function setButton() {
         left: 0,
         visibility: 'visible'
       });
-      $('.section-box.ETFs-stock .chart-type').css({
-        position: 'relative',
-        left: 0,
-        visibility: 'visible'
-      });
+      // if ( $('.select-chart-type').hasClass('active') ) {
+      //   $('.section-box.ETFs-stock .chart-type').css({
+      //     position: 'relative',
+      //     left: 0,
+      //     visibility: 'visible'
+      //   });
+      // }
       // $('.section-box.ETFs-stock .list-chart').resize();
     } else if ( val === "fund") {
       $('.section-box').hide();
@@ -244,11 +261,13 @@ function setButton() {
         left: 0,
         visibility: 'visible'
       });
-      $('.section-box.ETFs-fund .chart-type').css({
-        position: 'relative',
-        left: 0,
-        visibility: 'visible'
-      });
+      // if ( $('.select-chart-type').hasClass('active') ) {
+      //   $('.section-box.ETFs-fund .chart-type').css({
+      //     position: 'relative',
+      //     left: 0,
+      //     visibility: 'visible'
+      //   });
+      // }
       // $('.section-box.ETFs-fund .list-chart').resize();
     } else if ( val === "bond") {
       $('.section-box').hide();
@@ -258,11 +277,13 @@ function setButton() {
         left: 0,
         visibility: 'visible'
       });
-      $('.section-box.ETFs-bond .chart-type').css({
-        position: 'relative',
-        left: 0,
-        visibility: 'visible'
-      });
+      // if ( $('.select-chart-type').hasClass('active') ) {
+      //   $('.section-box.ETFs-bond .chart-type').css({
+      //     position: 'relative',
+      //     left: 0,
+      //     visibility: 'visible'
+      //   });
+      // }
       // $('.section-box.ETFs-bond .list-chart').resize();
     }
   })

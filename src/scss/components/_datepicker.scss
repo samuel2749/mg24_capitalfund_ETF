@@ -80,7 +80,7 @@
 .ring-left,
 .ring-right {
   position: absolute;
-  top: 224px;
+  top: 210px;
 }
 
 .ring-left {
@@ -103,4 +103,17 @@
   margin: 8px;
   height: 32px;
   width: 8px;
+}
+
+
+
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  color: #000;
+  border: 0;
+  background: none;
+}
+.ui-widget-content {
+  border: 0;
+  background: none;
 }
