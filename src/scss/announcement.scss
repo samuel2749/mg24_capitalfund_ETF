@@ -1,0 +1,455 @@
+@import 'compass/css3';
+@import 'helpers/mixins';
+@import 'helpers/variables';
+
+$table-bg-accent: #e2e2e2;
+@import 'layout/footer';
+// @import 'components/forms';
+// @import 'components/tables';
+
+.banner {
+  text-align: center;
+  img {
+    width: 100%;
+  }
+}
+
+.main-title {
+  // @include clearfix;
+  text-align: center;
+  font-size: 0;
+  font-weight: 700;
+  li {
+    // float: left;
+    display: inline-block;
+    vertical-align: top;
+    & ~ li {
+      border-left: 1px solid #cecece;
+    }
+    &.active {
+      a {
+        color: $main-color;
+      }
+    }
+  }
+  a {
+    display: block;
+    padding: 0 55px;
+    font-size: 18px;
+    transition: .3s;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.container {
+
+}
+
+.section-box {
+  margin-top: 34px;
+}
+.section {
+  position: relative;
+  & ~ .section {
+    margin-top: 32px;
+  }
+  .section-title {
+    font-size: 18px;
+    color: #6e6e6e;
+    margin-bottom: 14px;
+  }
+  .more-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding-right: 14px;
+    color: #524f46;
+    font-size: 14px;
+    background: url(../images/more-arrow.png) 100% 0 no-repeat;
+    a {
+      transition: .3s;
+    }
+    &:hover {
+      color: $main-color;
+      a {
+        color: $main-color;
+      }
+    }
+  }
+}
+
+.table-box {
+  // border: 1px solid #E1E1E1;
+  color: #6e6e6e;
+  .table-bordered {
+    border: 0;
+  }
+  thead {
+    // border-left: 3px solid $main-color;
+  }
+  tr {
+    background: #FFF;
+  }
+  .table-bordered > thead > tr > th {
+    // border-left: 3px solid $main-color;
+  }
+  .table-bordered > tbody > tr:nth-child(odd) {
+    position: relative;
+    border-top: 3px solid #ddd;
+  }
+  .table-bordered > tbody > tr:after {
+    // content: '';
+    // display: table;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 2px;
+    // background: #974;
+  }
+  .table-bordered > tbody > tr > td {
+    // border: 0;
+    font-size: 16px;
+    &.up {
+      color: $main-color;
+    }
+    &.down {
+      color: #1d8147;
+    }
+  }
+  .table-bordered > tbody > tr > td:nth-child(12),
+  .table-bordered > tbody > tr > td:nth-child(3) {
+    font-size: 13px;
+  }
+  .table-bordered > tbody > tr > td:nth-child(2),
+  .table-bordered > tbody > tr > td:nth-child(3),
+  .table-bordered > tbody > tr > td:nth-child(12) {
+    text-align: left;
+  }
+  .table-bordered > thead > tr:first-child > th:first-child,
+  .table-bordered > tbody > tr > td:first-child {
+    border-left: 2px solid $main-color;
+  }
+}
+
+.section-box {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.table {
+  margin-bottom: 0;
+}
+.table-bordered > thead > tr > th {
+  border-bottom-width: 1px;
+}
+
+.table {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        text-align: center;
+        vertical-align: middle;
+        font-size: 14px;
+        // border: 1px solid #e2e2e2;
+      }
+    }
+  }
+  > thead {
+    > tr {
+      background: #FFF;
+    }
+  }
+  > tbody {
+    > tr {
+      background: #FFF;
+    }
+  }
+}
+
+.list-box {
+  margin-left: -6px;
+  margin-top: -6px;
+  .list {
+    width: 50%;
+    padding: 6px;
+    .list-title-name {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+    .line {
+      margin: 5px 0 18px;
+    }
+    .price {
+      display: inline-block;
+      width: 31.33333333%;
+      // max-width: 170px;
+      .list-icon {
+        @include bg('../images/product/list/info-icon1.png');
+      }
+    }
+    .amplitude {
+      display: inline-block;
+      width: 31.33333333%;
+      // max-width: 170px;
+      .list-val {
+        top: 0;
+        font-size: 30px;
+      }
+      .list-icon {
+        @include bg('../images/product/list/info-icon2.png');
+      }
+    }
+    .ratio {
+      display: inline-block;
+      width: 33.33333333%;
+      // max-width: 170px;
+      .list-icon {
+        @include bg('../images/product/list/info-icon3.png');
+      }
+    }
+    .list-val {
+      margin-left: 0;
+    }
+    .list-icon {
+      display: inline-block;
+    }
+    &.up {
+      // .list-info {
+      //   border-top: 6px solid #d6000f;
+      // }
+      // .amplitude {
+      //   .list-val {
+      //     color: #d6000f;
+      //   }
+      // }
+      // .ratio {
+      //   .list-val {
+      //     color: #d6000f;
+      //   }
+      // }
+    }
+    &.down {
+      // .list-info {
+      //   border-top: 6px solid #19C360;
+      // }
+      // .amplitude {
+      //   .list-val {
+      //     color: #19C360;
+      //   }
+      // }
+      // .ratio {
+      //   .list-val {
+      //     color: #19C360;
+      //   }
+      // }
+    }
+  }
+  .list-info {
+    a {
+      padding: 16px 15px 35px;
+    }
+  }
+}
+
+.confirm-btn {
+  margin-top: 12px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 52px;
+  @include clearfix;
+  .btn {
+    // float: left;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    // width: 188px;
+    // height: 52px;
+    a {
+      display: block;
+      width: 188px;
+      height: 52px;
+      // color: #FFF;
+    }
+    & ~ .btn {
+      margin-left: 12px;
+    }
+  }
+  .false-btn {
+    // background: $false-btn-bg;
+  }
+  .true-btn {
+    // background: $main-color;
+  }
+}
+
+.btn {
+  border: none;
+  // font-family: inherit;
+  // font-size: inherit;
+  // color: inherit;
+  // background: none;
+  cursor: pointer;
+  // padding: 25px 80px;
+  // display: inline-block;
+  // margin: 15px 30px;
+  // text-transform: uppercase;
+  // letter-spacing: 1px;
+  // font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  &:before {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.btn-1 {
+	border: 3px solid #fff;
+	color: #fff;
+}
+
+/* Button 1c */
+.btn-1c {
+  overflow: hidden;
+  a {
+    color: #FFF;
+  }
+  &.false-btn {
+    border: 3px solid $false-btn-bg;
+    &:after {
+      background: $false-btn-bg;
+    }
+  }
+  &.true-btn {
+    border: 3px solid $main-color;
+    &:after {
+      background: $main-color;
+    }
+  }
+  &:hover, &:active {
+    a {
+      color: #000;
+    }
+  }
+  &:after {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // background: #fff;
+  }
+  &:hover, &:active {
+    a {
+      // color: #0e83cd;
+    }
+  }
+  &:hover:after, &:active:after {
+    // width: 0%;
+    left: 100%;
+  }
+}
+
+// checkbox
+.checkbox-area {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  svg {
+    border: none;
+    display: block;
+  }
+  .cb-content {
+    position: relative;
+    top: -4px;
+    font-size: 16px;
+  }
+  label {
+  	// position: absolute;
+    // top: 3px;
+    // left: 0;
+  	cursor: pointer;
+  	// display: block;
+  	// font-size: 1.25em;
+  	// line-height: 2.5rem;
+  	// margin: 0.5em auto;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	user-select: none;
+  	// width: 20rem;
+    svg {
+      display: inline-block;
+      // float: left;
+      // margin-right: 0.5rem;
+      width: 23px;
+      height: 23px;
+      rect, polyline {
+        fill: none;
+        stroke-width: 3px;
+      }
+      rect {
+        stroke: $main-color;
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+    margin: 10px 0 0 5px;
+    width: 37px;
+    height: 37px;
+    &:checked + label svg {
+      rect {
+        stroke: $main-color;
+      }
+      polyline {
+        stroke: $main-color;
+      }
+      polyline {
+        -webkit-animation: checked 0.5s ease forwards;
+        animation: checked 0.5s ease forwards;
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+      }
+    }
+  }
+
+  @-webkit-keyframes checked {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes checked {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}
