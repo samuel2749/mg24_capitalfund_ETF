@@ -71,12 +71,12 @@ $table-bg-accent: #e2e2e2;
     a {
       transition: .3s;
     }
-    &:hover {
-      color: $main-color;
-      a {
-        color: $main-color;
-      }
-    }
+    // &:hover {
+    //   color: $main-color;
+    //   a {
+    //     color: $main-color;
+    //   }
+    // }
   }
 }
 
@@ -235,6 +235,11 @@ $table-bg-accent: #e2e2e2;
       //     color: #19C360;
       //   }
       // }
+    }
+    &:hover {
+      .list-info {
+        border: 1px solid $main-color;
+      }
     }
   }
   .list-info {

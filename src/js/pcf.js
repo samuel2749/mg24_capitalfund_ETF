@@ -20,6 +20,14 @@ $(function() {
   function datepicker() {
     $( "#datepicker" ).datepicker({
       dateFormat: "yy-mm-dd",
+      beforeShow: function (input, inst) {
+        setTimeout(function () {
+          inst.dpDiv.css({
+            top: 610,
+            left: 480
+          });
+        }, 0);
+      },
       onSelect: function() {
         var currentDate = $( "#datepicker" ).datepicker( "getDate" );
         console.log($('#datepicker').val());
@@ -28,21 +36,17 @@ $(function() {
         console.log('currentDate = ', currentDate.getFullYear()  );
       }
     });
-    // $( "#datepicker" ).datepicker();
-    //$( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
 
-
-    // $("#datepicker").datepicker({
-    //   dateFormat: "yy-mm-dd",
-    //   onSelect: function() {
-    //   var currentDate = $( "#datepicker" ).datepicker( "getDate" );
-    //   console.log('currentDate = ', currentDate);
-    // }});
+    $( "#datepicker" ).css({
+      top: 10,
+      left: 10
+    });
 
     $('.select-date').on('click', function() {
       $( "#datepicker" ).datepicker( "show" );
     });
-    //
+
+
 
 
   }

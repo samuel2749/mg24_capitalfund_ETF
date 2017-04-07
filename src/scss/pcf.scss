@@ -273,11 +273,17 @@ $table-bg-accent: #e2e2e2;
         text-align: center;
         font-size: 18px;
         line-height: 52px;
+        transition: .3s;
       }
       img {
         position: relative;
         top: 5px;
         left: 2px;
+      }
+      &:hover {
+        a {
+          background: $main-color;
+        }
       }
     }
   }

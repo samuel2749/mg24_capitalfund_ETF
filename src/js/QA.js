@@ -15,18 +15,33 @@ $(function() {
 
   // accordionList click
   $('.list-title').click(function() {
-		$('.list-sub').slideUp();
+    console.log($(this).parents('.accordion-list').find('.list-sub'));
+    $(this).parents('.accordion-list').find('.list-sub').slideUp();
+    // $('.list-sub').slideUp();
 		$('.switch-icon').css('backgroundPositionY', 0);
 		if ( $(this).next().css('display') == 'none' ) {
 			$(this).next().slideDown();
 			$(this).find('.switch-icon').css('backgroundPositionY', -15);
 		}
+
+		// $('.list-sub').slideUp();
+		// $('.switch-icon').css('backgroundPositionY', 0);
+		// if ( $(this).next().css('display') == 'none' ) {
+		// 	$(this).next().slideDown();
+		// 	$(this).find('.switch-icon').css('backgroundPositionY', -15);
+		// }
 	});
 
   // 預設第一個開啟
   if ( $('.accordion .product li').eq(0).find('.list-title').next().css('display') == 'none' ) {
     $('.accordion .product li').eq(0).find('.list-title').next().show();
     $('.accordion .product li').eq(0).find('.list-title').find('.switch-icon').css('backgroundPositionY', -15);
+
+    $('.accordion .transaction li').eq(0).find('.list-title').next().show();
+    $('.accordion .transaction li').eq(0).find('.list-title').find('.switch-icon').css('backgroundPositionY', -15);
+
+    $('.accordion .market li').eq(0).find('.list-title').next().show();
+    $('.accordion .market li').eq(0).find('.list-title').find('.switch-icon').css('backgroundPositionY', -15);
   }
 
 });

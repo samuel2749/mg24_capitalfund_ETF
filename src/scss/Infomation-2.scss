@@ -252,6 +252,21 @@ $table-bg-accent: #e2e2e2;
   }
 // }
 
+.list {
+  .list-info {
+    border-left: 1px solid #736f6a;
+    border-right: 1px solid #736f6a;
+    border-bottom: 1px solid #736f6a;
+  }
+  &:hover {
+    .list-info {
+      border-left: 1px solid $main-color;
+      border-right: 1px solid $main-color;
+      border-bottom: 1px solid $main-color;
+    }
+  }
+}
+
 
 .confirm-btn {
   margin-top: 12px;

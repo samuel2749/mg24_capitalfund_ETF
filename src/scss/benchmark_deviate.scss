@@ -51,6 +51,7 @@ $table-bg-accent: #e2e2e2;
       display: inline-block;
       vertical-align: top;
       font-size: 16px;
+      overflow: hidden;
       &.active {
         a {
           background: $main-color;
@@ -107,7 +108,7 @@ $table-bg-accent: #e2e2e2;
         background:transparent;
         border:none;
         padding-left:34px;
-        width: 270px;
+        width: 302px;
         height:100%;
       }
     }
