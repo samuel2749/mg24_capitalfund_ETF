@@ -17,8 +17,9 @@ $(function() {
   $('.list-title').click(function() {
     console.log($(this).parents('.accordion-list').find('.list-sub'));
     $(this).parents('.accordion-list').find('.list-sub').slideUp();
+    $(this).parents('.accordion-list').find('.switch-icon').css('backgroundPositionY', 0);
     // $('.list-sub').slideUp();
-		$('.switch-icon').css('backgroundPositionY', 0);
+		// $('.switch-icon').css('backgroundPositionY', 0);
 		if ( $(this).next().css('display') == 'none' ) {
 			$(this).next().slideDown();
 			$(this).find('.switch-icon').css('backgroundPositionY', -15);
