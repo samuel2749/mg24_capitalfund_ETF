@@ -183,9 +183,22 @@ $table-bg-accent: #e2e2e2;
   float: left;
   width: 70%;
 }
-.hot-article {
+.other-video {
+  // @include clearfix;
   float: right;
   width: 29%;
+  .more-btn {
+    float: right;
+    margin-top: 15px;
+    a {
+      transition: .3s;
+    }
+    &:hover {
+      a {
+        color: $main-color;
+      }
+    }
+  }
 }
 
 .info {
@@ -202,7 +215,8 @@ $table-bg-accent: #e2e2e2;
   }
 }
 .info-list {
-  padding: 20px 0 40px 14px;
+  @include clearfix;
+  padding: 20px 15px 20px 15px;
   li {
     @include clearfix;
     font-size: 16px;
@@ -213,18 +227,23 @@ $table-bg-accent: #e2e2e2;
       }
     }
   }
-  .hot-num {
-    float: left;
-    width: 25px;
-    height: 25px;
-    background: #2A2925;
-    text-align: center;
-    line-height: 25px;
-    color: #FFF;
+  .other-img {
+    // float: left;
+    // width: 25px;
+    // height: 25px;
+    // background: #2A2925;
+    // text-align: center;
+    // line-height: 25px;
+    // color: #FFF;
+    img {
+      width: 100%;
+    }
   }
-  .hot-title {
-    float: left;
-    margin-left: 6px;
+  .other-title {
+    font-size: 16px;
+    font-weight: 700;
+    // float: left;
+    // margin-left: 6px;
   }
   // .name {
   //   line-height: 1.5;
@@ -238,17 +257,23 @@ $table-bg-accent: #e2e2e2;
 .basic {
   // border-bottom: 0;
   .info-title {
-    background-image: url(../images/market/hot-click-icon.png);
+    background-image: url(../images/video-list/video-icon.png);
   }
   .info-list {
     // padding: 0 14px;
     li {
       @include clearfix;
-      padding: 10px 0;
-      font-size: 14px;
+      // padding: 10px 0;
+      // font-size: 14px;
       // & ~ li {
       //   border-top: 1px solid #e2e2e2;
       // }
+      a {
+        transition: .3s;
+      }
+      & ~ li {
+        margin-top: 15px;
+      }
     }
     .name {
       float: left;
@@ -273,8 +298,14 @@ $table-bg-accent: #e2e2e2;
     .list-info {
 
     }
+    .list-title-box {
+
+    }
     .list-title {
       display: inline-block;
+    }
+    .author {
+      float: right;
     }
     .ribbon {
       position: absolute;
@@ -291,7 +322,7 @@ $table-bg-accent: #e2e2e2;
     }
     .btns {
       @include clearfix;
-      margin: 30px 0 15px;
+      margin: 10px 0 15px;
       a {
         display: block;
         width: 100%;
@@ -343,8 +374,11 @@ $table-bg-accent: #e2e2e2;
       margin: 5px 0 18px;
     }
     .img {
-      float: left;
-      margin: 0 20px 12px 0;
+      // float: left;
+      // margin: 0 20px 12px 0;
+      img {
+        width: 100%;
+      }
     }
     p {
       font-size: 14px;

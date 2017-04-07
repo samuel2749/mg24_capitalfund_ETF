@@ -50,8 +50,22 @@
 
 .list-box {
   .list-info {
+    // border: 1px solid #736f6a;
     &:hover {
       border: 1px solid #d6000f;
+    }
+  }
+  &.NAV-list-box {
+    .list-info {
+      border-top: none;
+      border-left: 1px solid #736f6a;
+      border-right: 1px solid #736f6a;
+      border-bottom: 1px solid #736f6a;
+      &:hover {
+        border-left: 1px solid #d6000f;
+        border-right: 1px solid #d6000f;
+        border-bottom: 1px solid #d6000f;
+      }
     }
   }
 }

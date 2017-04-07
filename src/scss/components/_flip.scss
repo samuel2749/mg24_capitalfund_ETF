@@ -1,0 +1,48 @@
+.flip {
+  li {
+    // display: inline-block;
+    // width: 200px;
+    // height: 200px;
+    // position: relative;
+  }
+  a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    perspective: 300px;
+  }
+  .front {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    transition: 0.6s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .end {
+    width: 100%;
+    height: 100%;
+    // padding: 10px;
+    // background-color: #09C;
+    color: #FFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: 0.65s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  a:hover {
+    .front {
+      transform: rotateY(-180deg);
+    }
+    .end {
+      transform: rotateY(0deg);
+    }
+  }
+}

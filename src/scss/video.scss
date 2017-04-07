@@ -30,6 +30,10 @@ $table-bg-accent: #e2e2e2;
     background: #FFF;
     border: 1px solid #E4E4E4;
     margin: 14px 0 0 14px;
+    transition: .3s;
+    &:hover {
+      border: 1px solid $main-color;
+    }
     a {
       color: #000;
     }

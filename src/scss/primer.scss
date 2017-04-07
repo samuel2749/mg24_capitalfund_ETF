@@ -5,7 +5,7 @@
 $table-bg-accent: #e2e2e2;
 @import 'layout/footer';
 @import 'components/datepicker';
-// @import 'components/forms';
+@import 'components/flip';
 @import 'components/tables';
 
 
@@ -1102,6 +1102,9 @@ $table-bg-accent: #e2e2e2;
           left: -20px;
         }
       }
+      &.active {
+        background-position: 0 -55px;
+      }
     }
     .step1 {
       background-image: url(../images/primer/step-1-tag.png);
@@ -1150,4 +1153,44 @@ $table-bg-accent: #e2e2e2;
   text-align: center;
   padding: 30px 0;
   border: 1px solid #E2E2E2;
+  > div {
+    position: relative;
+  }
+  .step2-box {
+    display: none;
+    .step2-flip1 {
+      position: absolute;
+      top: 451px;
+      left: 380px;
+      width: 223px;
+      height: 223px;
+    }
+    .step2-flip2 {
+      position: absolute;
+      top: 339px;
+      left: 643px;
+      width: 177px;
+      height: 177px;
+    }
+    .step2-flip3 {
+      position: absolute;
+      top: 225px;
+      left: 832px;
+      width: 177px;
+      height: 177px;
+    }
+    .step2-flip4 {
+      position: absolute;
+      top: 32px;
+      left: 832px;
+      width: 177px;
+      height: 177px;
+    }
+  }
+  .step3-box {
+    display: none;
+  }
+  .step4-box {
+    display: none;
+  }
 }
