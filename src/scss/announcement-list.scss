@@ -60,21 +60,38 @@ $table-bg-accent: #e2e2e2;
     color: #6e6e6e;
     margin-bottom: 14px;
   }
+  .page-btn {
+    @include clearfix;
+    margin: 20px 0;
+    .last-page {
+      float: left;
+      a {
+        padding-right: 0;
+        padding-left: 14px;
+        color: #524f46;
+        font-size: 14px;
+        background: url(../images/last-arrow.png) 0 0 no-repeat;
+      }
+    }
+    .next-page {
+      float: right;
+    }
+  }
   .more-btn {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    padding-right: 14px;
-    color: #524f46;
-    font-size: 14px;
-    background: url(../images/more-arrow.png) 100% 0 no-repeat;
+    // position: absolute;
+    // bottom: 15px;
+    // right: 15px;
+    // padding-right: 14px;
+    // color: #524f46;
+    // font-size: 14px;
+    // background: url(../images/more-arrow.png) 100% 0 no-repeat;
     a {
       transition: .3s;
-    }
-    &:hover {
-      color: $main-color;
-      a {
+      &:hover {
         color: $main-color;
+        // a {
+        //   color: $main-color;
+        // }
       }
     }
   }
@@ -178,8 +195,16 @@ $table-bg-accent: #e2e2e2;
   margin-left: -6px;
   margin-top: -6px;
   .list {
-    width: 50%;
-    padding: 6px;
+    width: 100%;
+    padding: 40px;
+    background: #FFF;
+    border: 1px solid #E2E2E2;
+    .list-info {
+
+    }
+    .list-title {
+      display: inline-block;
+    }
     .ribbon {
       position: absolute;
       top: 0;
@@ -193,14 +218,69 @@ $table-bg-accent: #e2e2e2;
         background: url(../images/ribbon.png) 0 -19px no-repeat;
       }
     }
+    .btns {
+      @include clearfix;
+      margin: 30px 0 15px;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .font {
+      @include clearfix;
+      float: left;
+      li {
+        float: left;
+        transition: .3s;
+        & ~ li {
+          margin-left: 6px;
+        }
+        &:hover {
+          background-color: #544f4f;
+        }
+      }
+      .font-add {
+        width: 30px;
+        height: 30px;
+        background: #BDBDBD url(../images/font-add.png) 50% 50% no-repeat;
+      }
+      .font-less {
+        width: 30px;
+        height: 30px;
+        background: #BDBDBD url(../images/font-less.png) 50% 50% no-repeat;
+      }
+    }
+    .fb-share {
+      float: right;
+      width: 30px;
+      height: 30px;
+      background: #BDBDBD url(../images/fb-icon.png) 50% 6px no-repeat;
+      background-size: 12px;
+      transition: .3s;
+      &:hover {
+        background-color: #544f4f;
+      }
+    }
     .list-title-name {
       display: inline-block;
       font-size: 18px;
       font-weight: 700;
-      margin-top: 3px;
+      margin-left: 10px;
     }
     .line {
       margin: 5px 0 18px;
+    }
+    .img {
+      float: left;
+      margin: 0 20px 20px 0;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      & ~ p {
+        margin-top: 30px;
+      }
     }
     .txt {
       font-size: 14px;
@@ -238,11 +318,12 @@ $table-bg-accent: #e2e2e2;
     }
   }
   .list-info {
-    a {
-      padding: 16px 15px 35px;
-    }
+    // a {
+    //   padding: 16px 15px 35px;
+    // }
   }
 }
+
 
 .confirm-btn {
   margin-top: 12px;
