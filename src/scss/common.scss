@@ -30,16 +30,23 @@
 // 修正樣式
 #header {
   height: 58px;
-  width: 1200px;
+  max-width: 1200px;
+  width: auto;
 }
 #header .fans {
-  left: 755px;
+  // left: 755px;
+  left: auto;
+  right: 357px;
 }
 #header .blog {
-  left: 855px;
+  // left: 855px;
+  left: auto;
+  right: 257px;
 }
 #header .select {
-  left: 953px;
+  // left: 953px;
+  left: auto;
+  right: 153px;
 }
 #header .select span {
   box-sizing: content-box;
@@ -61,7 +68,7 @@ body {
 
 .container {
   position: relative;
-  width: 1120px;
+  max-width: 1120px;
   margin: 0 auto 34px;
   // font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
 }
@@ -106,6 +113,11 @@ body {
     color: #524f46;
     font-size: 14px;
     background: url(../images/more-arrow.png) 100% 0 no-repeat;
+  }
+  img {
+    // position: relative;
+    // top: 4px;
+    // width: 9px;
   }
 }
 
@@ -239,11 +251,40 @@ body {
 }
 
 @media screen and (max-width: 640px) {
-  .wrap {
+  #wrap {
     padding-top: 12.5%;
   }
-  .slider, .kv {
-    // display: inline-block;
-    // margin-top: 75px;
+  .more-btn {
+    a {
+      padding-right: 18px;
+      font-size: 22px;
+      background: url(../images/m/more-arrow.png) 100% 1px no-repeat;
+    }
+  }
+  .list-box {
+    .list {
+      .list-chart {
+        display: none;
+      }
+      .list-date {
+        font-size: 24px;
+      }
+      .list-title {
+        font-size: 24px;
+      }
+      .list-name {
+        font-size: 21px;
+      }
+      .list-val {
+        font-size: 28px;
+      }
+    }
+    &.article-type {
+      .list-img {
+        .mask-box {
+          display: none;
+        }
+      }
+    }
   }
 }

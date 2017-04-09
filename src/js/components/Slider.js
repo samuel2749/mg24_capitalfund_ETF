@@ -15,19 +15,16 @@ var Slider = function( cfg ) {
 	$(window).resize(function() {
 		var win_Width = $(window).width();
 		if ( win_Width <= 1200 ) {
-			j_ul.find('li').css({width: win_Width});
-			j_li_width = win_Width;
-			j_ul.width( j_li_width * (j_li_length + (addCloneItem * 2)) );
-			j_normalize_position = j_li_width * addCloneItem;
-			j_normalize.css({'left': -j_normalize_position});
+			j_li_width = win_Width
+
 		} else {
-			j_ul.find('li').css({width: max_Width});
 			j_li_width = max_Width;
-			j_ul.width( j_li_width * (j_li_length + (addCloneItem * 2)) );
-			j_normalize_position = j_li_width * addCloneItem;
-			j_normalize.css({'left': -j_normalize_position});
 		}
-		console.log('j_normalize_position = ', j_normalize_position);
+		j_ul.find('li').css({width: j_li_width});
+		j_ul.width( j_li_width * (j_li_length + (addCloneItem * 2)) );
+		j_normalize_position = j_li_width * addCloneItem;
+		j_ul.css({left: j_normalize_position * index});
+		j_normalize.css({'left': -j_normalize_position});
 	}).resize();
 
 	if (cfg.random) {

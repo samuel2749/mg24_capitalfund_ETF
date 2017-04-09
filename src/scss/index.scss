@@ -1,6 +1,7 @@
 @import 'compass/css3';
 @import "helpers/variables";
 @import 'helpers/mixins';
+// @import 'components/youtube';
 
 .section {
   position: relative;
@@ -57,11 +58,12 @@
   }
   &.NAV-list-box {
     .list-info {
-      border-top: none;
+      border-top: 1px solid #736f6a;
       border-left: 1px solid #736f6a;
       border-right: 1px solid #736f6a;
       border-bottom: 1px solid #736f6a;
       &:hover {
+        border-top: 1px solid #d6000f;
         border-left: 1px solid #d6000f;
         border-right: 1px solid #d6000f;
         border-bottom: 1px solid #d6000f;
@@ -116,6 +118,7 @@
     }
   }
   .ETF {
+    float: right;
     .list-img {
       background: url(../images/index/category4.jpg) 50% 50% no-repeat;
       background-size: cover;
@@ -131,4 +134,83 @@
       border: 2px solid #D50110;
     }
   }
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .section {
+    .section-title {
+      margin-top: 22px;
+      font-size: 28px;
+    }
+  }
+  .list-box {
+    margin-top: 20px;
+    &.article-type {
+      .list-img {
+        position: relative;
+        height: 114px;
+        h3 {
+          line-height: 114px;
+        }
+      }
+      .m-article-more-icon {
+        display: block;
+        @include bg('../images/m/article-icon.png');
+        @include align('v');
+        right: 18px;
+      }
+    }
+    &.article-type {
+      .list {
+        .list-title {
+          font-size: 38px;
+        }
+        .list-txt {
+          font-size: 24px;
+        }
+        .list-info {
+          height: 300px;
+          line-height: 1.5;
+          padding: 35px 15px;
+        }
+        &.ETF {
+          .list-info {
+            height: auto;
+            padding: 15px;
+          }
+          .video-container {
+              position: relative;
+              padding-bottom: 56.25%;
+              padding-top: 30px;
+              height: 0;
+              overflow: hidden;
+          }
+
+          .video-container embed,
+          .video-container iframe,
+          .video-container object {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+          }
+        }
+      }
+      .announcement {
+        .list-info {
+          padding: 35px 25px
+        }
+        .ribbon {
+          left: -10px;
+          width: 17px;
+          height: 33px;
+          background-image: url(../images/m/ribbon.png);
+        }
+      }
+    }
+  }
+
 }
