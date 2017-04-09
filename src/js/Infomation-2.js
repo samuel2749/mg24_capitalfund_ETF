@@ -6,7 +6,7 @@ $(function() {
   $('.list-chart').each(function() {
     // temp += 1;
     var id = $(this).attr('id');
-    renderChart(id);
+    new Chart(id);
   });
 
   function renderChart(ele) {

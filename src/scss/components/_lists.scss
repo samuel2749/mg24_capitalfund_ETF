@@ -8,7 +8,11 @@
   .list-chart {
     width: 100%;
     height: 160px;
-    border: 1px solid $main-color;
+    // padding-bottom: 15px;
+    border-top: 1px solid $main-color;
+    border-left: 1px solid $main-color;
+    border-right: 1px solid $main-color;
+    border-bottom: 15px solid #EB6363;
   }
   .list-info {
     position: relative;
