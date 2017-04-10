@@ -44,95 +44,100 @@ $table-bg-accent: #e2e2e2;
 }
 
 .container {
-  .select {
-    font-size: 0;
-    margin-top: 25px;
-    li {
-      display: inline-block;
-      vertical-align: top;
-      font-size: 16px;
-      overflow: hidden;
-      &.active {
-        a {
-          background: $main-color;
-        }
-      }
-      &:hover {
-        a {
-          background: $main-color;
-        }
-      }
-    }
-    a {
-      display: block;
-      background: #6e6e6e;
-      color: #FFF;
-      padding: 0 10px;
-      height: 32px;
-      line-height: 32px;
-      // transition: .3s;
-    }
-    .select-table-type {
-      span {
-        @include bg('../images/table-type-icon.png');
-        display: inline-block;
-        position: relative;
-        top: 1px;
-      }
-    }
-    .select-chart-type {
-      margin-left: 5px;
-      span {
-        background-image: url(../images/chart-type-icon.png);
-        background-repeat: no-repeat;
-        width: 14px;
-        height: 14px;
-        display: inline-block;
-        position: relative;
-        top: 1px;
-      }
-    }
-    .total-type {
-      background: url(../images/dropdown-arrow.png) right center no-repeat,
-                  url(../images/select-type-icon.png) 10px center no-repeat;
-      /* the width and the height of your image */
-      width: 270px;
-      height: 32px;
-      overflow: hidden;
-      border: solid 1px #ccc;
-      // margin-left: 13px;
-      select{
-        -webkit-appearance:none;
-        -moz-appearance:none;
-        appearance:none;
-        background:transparent;
-        border:none;
-        padding-left:34px;
-        width: 302px;
-        height:100%;
-      }
-    }
-    .ETF-type {
-      background: url(../images/dropdown-arrow.png) right center no-repeat,
-                  url(../images/select-type-icon.png) 10px center no-repeat;
-      /* the width and the height of your image */
-      width: 270px;
-      height: 32px;
-      overflow: hidden;
-      border: solid 1px #ccc;
-      margin-left: 13px;
-      select{
-        -webkit-appearance:none;
-        -moz-appearance:none;
-        appearance:none;
-        background:transparent;
-        border:none;
-        padding-left:34px;
-        width: 302px;
-        height:100%;
-      }
-    }
-  }
+  // .select {
+  //   font-size: 0;
+  //   margin-top: 25px;
+  //   li {
+  //     display: inline-block;
+  //     vertical-align: top;
+  //     width: 270px;
+  //     height: 32px;
+  //     font-size: 16px;
+  //     border: solid 1px #ccc;
+  //     overflow: hidden;
+  //     background: url(../images/dropdown-arrow.png) right center no-repeat,
+  //                 url(../images/select-type-icon.png) 10px center no-repeat;
+  //     select {
+  //       padding-left:34px;
+  //       width: 302px;
+  //       height:100%;
+  //       -webkit-appearance:none;
+  //       -moz-appearance:none;
+  //       appearance:none;
+  //       background:transparent;
+  //       border:none;
+  //     }
+  //     &.active {
+  //       a {
+  //         background: $main-color;
+  //       }
+  //     }
+  //     &:hover {
+  //       a {
+  //         background: $main-color;
+  //       }
+  //     }
+  //   }
+  //   a {
+  //     display: block;
+  //     background: #6e6e6e;
+  //     color: #FFF;
+  //     padding: 0 10px;
+  //     height: 32px;
+  //     line-height: 32px;
+  //     // transition: .3s;
+  //   }
+  //   .select-table-type {
+  //     span {
+  //       @include bg('../images/table-type-icon.png');
+  //       display: inline-block;
+  //       position: relative;
+  //       top: 1px;
+  //     }
+  //   }
+  //   .select-chart-type {
+  //     margin-left: 5px;
+  //     span {
+  //       background-image: url(../images/chart-type-icon.png);
+  //       background-repeat: no-repeat;
+  //       width: 14px;
+  //       height: 14px;
+  //       display: inline-block;
+  //       position: relative;
+  //       top: 1px;
+  //     }
+  //   }
+  //   .total-type {
+  //     // background: url(../images/dropdown-arrow.png) right center no-repeat,
+  //     //             url(../images/select-type-icon.png) 10px center no-repeat;
+  //     /* the width and the height of your image */
+  //     // overflow: hidden;
+  //     // border: solid 1px #ccc;
+  //     // margin-left: 13px;
+  //     select{
+  //       // -webkit-appearance:none;
+  //       // -moz-appearance:none;
+  //       // appearance:none;
+  //       // background:transparent;
+  //       // border:none;
+  //     }
+  //   }
+  //   .ETF-type {
+  //     // background: url(../images/dropdown-arrow.png) right center no-repeat,
+  //     //             url(../images/select-type-icon.png) 10px center no-repeat;
+  //     /* the width and the height of your image */
+  //     // overflow: hidden;
+  //     // border: solid 1px #ccc;
+  //     margin-left: 13px;
+  //     select{
+  //       // -webkit-appearance:none;
+  //       // -moz-appearance:none;
+  //       // appearance:none;
+  //       // background:transparent;
+  //       // border:none;
+  //     }
+  //   }
+  // }
 }
 
 .section-box {
@@ -258,8 +263,8 @@ $table-bg-accent: #e2e2e2;
 }
 
 .list-box {
-  margin-left: -6px;
-  margin-top: -6px;
+  // margin-left: -6px;
+  // margin-top: -6px;
   .list {
     width: 50%;
     padding: 6px;
@@ -286,7 +291,7 @@ $table-bg-accent: #e2e2e2;
       // max-width: 170px;
       .list-val {
         top: 0;
-        font-size: 30px;
+        // font-size: 30px;
       }
       .list-icon {
         @include bg('../images/product/list/info-icon2.png');
@@ -550,4 +555,60 @@ $table-bg-accent: #e2e2e2;
       stroke-dashoffset: 0;
     }
   }
+}
+
+
+@media screen and (max-width: 1110px) {
+  .list-box  {
+    .list {
+      .price {
+        // width: 33.33333333%;
+      }
+      .amplitude {
+        // width: 33.33333333%;
+      }
+      .ratio {
+        width: 31.33333333%;
+      }
+      .list-val {
+        display: block;
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .list-box {
+    .list {
+      .price, .amplitude, .ratio {
+        display: block;
+        width: 100%;
+        .list-val {
+          display: inline-block;
+        }
+      }
+      .amplitude, .ratio {
+        margin-top: 10px;
+      }
+      .list-val {
+        // font-size: 26px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .list-box {
+    margin: 0;
+    .list {
+      width: 100%;
+      .list-title-name {
+        font-size: 28px;
+      }
+    }
+  }
+  .section {
+    .section-title {
+      font-size: 28px;
+    }
+  }
+
 }
