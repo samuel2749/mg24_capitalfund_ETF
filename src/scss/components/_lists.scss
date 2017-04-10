@@ -262,6 +262,16 @@
   .list-box {
     .list {
       width: 100%;
+      .list-title-name {
+        font-size: 26px;
+      }
+    }
+    &.data-type {
+      .list {
+        .list-date {
+          background: url(../images/m/list-arrow2.png) 100% 50% no-repeat;
+        }
+      }
     }
     .list-info {
       a {

@@ -441,3 +441,43 @@ $table-bg-accent: #e2e2e2;
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .list-box {
+    &.data-type {
+      .list {
+        width: 100%;
+        .list-date {
+          font-size: 18px;
+          background: url(../images/m/list-arrow2.png) 100% 3px no-repeat;
+        }
+        .list-info {
+          a {
+            padding: 16px 15px 45px;
+          }
+        }
+        .ribbon {
+          width: 17px;
+          height: 33px;
+          background: url('../images/m/ribbon.png') 0 0 no-repeat;
+        }
+        .list-title-name {
+          font-size: 26px;
+        }
+        .txt {
+          font-size: 18px;
+        }
+        .more-btn {
+          padding-right: 18px;
+          font-size: 20px;
+          background: url(../images/m/more-arrow.png) 100% 1px no-repeat;
+        }
+        &.up {
+          .ribbon {
+            background: url('../images/m/ribbon.png') 0 -33px no-repeat;
+          }
+        }
+      }
+    }
+  }
+}

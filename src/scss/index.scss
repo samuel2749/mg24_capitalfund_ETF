@@ -56,6 +56,13 @@
       border: 1px solid #d6000f;
     }
   }
+  .announcement {
+    &:hover {
+      .list-info {
+        border: 1px solid #E2E2E2;
+      }
+    }
+  }
   &.NAV-list-box {
     .list-info {
       border-top: 1px solid #736f6a;

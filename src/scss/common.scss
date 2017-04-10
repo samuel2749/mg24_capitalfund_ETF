@@ -83,8 +83,12 @@ body {
       font-size: 16px;
       border: solid 1px #ccc;
       overflow: hidden;
-      background: url(../images/dropdown-arrow.png) right center no-repeat,
-                  url(../images/select-type-icon.png) 10px center no-repeat;
+      background-color: #FFF;
+      background-image:url(../images/dropdown-arrow.png), url(../images/select-type-icon.png);
+      background-position: right center, 10px center;
+    	background-repeat:no-repeat, no-repeat;
+      // background:#FFF url(../images/dropdown-arrow.png) right center no-repeat,
+      //             url(../images/select-type-icon.png) 10px center no-repeat;
       select {
         padding-left:34px;
         width: 302px;
@@ -175,7 +179,8 @@ body {
   margin: 0 auto;
   .kv-txt {
     position: absolute;
-    top: 64%;
+    // top: 64%;
+    bottom: 5%;
     left: 3%;
     font-size: 37px;
     font-weight: 700;
@@ -354,6 +359,16 @@ body {
   #wrap {
     padding-top: 12.5%;
   }
+  #m-footer {
+    > a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      img {
+        width: 50%;
+      }
+    }
+  }
   .kv {
     .kv-txt {
       font-size: 18px;
@@ -362,11 +377,20 @@ body {
   .breadcrumb {
     display: none;
   }
+  .container {
+    .section-title {
+      font-size: 28px;
+    }
+  }
   .main-title {
     margin-top: 32px;
     li {
+      width: 50%;
       a {
+        padding: 0;
         font-size: 28px;
+        max-width: 222px;
+        width: 100%;
       }
     }
   }
@@ -384,6 +408,8 @@ body {
       }
       .list-date {
         font-size: 24px;
+        padding-right: 14px;
+        background: url(../images/m/list-arrow1.png) 100% 50% no-repeat;
       }
       .list-title {
         font-size: 24px;
@@ -433,8 +459,12 @@ body {
         width: 100%;
         height: 53px;
         font-size: 28px;
-        background: url(../images/m/dropdown-arrow.png) right center no-repeat,
-                    url(../images/m/select-type-icon.png) 10px center no-repeat;
+        background-color: #FFF;
+        background-image:url(../images/m/dropdown-arrow.png), url(../images/m/select-type-icon.png);
+        background-position: right center, 10px center;
+      	background-repeat:no-repeat, no-repeat;
+        // background: url(../images/m/dropdown-arrow.png) right center no-repeat,
+        //             url(../images/m/select-type-icon.png) 10px center no-repeat;
         select {
           width: 100%;
           height: 53px;

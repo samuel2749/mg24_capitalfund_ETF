@@ -13,7 +13,7 @@ $table-bg-accent: #e2e2e2;
     background: #FFF;
   }
   .info-text {
-    width: 1040px;
+    // width: 1040px;
     height: 485px;
     font-size: 14px;
     line-height: 1.5;
@@ -232,5 +232,29 @@ $table-bg-accent: #e2e2e2;
     to {
       stroke-dashoffset: 0;
     }
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 10px;
+    .info-text {
+      font-size: 22px;
+    }
+  }
+  .checkbox-area .cb-content {
+    font-size: 28px;
+    top: -8px;
+  }
+  .confirm-btn .btn {
+    font-size: 28px;
+    & ~ .btn {
+      margin-left: 18px;
+    }
+  }
+  .checkbox-area label svg {
+    width: 38px;
+    height: 38px;
   }
 }

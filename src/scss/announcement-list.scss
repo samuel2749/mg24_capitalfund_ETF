@@ -262,6 +262,9 @@ $table-bg-accent: #e2e2e2;
         background-color: #544f4f;
       }
     }
+    .line-share {
+      display: none;
+    }
     .list-title-name {
       display: inline-block;
       font-size: 18px;
@@ -274,6 +277,9 @@ $table-bg-accent: #e2e2e2;
     .img {
       float: left;
       margin: 0 20px 12px 0;
+      img {
+        width: 100%;
+      }
     }
     p {
       font-size: 14px;
@@ -516,4 +522,61 @@ $table-bg-accent: #e2e2e2;
       stroke-dashoffset: 0;
     }
   }
+}
+
+@media screen and (max-width: 640px) {
+  .list-box {
+    .list {
+      .list-title-name {
+        display: block;
+        font-size: 28px;
+        margin-left: 0;
+        margin-top: 15px;
+      }
+      .font {
+        .font-add {
+          width: 48px;
+          height: 45px;
+          background: #BDBDBD url(../images/m/font-add.png) 50% 50% no-repeat;
+        }
+        .font-less {
+          width: 48px;
+          height: 45px;
+          background: #BDBDBD url(../images/m/font-less.png) 50% 50% no-repeat;
+          margin-left: 10px;
+        }
+      }
+      .fb-share {
+        width: 48px;
+        height: 45px;
+        background: #BDBDBD url(../images/m/fb-icon.png) 50% 9px no-repeat;
+      }
+      .line-share {
+        display: block;
+        float: right;
+        width: 48px;
+        height: 45px;
+        background: #BDBDBD url(../images/m/line-icon.png) 50% 50% no-repeat;
+        margin-right: 10px;
+      }
+      .img {
+        float: none;
+        margin: 0 0 10px;
+        width: 100%;
+      }
+      p {
+        font-size: 24px;
+      }
+      .last-page {
+        a {
+
+        }
+      }
+    }
+  }
+}
+.section .page-btn .last-page a {
+  padding-right: 18px;
+  font-size: 22px;
+  background: url(../images/m/last-arrow.png) 0 0 no-repeat;
 }
