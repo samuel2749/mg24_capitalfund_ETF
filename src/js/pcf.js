@@ -14,8 +14,23 @@ $(function() {
     // accordionList.css({position: 'absolute'}).fadeOut().eq(index).css({position: 'relative'}).fadeIn();
   });
 
-
+  swiper();
   datepicker();
+
+  function swiper() {
+    var appendNumber = 4;
+    var prependNumber = 1;
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 2,
+        centeredSlides: true,
+        paginationClickable: true,
+        spaceBetween: 30,
+    });
+    $('.swiper-pagination span').eq(1).click();
+  }
 
   function datepicker() {
     $( "#datepicker" ).datepicker({
@@ -23,8 +38,8 @@ $(function() {
       beforeShow: function (input, inst) {
         setTimeout(function () {
           inst.dpDiv.css({
-            top: 610,
-            left: 480
+            top: 490,
+            left: 310
           });
         }, 0);
       },

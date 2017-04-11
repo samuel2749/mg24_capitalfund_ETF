@@ -29,7 +29,7 @@ $table-bg-accent: #e2e2e2;
     font-size: 0;
     background: #FFF;
     border: 1px solid #E4E4E4;
-    margin: 14px 0 0 14px;
+    margin: 2% 0 0 2%;
     transition: .3s;
     &:hover {
       border: 1px solid $main-color;
@@ -980,5 +980,56 @@ $table-bg-accent: #e2e2e2;
       background: url(../images/Qa/accordion-title-arrow.png);
       transition: .3s;
     }
+  }
+}
+
+.section {
+  &.m {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .section {
+    &.pc {
+      display: none;
+    }
+    &.m {
+      display: block;
+      .list-box {
+        padding: 0 6px;
+        .list {
+          width: 100%;
+          margin: 0;
+        }
+        .list-info {
+          font-size: 28px;
+        }
+      }
+      .list-sub {
+        font-size: 28px;
+        margin: 6px 0 0 0 !important;
+        // width: 100%;
+        // padding: 10px;
+        // background: #FFF;
+        // border: 1px solid #E4E4E4;
+        .list-info {
+          padding: 0px 0 0 1px;
+          background: url(../images/list-arrow2.png) 0px 21px no-repeat;
+          a {
+            padding: 10px;
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+        &:hover {
+          border: 1px solid #E4E4E4;
+        }
+      }
+    }
+  }
+  .main-title {
+    display: none;
   }
 }

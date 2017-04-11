@@ -17,6 +17,7 @@
 
 	<link rel="stylesheet" href="https://www.capitalfund.com.tw/webstatic/Shared/Styles/info.css">
 
+	<link rel="stylesheet" href="./css/swiper.min.css">
 	<link rel="stylesheet" href="./css/common.css">
 	<link rel="stylesheet" href="./css/benchmark_deviate.css">
 
@@ -304,6 +305,16 @@
 				 >
 			 	<a href="javascript:;">追蹤偏離</a>
 			</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><a href="Infomation-2.html">即時預估淨值</a></div>
+					<div class="swiper-slide"><a href="pcf-00678.html">申購買回清單</a></div>
+					<div class="swiper-slide active"><a href="benchmark_deviate.html">追蹤偏離</a></div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
 			<ul class="main-title">
 				<li><a href="Infomation-2.html">即時預估淨值</a></li>
 				<li><a href="pcf-00678.html">申購買回清單</a></li>
@@ -335,7 +346,19 @@
 				<div class="section stock">
 					<div class="section-title">股票ETFs</div>
 					<div class="more-btn"><a href="javascript:;">more</a></div>
-					<div class="row table-box">
+					<div class="accordion">
+						<div class="accordion-content">
+							<ul class="accordion-title">
+								<li class="acc-fun active">
+									<a href="javascript:;">當日</a>
+								</li>
+								<li class="acc-nav">
+									<a href="javascript:;">累積</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row table-box pc-table">
 					  <div class="col-sm-12">
 					    <div class="table-responsive">
 					      <table class="table table-bordered">
@@ -391,13 +414,147 @@
 									</tbody>
 					      </table>
 					    </div>
+					  </div>
+					</div>
+					<div class="row table-box m-table">
+					  <div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
 					  </div>
 					</div>
 				</div>
 				<div class="section fund">
 					<div class="section-title">基金ETFs</div>
 					<div class="more-btn"><a href="javascript:;">more</a></div>
-					<div class="row table-box">
+					<div class="accordion">
+						<div class="accordion-content">
+							<ul class="accordion-title">
+								<li class="acc-fun active">
+									<a href="javascript:;">當日</a>
+								</li>
+								<li class="acc-nav">
+									<a href="javascript:;">累積</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row table-box pc-table">
 					  <div class="col-sm-12">
 					    <div class="table-responsive">
 					      <table class="table table-bordered">
@@ -455,11 +612,145 @@
 					    </div>
 					  </div>
 					</div>
+					<div class="row table-box m-table">
+					  <div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+					</div>
 				</div>
 				<div class="section bond">
 					<div class="section-title">債券ETFs</div>
 					<div class="more-btn"><a href="javascript:;">more</a></div>
-					<div class="row table-box">
+					<div class="accordion">
+						<div class="accordion-content">
+							<ul class="accordion-title">
+								<li class="acc-fun active">
+									<a href="javascript:;">當日</a>
+								</li>
+								<li class="acc-nav">
+									<a href="javascript:;">累積</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row table-box pc-table">
 					  <div class="col-sm-12">
 					    <div class="table-responsive">
 					      <table class="table table-bordered">
@@ -515,6 +806,128 @@
 									</tbody>
 					      </table>
 					    </div>
+					  </div>
+					</div>
+					<div class="row table-box m-table">
+					  <div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
 					  </div>
 					</div>
 				</div>
@@ -522,7 +935,19 @@
 			<div class="section-box ETFs-stock">
 				<div class="section stock">
 					<div class="section-title">股票ETFs</div>
-					<div class="row table-box">
+					<div class="accordion">
+						<div class="accordion-content">
+							<ul class="accordion-title">
+								<li class="acc-fun active">
+									<a href="javascript:;">當日</a>
+								</li>
+								<li class="acc-nav">
+									<a href="javascript:;">累積</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row table-box pc-table">
 					  <div class="col-sm-12">
 					    <div class="table-responsive">
 					      <table class="table table-bordered">
@@ -650,6 +1075,248 @@
 									</tbody>
 					      </table>
 					    </div>
+					  </div>
+					</div>
+					<div class="row table-box m-table">
+					  <div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
 					  </div>
 					</div>
 					<div class="load-more-btn">
@@ -666,7 +1333,19 @@
 			<div class="section-box ETFs-fund">
 				<div class="section fund">
 					<div class="section-title">基金ETFs</div>
-					<div class="row table-box">
+					<div class="accordion">
+						<div class="accordion-content">
+							<ul class="accordion-title">
+								<li class="acc-fun active">
+									<a href="javascript:;">當日</a>
+								</li>
+								<li class="acc-nav">
+									<a href="javascript:;">累積</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row table-box pc-table">
 					  <div class="col-sm-12">
 					    <div class="table-responsive">
 					      <table class="table table-bordered">
@@ -796,6 +1475,248 @@
 					    </div>
 					  </div>
 					</div>
+					<div class="row table-box m-table">
+					  <div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+					</div>
 					<div class="load-more-btn">
 						<a href="javascript:;">
 							<div class="load-more-icon">
@@ -810,7 +1731,19 @@
 			<div class="section-box ETFs-bond">
 				<div class="section bond">
 					<div class="section-title">債券ETFs</div>
-					<div class="row table-box">
+					<div class="accordion">
+						<div class="accordion-content">
+							<ul class="accordion-title">
+								<li class="acc-fun active">
+									<a href="javascript:;">當日</a>
+								</li>
+								<li class="acc-nav">
+									<a href="javascript:;">累積</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row table-box pc-table">
 					  <div class="col-sm-12">
 					    <div class="table-responsive">
 					      <table class="table table-bordered">
@@ -938,6 +1871,248 @@
 									</tbody>
 					      </table>
 					    </div>
+					  </div>
+					</div>
+					<div class="row table-box m-table">
+					  <div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-day">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數</th>
+					            <th>漲跌幅</th>
+					            <th>追蹤偏離<br/>(A) – (B)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(A)</td>
+					            <td class="t-deviation-day up" rowspan="2">0.01%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav">13.55</td>
+					            <td class="t-ratio-day up">0.59%<br/>(B)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
+					  </div>
+						<div class="col-sm-12 t-acc">
+					    <div class="table-responsive">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>名稱</th>
+					            <th>淨值/<br>指數<br/>(註1)</th>
+					            <th>漲跌幅<br/>(註1)</th>
+					            <th>追蹤偏離<br>(C) – (D)</th>
+					          </tr>
+					        </thead>
+									<tbody>
+										<tr>
+					            <td class="t-title">群益深証中小</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(C)</td>
+					            <td class="t-deviation-accu down" rowspan="2">-0.15%</td>
+					          </tr>
+										<tr>
+					            <td class="t-title">中小板指(TWD)</td>
+					            <td class="t-nav-2">13.92</td>
+					            <td class="t-ratio-accu down">-2.66%<br/>(D)</td>
+					          </tr>
+									</tbody>
+					      </table>
+					    </div>
+							<div class="info-date">
+								資料日期: 2017-02-13
+							</div>
 					  </div>
 					</div>
 					<div class="load-more-btn">
@@ -1131,6 +2306,7 @@
 	<script src="./js/lib/jquery-1.9.1.min.js"></script>
 	<script src="./js/lib/greensock/TweenMax.min.js"></script>
 	<script src="./js/lib/echarts.min.js"></script>
+	<script src="./js/lib/swiper.min.js"></script>
 	<script src="./js/lib/fastclick.js"></script>
 	<script src="./js/fun.js"></script>
 	<script src="./js/lib/jquery.easing.js"></script>

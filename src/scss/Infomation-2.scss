@@ -11,9 +11,7 @@ $table-bg-accent: #e2e2e2;
   // footer 會多出空白
   overflow: hidden;
 }
-.main-title-box {
-  position: relative;
-}
+
 .main-title {
   // @include clearfix;
   text-align: center;
@@ -489,7 +487,9 @@ $table-bg-accent: #e2e2e2;
 
 
 @media screen and (max-width: 640px) {
-  // .container .option .select-chart-type
+  .main-title {
+    display: none;
+  }
   .section .section-title {
     font-size: 28px;
   }

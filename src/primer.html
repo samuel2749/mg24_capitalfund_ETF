@@ -17,6 +17,7 @@
 
 	<link rel="stylesheet" href="https://www.capitalfund.com.tw/webstatic/Shared/Styles/info.css">
 
+	<link rel="stylesheet" href="./css/swiper.min.css">
 	<link rel="stylesheet" href="./css/common.css">
 	<link rel="stylesheet" href="./css/primer.css">
 
@@ -304,6 +305,16 @@
 				 >
 			 	<a href="javascript:;">入門導覽</a>
 			</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><a href="market.html">市場情報</a></div>
+					<div class="swiper-slide active"><a href="primer.html">入門導覽</a></div>
+					<div class="swiper-slide"><a href="video.html">ETF掃描</a></div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
 			<ul class="main-title">
 				<li><a href="market.html">市場情報</a></li>
 				<li class="active"><a href="primer.html">入門導覽</a></li>
@@ -335,7 +346,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="all-box">
+				<div class="all-box pc">
 					<div class="step1-box">
 						<img src="images/primer/pic1.png" />
 					</div>
@@ -373,7 +384,44 @@
 						<img src="images/primer/pic4.png" />
 					</div>
 				</div>
-
+				<div class="all-box m">
+					<div class="step1-box">
+						<img src="images/m/pic1.png" />
+					</div>
+					<div class="step2-box">
+						<img src="images/m/pic2.png" />
+						<div class="step2-flip1 flip">
+							<a href="javascript:;">
+					    	<div class="front"></div>
+				        <div class="end"><img src="./images/m/step-2-flip-1.png" /></div>
+					    </a>
+						</div>
+						<div class="step2-flip2 flip">
+							<a href="javascript:;">
+					    	<div class="front"></div>
+				        <div class="end"><img src="./images/m/step-2-flip-2.png" /></div>
+					    </a>
+						</div>
+						<div class="step2-flip3 flip">
+							<a href="javascript:;">
+					    	<div class="front"></div>
+				        <div class="end"><img src="./images/m/step-2-flip-3.png" /></div>
+					    </a>
+						</div>
+						<div class="step2-flip4 flip">
+							<a href="javascript:;">
+					    	<div class="front"></div>
+				        <div class="end"><img src="./images/m/step-2-flip-4.png" /></div>
+					    </a>
+						</div>
+					</div>
+					<div class="step3-box">
+						<img src="images/m/pic3.png" />
+					</div>
+					<div class="step4-box">
+						<img src="images/m/pic4.png" />
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="footer">
@@ -534,6 +582,7 @@
 	<script src="./js/lib/jquery-ui.js"></script>
 	<script src="./js/lib/greensock/TweenMax.min.js"></script>
 	<script src="./js/lib/echarts.min.js"></script>
+	<script src="./js/lib/swiper.min.js"></script>
 	<script src="./js/lib/fastclick.js"></script>
 	<script src="./js/fun.js"></script>
 	<script src="./js/lib/jquery.easing.js"></script>

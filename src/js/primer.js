@@ -1,4 +1,17 @@
 $(function() {
+
+  var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      slidesPerView: 2,
+      centeredSlides: true,
+      paginationClickable: true,
+      spaceBetween: 30,
+  });
+  $('.swiper-pagination span').eq(1).click();
+
+
   var accordionTitleLi = $('.accordion-title li');
   var accordionList = $('.all-box > div');
 
@@ -10,7 +23,9 @@ $(function() {
 
     j_this.addClass('active').siblings().removeClass('active');
     console.log(index);
-    accordionList.hide().eq(index).show();
+    // accordionList.hide().eq(index).show();
+    $('.all-box.pc > div').hide().eq(index).show();
+    $('.all-box.m > div').hide().eq(index).show();
     // accordionList.css({position: 'absolute'}).fadeOut().eq(index).css({position: 'relative'}).fadeIn();
   });
 

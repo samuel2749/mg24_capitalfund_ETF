@@ -196,3 +196,113 @@ $table-bg-accent: #e2e2e2;
     }
   }
 }
+
+.m-table {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .pc-table {
+    display: none;
+  }
+  .m-table {
+    display: block;
+  }
+  .accordion {
+    position: relative;
+    .accordion-title {
+      @include clearfix;
+      li {
+        float: left;
+        width: 33%;
+        height: 110px;
+        font-size: 28px;
+        line-height: 110px;
+        &.active {
+          background: $main-color;
+          a {
+            color: #FFF;
+          }
+          .accordion-title-arrow {
+            bottom: -7px;
+          }
+        }
+      }
+      .accordion-title-arrow {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1 * image-width('../images/m/accordion-title-arrow.png');
+        margin: 0 auto;
+        width: image-width('../images/m/accordion-title-arrow.png');
+        height: image-height('../images/m/accordion-title-arrow.png');
+        background: url(../images/m/accordion-title-arrow.png);
+        transition: .3s;
+      }
+    }
+    .accordion-list {
+      .question-icon {
+        position: absolute;
+        left: 0;
+        font-size: 0;
+        margin-top: 5px;
+      }
+      .answer-icon {
+        margin-top: 5px;
+      }
+      .list-title {
+        // padding-top: 9px;
+      }
+      .list-title-text {
+        font-size: 24px;
+        margin-top: 5px;
+        padding: 0;
+      }
+      .list-sub {
+        font-size:24px;
+      }
+    }
+  }
+  .accordion .accordion-list .list-title {
+    padding: 10px 0 0 34px;
+  }
+  .accordion .accordion-list .switch-icon {
+    top: 20px;
+    right: -10px;
+    bottom: auto;
+  }
+  .m-table {
+    display: block;
+    font-size: 22px;
+    .m-table-box {
+      // margin-top: 10px;
+      // border-left: 2px solid #75726B;
+      // border-top: 1px solid #E2E2E2;
+      // border-bottom: 1px solid #E2E2E2;
+      // padding: 10px;
+      line-height: 1.5;
+      & ~ .m-table-box {
+        margin-top: 20px;
+      }
+      .t-title {
+        background: #F0F0F0;
+        border-radius: 3px;
+        padding-left: 10px;
+      }
+      .t-name {
+        color: #868686;
+        padding-left: 10px;
+        margin-top: 5px;
+        & ~ .t-name {
+          // margin-top: 10px;
+          border-top: 1px solid #E2E2E2;
+        }
+      }
+      .t-val {
+        color: #000;
+        padding-left: 10px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

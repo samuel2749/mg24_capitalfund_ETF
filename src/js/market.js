@@ -1,5 +1,6 @@
 $(function() {
   setButton();
+  swiper();
 
   function setButton() {
     $('.section.stock .more-btn').on('click', function() {
@@ -10,6 +11,20 @@ $(function() {
     });
     $('.section.bond .more-btn').on('click', function() {
       $(".ETF-type select").val("bond").change();
+    });
+  }
+
+  function swiper() {
+    var appendNumber = 4;
+    var prependNumber = 1;
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 2,
+        centeredSlides: true,
+        paginationClickable: true,
+        spaceBetween: 30,
     });
   }
 

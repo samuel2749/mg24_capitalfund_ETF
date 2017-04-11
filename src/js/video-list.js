@@ -1,6 +1,17 @@
 $(function() {
   setButton();
 
+  var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      slidesPerView: 2,
+      centeredSlides: true,
+      paginationClickable: true,
+      spaceBetween: 30,
+  });
+  $('.swiper-pagination span').eq(2).click();
+
   function setButton() {
     var fontSize = 14;
     $('.font-add').on('click', function() {

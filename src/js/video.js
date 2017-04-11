@@ -1,4 +1,17 @@
 $(function() {
+
+  var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      slidesPerView: 2,
+      centeredSlides: true,
+      paginationClickable: true,
+      spaceBetween: 30,
+  });
+  $('.swiper-pagination span').eq(2).click();
+
+
   var accordionTitleLi = $('.accordion-title li');
   var accordionList = $('.all-box > div');
 

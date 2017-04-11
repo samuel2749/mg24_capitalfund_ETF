@@ -17,6 +17,7 @@
 
 	<link rel="stylesheet" href="https://www.capitalfund.com.tw/webstatic/Shared/Styles/info.css">
 
+	<link rel="stylesheet" href="./css/swiper.min.css">
 	<link rel="stylesheet" href="./css/common.css">
 	<link rel="stylesheet" href="./css/video.css">
 
@@ -304,12 +305,22 @@
 				 >
 			 	<a href="javascript:;">ETF掃描</a>
 			</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><a href="market.html">市場情報</a></div>
+					<div class="swiper-slide"><a href="primer.html">入門導覽</a></div>
+					<div class="swiper-slide active"><a href="video.html">ETF掃描</a></div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
 			<ul class="main-title">
 				<li><a href="market.html">市場情報</a></li>
 				<li><a href="primer.html">入門導覽</a></li>
 				<li class="active"><a href="video.html">ETF掃描</a></li>
 			</ul>
-			<div class="article section">
+			<div class="article section pc">
 				<ul class="list-box article-list-box">
 	        <li class="list">
 	          <a href="video-20170303-01.html">
@@ -372,6 +383,65 @@
 	          </a>
 	        </li>
 				</ul>
+				<div class="load-more-btn">
+					<a href="javascript:;">
+						<div class="load-more-icon">
+							<img class="normal" src="./images/more-icon.png" />
+							<img class="hover" src="./images/more-icon-hover.png" />
+						</div>
+						<span>看更多</span>
+					</a>
+				</div>
+			</div>
+			<div class="article section m">
+				<ul class="list-box article-list-box">
+	        <li class="list">
+	          <a href="video-20170303-01.html">
+							<div class="list-img ">
+		          	<img src="./images/video/pic.png" />
+		          </div>
+		          <div class="list-info">
+	              亞洲首檔生技ETF，群益NBI生技1/4開募
+		          </div>
+	          </a>
+	        </li>
+					<li class="list list-sub">
+	          <div class="list-info">
+              <a href="video-20170303-01.html">亞洲首檔生技ETF，群益NBI生技1/4開募</a>
+	          </div>
+						<div class="list-info">
+              <a href="video-20170303-01.html">亞洲首檔生技ETF，群益NBI生技1/4開募</a>
+	          </div>
+						<div class="list-info">
+              <a href="video-20170303-01.html">亞洲首檔生技ETF，群益NBI生技1/4開募</a>
+	          </div>
+						<div class="list-info">
+              <a href="video-20170303-01.html">亞洲首檔生技ETF，群益NBI生技1/4開募</a>
+	          </div>
+						<div class="list-info">
+              <a href="video-20170303-01.html">亞洲首檔生技ETF，群益NBI生技1/4開募</a>
+	          </div>
+						<div class="list-info">
+              <a href="video-20170303-01.html">亞洲首檔生技ETF，群益NBI生技1/4開募</a>
+	          </div>
+	        </li>
+					<!-- <li>
+						<ul class="list-sub">
+							<li>
+								<div class="list-arrow"></div>
+								<div class="list-text">亞洲首檔生技ETF，群益NBI生技1/4開募</div>
+							</li>
+						</ul>
+					</li> -->
+				</ul>
+				<!-- <div class="list-sub">
+					<ul class="list-box article-list-box">
+						<li>
+							<div class="list-arrow"></div>
+							<div class="list-text">亞洲首檔生技ETF，群益NBI生技1/4開募</div>
+						</li>
+					</ul>
+				</div> -->
 				<div class="load-more-btn">
 					<a href="javascript:;">
 						<div class="load-more-icon">
@@ -541,6 +611,7 @@
 	<script src="./js/lib/jquery-ui.js"></script>
 	<script src="./js/lib/greensock/TweenMax.min.js"></script>
 	<script src="./js/lib/echarts.min.js"></script>
+	<script src="./js/lib/swiper.min.js"></script>
 	<script src="./js/lib/fastclick.js"></script>
 	<script src="./js/fun.js"></script>
 	<script src="./js/lib/jquery.easing.js"></script>

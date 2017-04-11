@@ -186,6 +186,9 @@ $table-bg-accent: #e2e2e2;
 .hot-article {
   float: right;
   width: 29%;
+  &.m {
+    display: none;
+  }
 }
 
 .info {
@@ -214,7 +217,10 @@ $table-bg-accent: #e2e2e2;
     }
   }
   .hot-num {
-    float: left;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    // float: left;
     width: 25px;
     height: 25px;
     background: #2A2925;
@@ -223,7 +229,7 @@ $table-bg-accent: #e2e2e2;
     color: #FFF;
   }
   .hot-title {
-    float: left;
+    // float: left;
     margin-left: 6px;
   }
   // .name {
@@ -244,14 +250,15 @@ $table-bg-accent: #e2e2e2;
     // padding: 0 14px;
     li {
       @include clearfix;
-      padding: 10px 0;
+      position: relative;
+      padding: 10px 0 10px 30px;
       font-size: 14px;
       // & ~ li {
       //   border-top: 1px solid #e2e2e2;
       // }
     }
     .name {
-      float: left;
+      // float: left;
       width: 160px;
       padding-left: 35px;
       color: #868686;
@@ -526,6 +533,71 @@ $table-bg-accent: #e2e2e2;
   @keyframes checked {
     to {
       stroke-dashoffset: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .main-title {
+    display: none;
+  }
+  .hot-article {
+    &.pc {
+      display: none;
+    }
+    &.m {
+      display: inline-block;
+      float: none;
+      width: 100%;
+      padding: 0 6px;
+      margin-top: 6px;
+      margin-bottom: 6px;
+      clear: both;
+      .info-title {
+        font-size: 20px;
+      }
+      .info-list {
+        padding: 10px 0 10px 14px;
+        li {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .stock {
+    float: none;
+    width: 100%;
+    padding: 0 6px;
+  }
+  .list-box {
+    .list {
+      .list-date {
+        font-size: 18px;
+        background: url(../images/m/list-arrow2.png) 100% 4px no-repeat;
+      }
+      .list-title-name {
+        font-size: 26px;
+      }
+      .txt {
+        font-size: 18px;
+      }
+      .ribbon {
+        width: 17px;
+        height: 33px;
+        background: url(../images/m/ribbon.png) 0 0 no-repeat;
+      }
+      &.up {
+        .ribbon {
+          background: url(../images/m/ribbon.png) 0 -33px no-repeat;
+        }
+      }
+    }
+  }
+  .section {
+    .more-btn {
+      font-size: 20px;
+      background: url(../images/m/more-arrow.png) 100% 0 no-repeat;
     }
   }
 }

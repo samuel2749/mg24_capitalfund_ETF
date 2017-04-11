@@ -17,6 +17,7 @@
 
 	<link rel="stylesheet" href="https://www.capitalfund.com.tw/webstatic/Shared/Styles/info.css">
 
+	<link rel="stylesheet" href="./css/swiper.min.css">
 	<link rel="stylesheet" href="./css/common.css">
 	<link rel="stylesheet" href="./css/Infomation-2.css">
 
@@ -304,13 +305,21 @@
 				 >
 			 	<a href="javascript:;">即時預估淨值</a>
 			</div>
-			<div class="main-title-box">
-				<ul class="main-title">
-					<li class="active"><a href="Infomation-2.html">即時預估淨值</a></li>
-					<li><a href="pcf-00678.html">申購買回清單</a></li>
-					<li><a href="benchmark_deviate.html">追蹤偏離</a></li>
-				</ul>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide active"><a href="Infomation-2.html">即時預估淨值</a></div>
+					<div class="swiper-slide"><a href="pcf-00678.html">申購買回清單</a></div>
+					<div class="swiper-slide"><a href="benchmark_deviate.html">追蹤偏離</a></div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
 			</div>
+			<ul class="main-title">
+				<li class="active"><a href="Infomation-2.html">即時預估淨值</a></li>
+				<li><a href="pcf-00678.html">申購買回清單</a></li>
+				<li><a href="benchmark_deviate.html">追蹤偏離</a></li>
+			</ul>
 			<ul class="option">
 				<li class="select-table-type active">
 					<a href="javascript:;">
@@ -656,7 +665,7 @@
 				<div class="section fund">
 					<div class="section-title">基金ETFs</div>
 					<div class="more-btn"><a href="javascript:;">more</a></div>
-					<div class="row table-box pc-table">
+					<div class="row table-box">
 					  <div class="col-sm-12">
 					    <div class="table-responsive">
 					      <table class="table table-bordered">
@@ -743,118 +752,9 @@
 					    </div>
 					  </div>
 					</div>
-					<div class="row table-box m-table">
-					  <div class="col-sm-12">
-					    <div class="table-responsive">
-					      <table class="table table-bordered table-nav">
-					        <thead>
-					          <tr>
-					            <th class="t-name">股票代號/<br>股票簡稱/<br>基金營業日/<br>資料時間</th>
-											<th class="t-received">昨收</th>
-					            <th class="t-immediate">即時預估</th>
-					            <th class="t-ratio">漲跌幅</th>
-					          </tr>
-					        </thead>
-									<tbody>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio up">0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio down">-0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio up">0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio down">-0.44%</td>
-										</tr>
-									</tbody>
-					      </table>
-								<table class="table table-bordered table-price">
-					        <thead>
-					          <tr>
-					            <th class="t-name">股票代號/<br>股票簡稱/<br>基金營業日/<br>資料時間</th>
-											<th class="t-received">昨收</th>
-					            <th class="t-immediate">即時預估</th>
-					            <th class="t-ratio">漲跌幅</th>
-					          </tr>
-					        </thead>
-									<tbody>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio up">0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio down">-0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio up">0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio down">-0.44%</td>
-										</tr>
-									</tbody>
-					      </table>
-								<table class="table table-bordered table-premium">
-					        <thead>
-					          <tr>
-					            <th class="t-name">股票代號/<br>股票簡稱/<br>基金營業日/<br>資料時間</th>
-											<th class="t-received">值</th>
-					            <th class="t-amplitude">幅度</th>
-					          </tr>
-					        </thead>
-									<tbody>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received down">-0.0888</td>
-											<td class="t-amplitude down">-0.5999%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received down">-0.0888</td>
-											<td class="t-amplitude down">-0.5999%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received down">-0.0888</td>
-											<td class="t-amplitude down">-0.5999%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received down">-0.0888</td>
-											<td class="t-amplitude down">-0.5999%</td>
-										</tr>
-									</tbody>
-					      </table>
-					    </div>
-					  </div>
-					</div>
 					<ul class="list-box chart-type">
 						<li class="list up">
-							<div id="chart-1" class="list-chart"></div>
+							<div id="chart-5" class="list-chart"></div>
 							<div class="list-info">
 								<a href="javascript:;">
 									<div class="list-date">2017-01-13</div>
@@ -879,7 +779,7 @@
 							</div>
 						</li>
 						<li class="list down">
-							<div id="chart-2" class="list-chart"></div>
+							<div id="chart-6" class="list-chart"></div>
 							<div class="list-info">
 								<a href="javascript:;">
 									<div class="list-date">2017-01-13</div>
@@ -904,7 +804,7 @@
 							</div>
 						</li>
 						<li class="list up">
-							<div id="chart-3" class="list-chart"></div>
+							<div id="chart-7" class="list-chart"></div>
 							<div class="list-info">
 								<a href="javascript:;">
 									<div class="list-date">2017-01-13</div>
@@ -929,7 +829,7 @@
 							</div>
 						</li>
 						<li class="list down">
-							<div id="chart-4" class="list-chart"></div>
+							<div id="chart-8" class="list-chart"></div>
 							<div class="list-info">
 								<a href="javascript:;">
 									<div class="list-date">2017-01-13</div>
@@ -954,11 +854,18 @@
 							</div>
 						</li>
 					</ul>
+					<!-- <div class="section stock">
+						<div class="section-title">債券ETFs</div>
+						<div class="more-btn"><a href="javascript:;">more</a></div>
+						<ul class="stock-list-box list-box chart-type">
+
+						</ul>
+					</div> -->
 				</div>
 				<div class="section bond">
 					<div class="section-title">債券ETFs</div>
 					<div class="more-btn"><a href="javascript:;">more</a></div>
-					<div class="row table-box pc-table">
+					<div class="row table-box">
 					  <div class="col-sm-12">
 					    <div class="table-responsive">
 					      <table class="table table-bordered">
@@ -1045,118 +952,9 @@
 					    </div>
 					  </div>
 					</div>
-					<div class="row table-box m-table">
-					  <div class="col-sm-12">
-					    <div class="table-responsive">
-					      <table class="table table-bordered table-nav">
-					        <thead>
-					          <tr>
-					            <th class="t-name">股票代號/<br>股票簡稱/<br>基金營業日/<br>資料時間</th>
-											<th class="t-received">昨收</th>
-					            <th class="t-immediate">即時預估</th>
-					            <th class="t-ratio">漲跌幅</th>
-					          </tr>
-					        </thead>
-									<tbody>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio up">0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio down">-0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio up">0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio down">-0.44%</td>
-										</tr>
-									</tbody>
-					      </table>
-								<table class="table table-bordered table-price">
-					        <thead>
-					          <tr>
-					            <th class="t-name">股票代號/<br>股票簡稱/<br>基金營業日/<br>資料時間</th>
-											<th class="t-received">昨收</th>
-					            <th class="t-immediate">即時預估</th>
-					            <th class="t-ratio">漲跌幅</th>
-					          </tr>
-					        </thead>
-									<tbody>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio up">0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio down">-0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio up">0.44%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received">2017-2-13<br><span>(13:58:15)</span></td>
-											<td class="t-immediate">13.49</td>
-											<td class="t-ratio down">-0.44%</td>
-										</tr>
-									</tbody>
-					      </table>
-								<table class="table table-bordered table-premium">
-					        <thead>
-					          <tr>
-					            <th class="t-name">股票代號/<br>股票簡稱/<br>基金營業日/<br>資料時間</th>
-											<th class="t-received">值</th>
-					            <th class="t-amplitude">幅度</th>
-					          </tr>
-					        </thead>
-									<tbody>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received down">-0.0888</td>
-											<td class="t-amplitude down">-0.5999%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received down">-0.0888</td>
-											<td class="t-amplitude down">-0.5999%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received down">-0.0888</td>
-											<td class="t-amplitude down">-0.5999%</td>
-										</tr>
-										<tr>
-											<td class="t-name">00643<br>群益深証中小<br>(Y)<br><span class="t-time">2017-2-13<br>13:58:15</span></td>
-											<td class="t-received down">-0.0888</td>
-											<td class="t-amplitude down">-0.5999%</td>
-										</tr>
-									</tbody>
-					      </table>
-					    </div>
-					  </div>
-					</div>
 					<ul class="list-box chart-type">
 						<li class="list up">
-							<div id="chart-1" class="list-chart"></div>
+							<div id="chart-9" class="list-chart"></div>
 							<div class="list-info">
 								<a href="javascript:;">
 									<div class="list-date">2017-01-13</div>
@@ -1181,7 +979,7 @@
 							</div>
 						</li>
 						<li class="list down">
-							<div id="chart-2" class="list-chart"></div>
+							<div id="chart-10" class="list-chart"></div>
 							<div class="list-info">
 								<a href="javascript:;">
 									<div class="list-date">2017-01-13</div>
@@ -1206,7 +1004,7 @@
 							</div>
 						</li>
 						<li class="list up">
-							<div id="chart-3" class="list-chart"></div>
+							<div id="chart-11" class="list-chart"></div>
 							<div class="list-info">
 								<a href="javascript:;">
 									<div class="list-date">2017-01-13</div>
@@ -1231,7 +1029,7 @@
 							</div>
 						</li>
 						<li class="list down">
-							<div id="chart-4" class="list-chart"></div>
+							<div id="chart-12" class="list-chart"></div>
 							<div class="list-info">
 								<a href="javascript:;">
 									<div class="list-date">2017-01-13</div>
@@ -1256,6 +1054,13 @@
 							</div>
 						</li>
 					</ul>
+					<!-- <div class="section bond">
+						<div class="section-title">債券ETFs</div>
+						<div class="more-btn"><a href="javascript:;">more</a></div>
+						<ul class="bond-list-box list-box chart-type">
+
+						</ul>
+					</div> -->
 				</div>
 			</div>
 			<div class="section-box ETFs-stock">
@@ -2983,6 +2788,7 @@
 	<script src="./js/lib/jquery-1.9.1.min.js"></script>
 	<script src="./js/lib/greensock/TweenMax.min.js"></script>
 	<script src="./js/lib/echarts.min.js"></script>
+	<script src="./js/lib/swiper.min.js"></script>
 	<script src="./js/lib/fastclick.js"></script>
 	<script src="./js/fun.js"></script>
 	<script src="./js/lib/jquery.easing.js"></script>

@@ -288,8 +288,8 @@ $table-bg-accent: #e2e2e2;
 }
 
 .list-box {
-  margin-left: -6px;
-  margin-top: -6px;
+  // margin-left: -6px;
+  // margin-top: -6px;
   .list {
     width: 100%;
     padding: 40px;
@@ -637,5 +637,101 @@ $table-bg-accent: #e2e2e2;
     to {
       stroke-dashoffset: 0;
     }
+  }
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container embed,
+.video-container iframe,
+.video-container object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 670px) {
+  .main-title {
+    display: none;
+  }
+  .other-video {
+    display: none;
+  }
+  .stock {
+    float: none;
+    width: 100%;
+  }
+  .section-box.active {
+    padding: 6px;
+  }
+  .list-box .list .author {
+    display: none;
+  }
+  .list-box .list .list-title {
+    display: block;
+  }
+  .list-box .list {
+    padding: 15px;
+  }
+  .list-box {
+    .list {
+      .list-title-name {
+        display: block;
+        font-size: 28px;
+        margin-left: 0;
+        margin-top: 15px;
+      }
+      .font {
+        .font-add {
+          width: 48px;
+          height: 45px;
+          background: #BDBDBD url(../images/m/font-add.png) 50% 50% no-repeat;
+        }
+        .font-less {
+          width: 48px;
+          height: 45px;
+          background: #BDBDBD url(../images/m/font-less.png) 50% 50% no-repeat;
+          margin-left: 10px;
+        }
+      }
+      .fb-share {
+        width: 48px;
+        height: 45px;
+        background: #BDBDBD url(../images/m/fb-icon.png) 50% 9px no-repeat;
+      }
+      .line-share {
+        display: block;
+        float: right;
+        width: 48px;
+        height: 45px;
+        background: #BDBDBD url(../images/m/line-icon.png) 50% 50% no-repeat;
+        margin-right: 10px;
+      }
+      .img {
+        float: none;
+        margin: 0 0 10px;
+        width: 100%;
+      }
+      p {
+        font-size: 24px;
+      }
+      .last-page {
+        a {
+
+        }
+      }
+    }
+  }
+  .section .page-btn .last-page a {
+    padding-right: 18px;
+    font-size: 22px;
+    background: url(../images/m/last-arrow.png) 0 0 no-repeat;
   }
 }

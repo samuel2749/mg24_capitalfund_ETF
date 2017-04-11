@@ -5,9 +5,24 @@
     // var myChart;
     setButton();
     accordion();
-    setEventListener()
+    setEventListener();
 
-    // var temp = 0;
+    var temp = 0;
+    $('.list-chart').each(function() {
+      // temp += 1;
+      var id = $(this).attr('id');
+      new Chart(id);
+    });
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 2,
+        centeredSlides: true,
+        paginationClickable: true,
+        spaceBetween: 30,
+    });
 
 
     function renderChart(ele) {
@@ -357,11 +372,11 @@
       // $('.pc-table').show();
       // $('.m-table').hide();
       if (!_init) {
-        $('.list-chart').each(function() {
-          // temp += 1;
-          var id = $(this).attr('id');
-          new Chart(id);
-        });
+        // $('.list-chart').each(function() {
+        //   // temp += 1;
+        //   var id = $(this).attr('id');
+        //   new Chart(id);
+        // });
         _init = true;
       //   console.log('aa');
       //   $('.right-area').append(pc_right_ele.clone());
