@@ -296,8 +296,15 @@
 
 
     if ( Fun.detectmobile.isMobile || ( $(window).width() <= 640 ) ) {
-      $('.select-chart-type').click();
+      // $('.select-chart-type').click();
     }
+
+    $('.select-table-type').on('click', function() {
+      $('.accordion').show();
+    });
+    $('.select-chart-type').on('click', function() {
+      $('.accordion').hide();
+    });
 
 
     $('.section.stock .more-btn').on('click', function() {

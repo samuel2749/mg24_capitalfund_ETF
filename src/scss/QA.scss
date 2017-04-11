@@ -145,8 +145,11 @@ $table-bg-accent: #e2e2e2;
       color: $main-color;
     }
     .list-sub-text {
+      font-size: 18px;
+      margin-bottom: 20px;
+      padding: 0 15px 15px;
       // font-size: 14px;
-      padding: 2px 0 12px;
+      // padding: 2px 0 12px;
       line-height: 1.5;
     }
     .switch-icon {
@@ -216,7 +219,7 @@ $table-bg-accent: #e2e2e2;
         float: left;
         width: 33%;
         height: 110px;
-        font-size: 28px;
+        font-size: 20px;
         line-height: 110px;
         &.active {
           background: $main-color;
@@ -245,18 +248,18 @@ $table-bg-accent: #e2e2e2;
         position: absolute;
         left: 0;
         font-size: 0;
-        margin-top: 5px;
+        margin-top: 19px;
       }
       .answer-icon {
-        margin-top: 5px;
+        margin-top: 0;
       }
       .list-title {
         // padding-top: 9px;
       }
       .list-title-text {
-        font-size: 24px;
+        font-size: 18px;
+        padding: 15px 15px;
         margin-top: 5px;
-        padding: 0;
       }
       .list-sub {
         font-size:24px;
@@ -267,7 +270,7 @@ $table-bg-accent: #e2e2e2;
     padding: 10px 0 0 34px;
   }
   .accordion .accordion-list .switch-icon {
-    top: 20px;
+    top: 30px;
     right: -10px;
     bottom: auto;
   }

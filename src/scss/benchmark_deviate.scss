@@ -391,6 +391,10 @@ $table-bg-accent: #e2e2e2;
   display: none;
 }
 
+.accordion {
+  display: none;
+}
+
 @media screen and (max-width: 640px) {
   .pc-table {
     display: none;
@@ -398,9 +402,16 @@ $table-bg-accent: #e2e2e2;
   .m-table {
     display: block;
     .info-date {
-      font-size: 18px;
-      margin-bottom: 10px;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
+  }
+  .table-box .table-bordered > tbody > tr th,
+  .table-box .table-bordered > tbody > tr td {
+    font-size: 18px !important;
+  }
+  .table-box .table-bordered > tbody > tr > .t-title {
+    text-align: left;
   }
   .table-responsive {
     margin-bottom: 5px;
@@ -422,7 +433,7 @@ $table-bg-accent: #e2e2e2;
     display: block;
     position: relative;
     width: 100%;
-    padding: 0 6px;
+    // padding: 0 6px;
     // &.a1 {
     //   display: none;
     // }
@@ -444,7 +455,7 @@ $table-bg-accent: #e2e2e2;
         height: 55px;
         vertical-align: top;
         background: $table-bg-accent;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 700;
         text-align: center;
         line-height: 55px;
@@ -491,4 +502,23 @@ $table-bg-accent: #e2e2e2;
     }
   }
 
+}
+
+@media screen and (max-width: 380px) {
+  .table-box .table-bordered > tbody > tr th,
+  .table-box .table-bordered > tbody > tr td {
+    font-size: 16px !important;
+  }
+}
+@media screen and (max-width: 350px) {
+  .table-box .table-bordered > tbody > tr th,
+  .table-box .table-bordered > tbody > tr td {
+    font-size: 15px !important;
+  }
+}
+@media screen and (max-width: 335px) {
+  .table-box .table-bordered > tbody > tr th,
+  .table-box .table-bordered > tbody > tr td {
+    font-size: 14px !important;
+  }
 }

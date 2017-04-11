@@ -1,21 +1,26 @@
-$(function() {
-  var accordionTitleLi = $('.accordion-title li');
-  var accordionList = $('.other .table-box');
-
-  // accordionTitle click
-  accordionTitleLi.on('click', function() {
-    var j_this = $(this);
-    var index = j_this.index();
-    if (j_this.hasClass('active')) return;
-
-    j_this.addClass('active').siblings().removeClass('active');
-    console.log(index);
-    accordionList.hide().eq(index).show();
-    // accordionList.css({position: 'absolute'}).fadeOut().eq(index).css({position: 'relative'}).fadeIn();
+(function($) {
+  $(function() {
+    swiper();
+    datepicker();
+    accordion();
   });
 
-  swiper();
-  datepicker();
+  function accordion() {
+    var accordionTitleLi = $('.accordion-title li');
+    var accordionList = $('.other .table-box');
+
+    // accordionTitle click
+    accordionTitleLi.on('click', function() {
+      var j_this = $(this);
+      var index = j_this.index();
+      if (j_this.hasClass('active')) return;
+
+      j_this.addClass('active').siblings().removeClass('active');
+      console.log(index);
+      accordionList.hide().eq(index).show();
+      // accordionList.css({position: 'absolute'}).fadeOut().eq(index).css({position: 'relative'}).fadeIn();
+    });
+  }
 
   function swiper() {
     var appendNumber = 4;
@@ -33,22 +38,26 @@ $(function() {
   }
 
   function datepicker() {
-    $( "#datepicker" ).datepicker({
+    // var j_datepicker = $('.ui-widget-content');
+    // var j_datepickerHandler = $('.select-date');
+
+    $("#datepicker").datepicker({
       dateFormat: "yy-mm-dd",
       beforeShow: function (input, inst) {
         setTimeout(function () {
+          var j_datepickerHandler = $('.select-date');
+          var top = j_datepickerHandler.offset().top;
+          var left = j_datepickerHandler.offset().left;
           inst.dpDiv.css({
-            top: 490,
-            left: 310
+            top: top + 40,
+            left: left - 160
           });
         }, 0);
       },
       onSelect: function() {
         var currentDate = $( "#datepicker" ).datepicker( "getDate" );
-        console.log($('#datepicker').val());
         var val = $('#datepicker').val()
         $('.info-date span').html(val);
-        console.log('currentDate = ', currentDate.getFullYear()  );
       }
     });
 
@@ -61,9 +70,17 @@ $(function() {
       $( "#datepicker" ).datepicker( "show" );
     });
 
-
-
+    $(window).resize(function() {
+      var j_datepicker = $('.ui-widget-content');
+      var j_datepickerHandler = $('.select-date');
+      var top = j_datepickerHandler.offset().top;
+      var left = j_datepickerHandler.offset().left;
+      j_datepicker.css({
+        top: top + 40,
+        left: left -160
+      })
+    }).resize();
 
   }
 
-});
+})(jQuery)

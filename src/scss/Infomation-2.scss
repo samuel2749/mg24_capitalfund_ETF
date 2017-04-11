@@ -96,6 +96,12 @@ $table-bg-accent: #e2e2e2;
       }
     }
   }
+  .table-price {
+    display: none;
+  }
+  .table-premium {
+    display: none;
+  }
   .select {
     display: inline-block;
     vertical-align: top;
@@ -140,7 +146,7 @@ $table-bg-accent: #e2e2e2;
   .more-btn {
     position: absolute;
     top: 6px;
-    right: 0;
+    right: 3%;
     a {
       transition: .3s;
     }
@@ -203,6 +209,12 @@ $table-bg-accent: #e2e2e2;
   .table-bordered > thead > tr:first-child > th:first-child,
   .table-bordered > tbody > tr > td:first-child {
     border-left: 2px solid $main-color;
+    line-height: 26px;
+  }
+  .t-received {
+    span {
+      font-size: 13px;
+    }
   }
 }
 
@@ -543,16 +555,17 @@ $table-bg-accent: #e2e2e2;
     }
   }
   .table-box {
-    padding: 0 6px;
+    padding: 0 3%;
   }
   .container {
     .option {
       width: 100%;
-      padding: 0 6px;
+      padding: 0 3%;
       li {
         width: 49.5%;
         height: 55px;
-        font-size: 28px;
+        font-size: 20px;
+        text-align: center;
         a {
           height: 55px;
           line-height: 55px;
@@ -581,7 +594,7 @@ $table-bg-accent: #e2e2e2;
     display: block;
     position: relative;
     width: 100%;
-    padding: 0 6px;
+    padding: 0 3%;
     // &.a1 {
     //   display: none;
     // }

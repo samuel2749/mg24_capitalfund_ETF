@@ -184,7 +184,7 @@ body {
   .kv-txt {
     position: absolute;
     // top: 64%;
-    bottom: 5%;
+    bottom: 15%;
     left: 3%;
     font-size: 37px;
     font-weight: 700;
@@ -196,7 +196,7 @@ body {
 }
 .section {
   .section-title {
-    padding-left: 6px;
+    padding-left: 3%;
   }
 //   position: relative;
 //   .more-btn {
@@ -216,7 +216,7 @@ body {
 .more-btn {
   display: inline-block;
   a {
-    padding-right: 14px;
+    padding-right: 13px;
     color: #524f46;
     font-size: 14px;
     background: url(../images/more-arrow.png) 100% 0 no-repeat;
@@ -362,6 +362,22 @@ body {
 
 
 @media screen and (max-width: 640px) {
+  #m-header {
+    .m-logo {
+      position: fixed;
+      width: 230px;
+      height: 68px;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
   .swiper-container {
     left: 0;
   }
@@ -388,7 +404,7 @@ body {
   }
   .container {
     .section-title {
-      font-size: 28px;
+      font-size: 20px;
     }
   }
   .main-title {
@@ -397,7 +413,7 @@ body {
       width: 50%;
       a {
         padding: 0;
-        font-size: 28px;
+        font-size: 20px;
         max-width: 222px;
         width: 100%;
       }
@@ -406,8 +422,8 @@ body {
   .more-btn {
     a {
       padding-right: 18px;
-      font-size: 22px;
-      background: url(../images/m/more-arrow.png) 100% 1px no-repeat;
+      font-size: 20px;
+      background: url(../images/m/more-arrow.png) 100% 0 no-repeat;
     }
   }
   .list-box {
@@ -416,7 +432,7 @@ body {
         display: none;
       }
       .list-date {
-        font-size: 24px;
+        font-size: 14px;
         padding-right: 14px;
         background: url(../images/m/list-arrow1.png) 100% 50% no-repeat;
       }
@@ -443,7 +459,7 @@ body {
     height: 64px;
     line-height: 64px;
     font-size: 28px;
-    padding: 0 6px;
+    padding: 0 3%;
     .load-more-icon {
       @include bg('../images/m/more-icon.png');
       img {
@@ -460,14 +476,14 @@ body {
   }
   .container {
     .select {
-      padding: 0 6px;
+      padding: 0 3%;
       margin: 25px auto;
       width: 100%;
       li {
         display: block;
         width: 100%;
         height: 53px;
-        font-size: 28px;
+        font-size: 20px;
         background-color: #FFF;
         background-image:url(../images/m/dropdown-arrow.png), url(../images/m/select-type-icon.png);
         background-position: right center, 10px center;
@@ -491,7 +507,7 @@ body {
       height: 50px;
       margin: 20px auto;
       a {
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 700;
       }
   }
@@ -504,10 +520,16 @@ body {
     }
   }
   .swiper-button-next {
+    right: 0;
     background: url(../images/m/more-arrow.png) 50% 50% no-repeat;
   }
   .swiper-button-prev {
+    left: 0;
     background: url(../images/m/last-arrow.png) 50% 50% no-repeat;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    width: 60px;
+    background-color: #F0F0F0;
   }
   .swiper-pagination {
     bottom: 0;

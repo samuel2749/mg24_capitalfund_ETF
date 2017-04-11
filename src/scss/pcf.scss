@@ -650,6 +650,17 @@ $table-bg-accent: #e2e2e2;
   display: none;
 }
 
+@media screen and (max-width: 1000px) {
+  .info-box {
+    .left-area {
+      width: 100%;
+    }
+    .right-area {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 640px) {
   .main-title {
     display: none;
@@ -660,20 +671,20 @@ $table-bg-accent: #e2e2e2;
       padding-top: 10px;
     }
     .farther-title {
-      font-size: 24px;
+      font-size: 18px;
       background: url(../images/m/farther-title-icon.png) 0 50% no-repeat;
     }
     .farther-list {
-      font-size: 22px;
+      font-size: 14px;
     }
   }
   .info-box {
-    .left-area {
-      width: 100%;
-    }
-    .right-area {
-      width: 100%;
-    }
+    // .left-area {
+    //   width: 100%;
+    // }
+    // .right-area {
+    //   width: 100%;
+    // }
     .announcement {
       .info-title {
         .info-date {
@@ -684,7 +695,7 @@ $table-bg-accent: #e2e2e2;
         }
         .select-date {
           .data-txt {
-            font-size: 24px;
+            font-size: 22px;
           }
           .data-arrow {
             top: -5px;
@@ -693,7 +704,7 @@ $table-bg-accent: #e2e2e2;
       }
       .info-list {
         li {
-          font-size: 24px;
+          font-size: 20px;
         }
         .name {
           float: none;
@@ -710,7 +721,7 @@ $table-bg-accent: #e2e2e2;
       }
     }
     .info .info-title {
-      font-size: 24px;
+      font-size: 22px;
     }
     .purchase {
       .list {
@@ -732,26 +743,6 @@ $table-bg-accent: #e2e2e2;
     }
 
     .stock {
-      // .pc-table {
-      //   display: none;
-      // }
-      // .m-table {
-      //   display: block;
-      //   font-size: 22px;
-      //   .m-table-box {
-      //     margin-top: 10px;
-      //     border-left: 2px solid #75726B;
-      //     border-top: 1px solid #E2E2E2;
-      //     border-bottom: 1px solid #E2E2E2;
-      //     padding: 10px;
-      //     .t-name {
-      //       color: #868686;
-      //       & ~ .t-name {
-      //         margin-top: 10px;
-      //       }
-      //     }
-      //   }
-      // }
       .accordion .accordion-title li {
         font-size: 22px;
       }
