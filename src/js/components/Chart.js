@@ -1,7 +1,6 @@
 var Chart = function(ele, pData) {
   var dom = document.getElementById(ele);
   var myChart = echarts.init(dom);
-
   var option = {
     tooltip: {
       trigger: 'asix',
@@ -24,7 +23,7 @@ var Chart = function(ele, pData) {
       formatter: '{b0} / {c0}'
     },
     xAxis: {
-      type: 'category',
+      type: 'time',
       position: 'top',
       //data: ['0:00','0:15','0:30','0:45','1:00','1:15','1:30','1:45','2:00','2:15','2:30',"3:00"],
       boundaryGap: false,
@@ -55,8 +54,8 @@ var Chart = function(ele, pData) {
     yAxis: {
       type: 'value',
       position: 'right',
-      interval: 500,
-      max: 2000,
+      /*interval: 500,
+      max: 2000,*/
       splitLine: {
         lineStyle: {
           color: ['#d5d5d5'],
@@ -95,7 +94,7 @@ var Chart = function(ele, pData) {
       showSymbol: false,
       symbol: 'circle',
       symbolSize: 6,
-      //data: ['1200', '1400', '808', '811', '626', '488', '1600', '1100', '500', '300', '1898', '822'],
+      //data: [['13', '1200'], ['14', '1400'], ['15', '808'], ['16', '811'], ['20', '626'], ['22', '488'], ['25', '1600'], ['33', '1100']],
       data: pData,
       areaStyle: {
         normal: {
@@ -125,5 +124,6 @@ var Chart = function(ele, pData) {
 
   this.resize = function(){
     myChart.resize();
+    console.log('resize');
   }
 }

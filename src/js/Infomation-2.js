@@ -1,12 +1,16 @@
 (function ($) {
   var _temp = '',
-    _init;
+    _init,
+    _chartObj = {
+      type: "all",
+      ChartBoxes: []
+    };
   $(function () {
     setButton();
     accordion();
     setEventListener();
     setNav();
-
+    getETF();
     /*$('.list-chart').each(function() {
       var id = $(this).attr('id');
       new Chart(id);
@@ -49,13 +53,14 @@
         $('.table-box').hide();
         $('.list-box').show();
       }
+      resizeChart();
     });
 
 
     $('.ETF-type select').on('change', function () {
       console.log($(this).val());
-      var val = $(this).val();
-      $('.section-box').hide();
+      _chartObj.type = $(this).val();
+      /*$('.section-box').hide();
       if (val === "all") {
         $('.section-box.ETFs-all').show();
       } else if (val === "stock") {
@@ -64,7 +69,8 @@
         $('.section-box.ETFs-fund').show();
       } else if (val === "bond") {
         $('.section-box.ETFs-bond').show();
-      }
+      }*/
+      getETF();
     })
 
     // 手機版預設開啟圖表
@@ -123,7 +129,10 @@
   }
 
   function setEventListener() {
-    $(window).resize(setTableSwitch).trigger('resize');
+    $(window).resize(function(){
+      setTableSwitch();
+      resizeChart();
+    }).trigger('resize');
   }
 
   function setTableSwitch() {
@@ -151,6 +160,13 @@
       console.log('pc');
       _temp = 'pc';
     }
+
+  }
+
+  function resizeChart(){
+    $.each(_chartObj.ChartBoxes, function(i, obj){
+      obj.resize();
+    })
   }
 
   // 點選淨值, 市價, 折溢價的 tag
@@ -196,81 +212,165 @@
     return widthNoScroll - widthWithScroll;
   }
 
-  function setData(){
+  function setData(pData) {
+    removeAllData();
+    if (_chartObj.type == 'all') $('.section-box .more-btn').show();
+    $.each(pData, function (i, data) {
+      var ele;
+      switch (data.id) {
+        case "stock":
+          ele = $('.section-box.ETFs-stock');
+          break;
+        case "fund":
+          ele = $('.section-box.ETFs-fund');
+          break;
+        case "bond":
+          ele = $('.section-box.ETFs-bond');
+          break;
+      }
+      ele.show();
+      if (_chartObj.type != 'all') ele.find('.load-more-btn').show();
+      setChartBox(ele.find('.list-box'), data);
+    });
+    resizeChart();
+  }
 
+  function removeAllData() {
+    $('.section-box').hide().find('.list-box').html('')
+      .end().find('.more-btn, .load-more-btn').hide();
+    while (_chartObj.ChartBoxes.length > 0) {
+      var chartObj = _chartObj.ChartBoxes.pop();
+    }
+  }
+
+  function setChartBox(pEle, pData) {
+    $.each(pData.data, function(i, data){
+      var chartID = pData.id + i;
+      pEle.append(renderChartBox(chartID, data));
+      _chartObj.ChartBoxes.push(new Chart(chartID, reSetChartData(data.msgArray)));
+    });
+  }
+
+  function renderChartBox(pChartID, pData) {
+    var ele = ''
+      + '<li class="list up">'
+      + '	<div id="_chart_id_" class="list-chart"></div>'
+      + '	<div class="list-info">'
+      + '		<a href="javascript:;">'
+      + '			<div class="list-date">_date_</div>'
+      + '			<div class="list-title">'
+      + '				<span class="list-title-num">_etfcode_</span>'
+      + '				<span class="list-title-name">_name_</span>'
+      + '			</div>'
+      + '			<div class="line"></div>'
+      + '			<div class="NAV-val">'
+      + '				<span class="list-name">預估淨值</span>'
+      + '				<span class="list-val">_nav_now_</span>'
+      + '			</div>'
+      + '			<div class="NAV-price">'
+      + '				<span class="list-name">最新市價</span>'
+      + '				<span class="list-val">_price_now_</span>'
+      + '			</div>'
+      + '			<div class="NAV-amplitude amplitude">'
+      + '				<span class="list-name">折溢價幅度</span>'
+      + '				<span class="list-val">_diff_ratio_</span>'
+      + '			</div>'
+      + '		</a>'
+      + '	</div>'
+      + '</li>';
+      ele = ele.replace('_chart_id_', pChartID);
+      ele = ele.replace('_date_', pData.date);
+      ele = ele.replace('_etfcode_', pData.etfcode);
+      ele = ele.replace('_nav_now_', pData.name);
+      ele = ele.replace('_price_now_', pData.price_now);
+      ele = ele.replace('_diff_ratio_', pData.diff_ratio);
+      if(pData.diff_ratio.substring(0, 1) == '-') ele = ele.replace('up', 'down');
+      //_chartObj.ChartBoxes.push(new Chart(pChartID, reSetChartData(pData.msgArray)));
+      return ele;
+  }
+
+  function reSetChartData(pData) {
+    var arr = [];
+    $.each(pData, function (i, data) {
+      arr.push([new Date(data.time).getTime(), data.nav]);
+    });
+    return arr;
   }
 
   //============ data ==============
   function getETF(pObj) {
+    pObj = pObj || {};
     /*$.get("test.aspx", pObj, function (data) {
       
     }, 'json');*/
     getDemoData();
-    setData();
   }
 
-  function getDemoData(pType) {
-    pType = pType || 'all';
-    var data = [];
-    if(pType == "all"){
-      for(var typeNum = 1; typeNum <= 3; typeNum++){
+  function getDemoData() {
+    var data = [], tempArr = ['stock', 'fund', 'bond'];
+    if (_chartObj.type == "all") {
+      for (var typeNum = 0; typeNum < 3; typeNum++) {
         var obj = {};
-        obj.id = typeNum;
-        obj.data = demoData(4);
+        obj.id = tempArr[typeNum];
+        obj.data = getSingleTypeData(4);
         data.push(obj);
       }
-    }else{
-      data.push({id:pType, data:getSingleTypeData()})
+    } else {
+      data.push({ id: _chartObj.type, data: getSingleTypeData() })
     }
+    
+    //console.log(data);
+    setData(data);
   }
 
-  function getSingleTypeData(pSum){
+  function getSingleTypeData(pSum) {
     pSum = pSum || 12;
     var data = [];
-    for(var num = 0; num < pSum; num++){
+    for (var num = 0; num < pSum; num++) {
       data.push(demoData());
     }
+    return data;
   }
 
   function demoData() {
     var obj = {
-        fundid: "093",
-        date: "2017/01/03",
-        etfcode: "00643",
-        name: "群益深証中小",
-        nav_now: "13.97",
-        price_now: "13.97",
-        diff_ratio: "0.8565%",
-        msgArray: [
-          {
-            time: "2017/01/03 10:45:00",
-            nav: "13.96"
-          },
-          {
-            time: "2017/01/03 10:45:15",
-            nav: "9.95"
-          },
-          {
-            time: "2017/01/03 10:45:30",
-            nav: "13.97"
-          },
-          {
-            time: "2017/01/03 10:45:45",
-            nav: "12.96"
-          },
-          {
-            time: "2017/01/03 10:46:00",
-            nav: "10.95"
-          },
-          {
-            time: "2017/01/03 10:46:15",
-            nav: "12.97"
-          },
-        ]
-      };
-    
-    if(Math.random() < 0.5){
-      obj.price_now = '-' + obj.price_now;
+      fundid: "093",
+      date: "2017/01/03",
+      etfcode: "00643",
+      name: "群益深証中小",
+      nav_now: "13.97",
+      price_now: "13.97",
+      diff_ratio: "0.8565%",
+      msgArray: [
+        {
+          time: "2017/01/03 10:45:00",
+          nav: "13.96"
+        },
+        {
+          time: "2017/01/03 10:45:15",
+          nav: "9.95"
+        },
+        {
+          time: "2017/01/03 10:45:30",
+          nav: "13.97"
+        },
+        {
+          time: "2017/01/03 10:45:45",
+          nav: "12.96"
+        },
+        {
+          time: "2017/01/03 10:46:00",
+          nav: "10.95"
+        },
+        {
+          time: "2017/01/03 10:46:15",
+          nav: "12.97"
+        },
+      ]
+    };
+
+    if (Math.random() < 0.5) {
+      obj.diff_ratio = '-' + obj.diff_ratio;
     }
     return obj;
   }
