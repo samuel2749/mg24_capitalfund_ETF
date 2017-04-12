@@ -223,11 +223,13 @@ $table-bg-accent: #e2e2e2;
   &.ETFs-stock,
   &.ETFs-fund,
   &.ETFs-bond {
-    position: absolute;
+    display: none;
+    // position: absolute;
+    position: relative;
     width: 100%;
     max-width: 1120px;
-    left: -3000px;
-    visibility: hidden;
+    // left: -3000px;
+    // visibility: hidden;
     // .chart-type {
     //   width: 100%;
     // }
@@ -276,11 +278,11 @@ $table-bg-accent: #e2e2e2;
 
 // .ETFs-all {
   .list-box {
-    // display: none;
-    position: absolute;
-    width: 100%;
-    left: -3000px;
-    visibility: hidden;
+    display: none;
+    // position: absolute;
+    // width: 100%;
+    // left: -3000px;
+    // visibility: hidden;
   }
 // }
 
