@@ -364,9 +364,9 @@ body {
 @media screen and (max-width: 640px) {
   #m-header {
     .m-logo {
-      position: fixed;
-      width: 230px;
-      height: 68px;
+      position: absolute;
+      width: 42%;
+      height: 100%;
       top: 0;
       left: 0;
       right: 0;

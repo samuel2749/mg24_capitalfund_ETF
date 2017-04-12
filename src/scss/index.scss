@@ -33,7 +33,7 @@
   .more-btn {
     position: absolute;
     top: 18px;
-    right: 5px;
+    right: 0;
     a {
       transition: .3s;
     }
@@ -172,15 +172,16 @@
     &.article-type {
       .list {
         .list-title {
-          font-size: 38px;
+          font-size: 28px;
         }
         .list-txt {
-          font-size: 24px;
+          font-size: 20px;
         }
         .list-info {
-          height: 300px;
+          min-height: 200px;
           line-height: 1.5;
-          padding: 35px 15px;
+          padding: 35px 15px 0;
+          box-sizing: content-box;
         }
         &.ETF {
           .list-info {
@@ -208,7 +209,7 @@
       }
       .announcement {
         .list-info {
-          padding: 35px 25px
+          padding: 15px 25px
         }
         .ribbon {
           left: -10px;

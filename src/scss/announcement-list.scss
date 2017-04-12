@@ -192,8 +192,8 @@ $table-bg-accent: #e2e2e2;
 }
 
 .list-box {
-  margin-left: -6px;
-  margin-top: -6px;
+  // margin-left: -6px;
+  // margin-top: -6px;
   .list {
     width: 100%;
     padding: 40px;
@@ -529,7 +529,7 @@ $table-bg-accent: #e2e2e2;
     .list {
       .list-title-name {
         display: block;
-        font-size: 28px;
+        font-size: 20px;
         margin-left: 0;
         margin-top: 15px;
       }
