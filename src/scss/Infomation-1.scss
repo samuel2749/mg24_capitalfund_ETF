@@ -237,7 +237,16 @@ $table-bg-accent: #e2e2e2;
   }
 }
 
-
+@media screen and (max-width: 768px) {
+  .infomation-box {
+    .info {
+      padding: 35px 30px;
+    }
+    .info-text {
+      height: 380px;
+    }
+  }
+}
 @media screen and (max-width: 640px) {
   .container {
     padding: 10px;
@@ -263,7 +272,7 @@ $table-bg-accent: #e2e2e2;
   }
   .infomation-box {
     .info {
-      padding: 10px;
+      padding: 15px;
     }
   }
 }

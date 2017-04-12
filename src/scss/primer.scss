@@ -1172,9 +1172,15 @@ $table-bg-accent: #e2e2e2;
   }
   > div {
     position: relative;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .step1-box {
+    max-width: 1005px;
   }
   .step2-box {
     display: none;
+    max-width: 903px;
     .step2-flip1 {
       position: absolute;
       top: 451px;
@@ -1206,9 +1212,11 @@ $table-bg-accent: #e2e2e2;
   }
   .step3-box {
     display: none;
+    max-width: 1038px;
   }
   .step4-box {
     display: none;
+    max-width: 1058px;
   }
 }
 .all-box {
@@ -1220,7 +1228,7 @@ $table-bg-accent: #e2e2e2;
   }
 }
 
-@media screen and (max-width: 1065px) {
+@media screen and (max-width: 1132px) {
   .accordion {
     .accordion-title {
       .step1 {

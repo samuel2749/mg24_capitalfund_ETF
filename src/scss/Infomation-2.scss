@@ -660,3 +660,34 @@ $table-bg-accent: #e2e2e2;
     }
   }
 }
+
+@media screen and (max-width: 528px) {
+  .m-table .table-bordered > thead > tr > th,
+  .m-table .table-bordered > tbody > tr > td {
+    font-size: 18px !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .m-table .table-bordered > thead > tr > th,
+  .m-table .table-bordered > tbody > tr > td {
+    font-size: 16px !important;
+  }
+}
+@media screen and (max-width: 408px) {
+  .m-table .table-bordered > thead > tr > th,
+  .m-table .table-bordered > tbody > tr > td {
+    font-size: 14px !important;
+  }
+  .m-table .table-bordered > tbody > tr .t-time {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .m-table .table-bordered > thead > tr > th,
+  .m-table .table-bordered > tbody > tr > td {
+    font-size: 12px !important;
+  }
+  .m-table .table-bordered > tbody > tr .t-time {
+    font-size: 12px !important;
+  }
+}

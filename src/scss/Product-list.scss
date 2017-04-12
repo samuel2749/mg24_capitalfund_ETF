@@ -593,10 +593,16 @@ $table-bg-accent: #e2e2e2;
     padding: 40px 40px;
     background: #FFF;
     .nav-left {
+      position: relative;
       width: 58%;
       float: left;
       height: 369px;
       border: 1px solid #E2E2E2;
+      background: #828282;
+      color: #FFF;
+      font-size: 32px;
+      text-align: center;
+      line-height: 369px;
     }
     .nav-right {
       width: 38%;
@@ -617,7 +623,8 @@ $table-bg-accent: #e2e2e2;
       }
       .nav-info-cont {
         background: #e2e2e2;
-        padding: 30px 0 30px 100px;
+        padding: 30px 0 30px 0px;
+        text-align: center;
       }
       .nav-info-data {
         &.up {
@@ -1199,6 +1206,24 @@ $table-bg-accent: #e2e2e2;
     width: 170px;
   }
 }
+@media screen and (max-width: 768px) {
+  .info-box .nav-box .nav-left {
+    width: 100%;
+  }
+  .info-box .nav-box .nav-right {
+    @include clearfix;
+    width: 100%;
+    margin-top: 28px;
+    .nav-info {
+      float: left;
+      width: 49%;
+      & ~ .nav-info {
+        margin-left: 2%;
+        margin-top: 0;
+      }
+    }
+  }
+}
 @media screen and (max-width: 640px) {
   .list-box .download .list-info .monthlyreport {
     .download-icon {
@@ -1232,6 +1257,9 @@ $table-bg-accent: #e2e2e2;
         background-position: 0 0;
       }
     }
+  }
+  .info-box .nav-box > div {
+    display: none !important;
   }
   .info-box .fun-box .info .info-title {
     font-size: 24px;
@@ -1497,6 +1525,7 @@ $table-bg-accent: #e2e2e2;
     }
   }
   .info-box .index-box {
+    position: relative;
     padding: 20px 15px 100px 15px;
     .all-index {
       height: 378px;

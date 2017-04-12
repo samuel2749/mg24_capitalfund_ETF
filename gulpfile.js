@@ -173,10 +173,10 @@ gulp.task('watch', function(){
   gulp.watch(['./src/scss/**/*.scss'], ['compass']);
   gulp.watch(['./src/js/**/*.js'], ['uglify']);
   gulp.watch(['./src/images/**'], ['tinypng']);
-  gulp.watch(['./src/m/**/*.html'], ['m-rebuild']);
-  gulp.watch(['./src/m/scss/**/*.scss'], ['m-compass']);
-  gulp.watch(['./src/m/js/**/*.js'], ['m-uglify']);
-  gulp.watch(['./src/m/images/**'], ['m-tinypng']);
+  // gulp.watch(['./src/m/**/*.html'], ['m-rebuild']);
+  // gulp.watch(['./src/m/scss/**/*.scss'], ['m-compass']);
+  // gulp.watch(['./src/m/js/**/*.js'], ['m-uglify']);
+  // gulp.watch(['./src/m/images/**'], ['m-tinypng']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);

@@ -192,6 +192,59 @@ $table-bg-accent: #e2e2e2;
 .hot-article {
   float: right;
   width: 29%;
+  .info-list {
+    padding: 20px 0 40px 14px;
+    li {
+      @include clearfix;
+      font-size: 14px;
+      line-height: 25px;
+      &.up {
+        .hot-num {
+          background: #D6000F;
+        }
+      }
+    }
+    .hot-num {
+      position: absolute;
+      top: 9px;
+      left: 0;
+      // float: left;
+      width: 25px;
+      height: 25px;
+      background: #2A2925;
+      text-align: center;
+      line-height: 25px;
+      color: #FFF;
+    }
+    .hot-title {
+      // float: left;
+      margin-left: 6px;
+    }
+    // .name {
+    //   line-height: 1.5;
+    // }
+    // .val {
+    //   color: #2b2925;
+    //   line-height: 1.5;
+    //   font-weight: 700;
+    // }
+  }
+  // display: inline-block;
+  // float: none;
+  // width: 100%;
+  // padding: 0 6px;
+  // margin-top: 6px;
+  // margin-bottom: 6px;
+  // clear: both;
+  // .info-title {
+  //   font-size: 20px;
+  // }
+  // .info-list {
+  //   padding: 10px 0 10px 14px;
+  //   li {
+  //     font-size: 20px;
+  //   }
+  // }
 }
 
 .info {
@@ -250,8 +303,10 @@ $table-bg-accent: #e2e2e2;
     // padding: 0 14px;
     li {
       @include clearfix;
-      padding: 10px 0;
+      position: relative;
+      // padding: 10px 0;
       font-size: 14px;
+      padding: 10px 0 10px 30px;
       // & ~ li {
       //   border-top: 1px solid #e2e2e2;
       // }
@@ -613,9 +668,10 @@ $table-bg-accent: #e2e2e2;
 }
 
 
-@media screen and (max-width: 640px) {
-  .main-title {
-    display: none;
+@media screen and (max-width: 768px) {
+  .section {
+    margin-left: 0;
+    margin-right: 0;
   }
   .hot-article {
     display: none;
@@ -644,7 +700,7 @@ $table-bg-accent: #e2e2e2;
       padding: 20px 15px;
       .list-title-name {
         display: block;
-        font-size: 28px;
+        font-size: 20px;
         margin-left: 0;
         margin-top: 15px;
       }
@@ -696,5 +752,19 @@ $table-bg-accent: #e2e2e2;
     padding-right: 18px;
     font-size: 22px;
     background: url(../images/m/last-arrow.png) 0 0 no-repeat;
+  }
+  .more-btn {
+    a {
+      padding-right: 18px;
+      font-size: 20px;
+      background: url(../images/m/more-arrow.png) 100% 0 no-repeat;
+    }
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .main-title {
+    display: none;
   }
 }

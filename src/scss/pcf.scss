@@ -650,7 +650,7 @@ $table-bg-accent: #e2e2e2;
   display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1018px) {
   .info-box {
     .left-area {
       width: 100%;
@@ -695,7 +695,7 @@ $table-bg-accent: #e2e2e2;
         }
         .select-date {
           .data-txt {
-            font-size: 22px;
+            font-size: 20px;
           }
           .data-arrow {
             top: -5px;
@@ -714,18 +714,19 @@ $table-bg-accent: #e2e2e2;
         }
       }
       .exchange-rate {
-        font-size: 24px;
+        font-size: 18px;
         > ul {
           display: block;
+          margin-top: 6px;
         }
       }
     }
     .info .info-title {
-      font-size: 22px;
+      font-size: 20px;
     }
     .purchase {
       .list {
-        font-size: 24px;
+        font-size: 18px;
       }
       .date {
         li {
@@ -762,6 +763,7 @@ $table-bg-accent: #e2e2e2;
         border-top: 1px solid #E2E2E2;
         border-bottom: 1px solid #E2E2E2;
         padding: 10px;
+        font-size: 20px;
         .t-name {
           color: #868686;
           & ~ .t-name {
