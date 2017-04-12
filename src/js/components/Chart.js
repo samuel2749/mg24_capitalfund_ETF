@@ -1,4 +1,4 @@
-var Chart = function(ele) {
+var Chart = function(ele, pData) {
   var dom = document.getElementById(ele);
   var myChart = echarts.init(dom);
 
@@ -26,7 +26,7 @@ var Chart = function(ele) {
     xAxis: {
       type: 'category',
       position: 'top',
-      data: ['0:00','0:15','0:30','0:45','1:00','1:15','1:30','1:45','2:00','2:15','2:30',"3:00"],
+      //data: ['0:00','0:15','0:30','0:45','1:00','1:15','1:30','1:45','2:00','2:15','2:30',"3:00"],
       boundaryGap: false,
       splitLine: {
         show: false,
@@ -95,7 +95,8 @@ var Chart = function(ele) {
       showSymbol: false,
       symbol: 'circle',
       symbolSize: 6,
-      data: ['1200', '1400', '808', '811', '626', '488', '1600', '1100', '500', '300', '1898', '822'],
+      //data: ['1200', '1400', '808', '811', '626', '488', '1600', '1100', '500', '300', '1898', '822'],
+      data: pData,
       areaStyle: {
         normal: {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -122,8 +123,7 @@ var Chart = function(ele) {
 
   myChart.setOption(option);
 
-  $(window).resize(function() {
+  this.resize = function(){
     myChart.resize();
-  }).resize();
-
+  }
 }
